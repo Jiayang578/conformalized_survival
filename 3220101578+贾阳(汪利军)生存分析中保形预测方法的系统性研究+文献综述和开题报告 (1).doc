@@ -1,0 +1,4433 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?mso-application progid="Word.Document"?>
+<pkg:package xmlns:pkg="http://schemas.microsoft.com/office/2006/xmlPackage">
+	<pkg:part pkg:name="/_rels/.rels" pkg:contentType="application/vnd.openxmlformats-package.relationships+xml">
+		<pkg:xmlData>
+			<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">
+				<Relationship Id="rId5" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument" Target="word/document.xml"/>
+				<Relationship Id="rId1" Type="http://schemas.openxmlformats.org/package/2006/relationships/metadata/thumbnail" Target="docProps/thumbnail.wmf"/>
+				<Relationship Id="rId3" Type="http://schemas.openxmlformats.org/package/2006/relationships/metadata/core-properties" Target="docProps/core.xml"/>
+				<Relationship Id="rId2" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/extended-properties" Target="docProps/app.xml"/>
+				<Relationship Id="rId4" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/custom-properties" Target="docProps/custom.xml"/>
+			</Relationships>
+		</pkg:xmlData>
+	</pkg:part>
+	<pkg:part pkg:name="/word/_rels/document.xml.rels" pkg:contentType="application/vnd.openxmlformats-package.relationships+xml">
+		<pkg:xmlData>
+			<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">
+				<Relationship Id="rId9" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/theme" Target="theme/theme1.xml"/>
+				<Relationship Id="rId8" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/footer" Target="footer2.xml"/>
+				<Relationship Id="rId7" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/footer" Target="footer1.xml"/>
+				<Relationship Id="rId6" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/header" Target="header2.xml"/>
+				<Relationship Id="rId5" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/header" Target="header1.xml"/>
+				<Relationship Id="rId4" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/endnotes" Target="endnotes.xml"/>
+				<Relationship Id="rId3" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/footnotes" Target="footnotes.xml"/>
+				<Relationship Id="rId2" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/settings" Target="settings.xml"/>
+				<Relationship Id="rId12" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/fontTable" Target="fontTable.xml"/>
+				<Relationship Id="rId11" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/numbering" Target="numbering.xml"/>
+				<Relationship Id="rId10" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/customXml" Target="../customXml/item1.xml"/>
+				<Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/styles" Target="styles.xml"/>
+			</Relationships>
+		</pkg:xmlData>
+	</pkg:part>
+	<pkg:part pkg:name="/word/document.xml" pkg:contentType="application/vnd.openxmlformats-officedocument.wordprocessingml.document.main+xml">
+		<pkg:xmlData>
+			<w:document xmlns:wpc="http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:wp14="http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing" xmlns:wp="http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing" xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main" xmlns:w14="http://schemas.microsoft.com/office/word/2010/wordml" xmlns:w10="urn:schemas-microsoft-com:office:word" xmlns:w15="http://schemas.microsoft.com/office/word/2012/wordml" xmlns:wpg="http://schemas.microsoft.com/office/word/2010/wordprocessingGroup" xmlns:wpi="http://schemas.microsoft.com/office/word/2010/wordprocessingInk" xmlns:wne="http://schemas.microsoft.com/office/word/2006/wordml" xmlns:wps="http://schemas.microsoft.com/office/word/2010/wordprocessingShape" xmlns:wpsCustomData="http://www.wps.cn/officeDocument/2013/wpsCustomData" mc:Ignorable="w14 w15 wp14">
+				<w:body>
+					<w:p>
+						<w:pPr>
+							<w:rPr>
+								<w:rFonts w:ascii="仿宋" w:hAnsi="仿宋" w:eastAsia="仿宋"/>
+								<w:b/>
+								<w:bCs/>
+								<w:sz w:val="24"/>
+							</w:rPr>
+						</w:pPr>
+						<w:bookmarkStart w:id="0" w:name="_GoBack"/>
+						<w:bookmarkEnd w:id="0"/>
+						<w:r>
+							<w:rPr>
+								<w:rFonts w:hint="eastAsia" w:ascii="仿宋" w:hAnsi="仿宋" w:eastAsia="仿宋"/>
+								<w:b/>
+								<w:bCs/>
+								<w:sz w:val="24"/>
+							</w:rPr>
+							<w:t>一、题目：</w:t>
+						</w:r>
+						<w:r>
+							<w:rPr>
+								<w:rFonts w:hint="eastAsia" w:ascii="仿宋" w:hAnsi="仿宋" w:eastAsia="仿宋"/>
+								<w:b/>
+								<w:bCs/>
+								<w:sz w:val="24"/>
+								<w:lang w:val="en-US" w:eastAsia="zh-CN"/>
+							</w:rPr>
+							<w:t>生存分析中保形预测方法的系统性研究</w:t>
+						</w:r>
+						<w:r>
+							<w:rPr>
+								<w:rFonts w:ascii="仿宋" w:hAnsi="仿宋" w:eastAsia="仿宋"/>
+								<w:b/>
+								<w:bCs/>
+								<w:sz w:val="24"/>
+							</w:rPr>
+							<w:fldChar w:fldCharType="begin"/>
+						</w:r>
+						<w:r>
+							<w:rPr>
+								<w:rFonts w:ascii="仿宋" w:hAnsi="仿宋" w:eastAsia="仿宋"/>
+								<w:b/>
+								<w:bCs/>
+								<w:sz w:val="24"/>
+							</w:rPr>
+							<w:instrText xml:space="preserve"> MERGEFIELD  \</w:instrText>
+						</w:r>
+						<w:r>
+							<w:rPr>
+								<w:rFonts w:hint="eastAsia" w:ascii="仿宋" w:hAnsi="仿宋" w:eastAsia="仿宋"/>
+								<w:b/>
+								<w:bCs/>
+								<w:sz w:val="24"/>
+							</w:rPr>
+							<w:instrText xml:space="preserve">题目</w:instrText>
+						</w:r>
+						<w:r>
+							<w:rPr>
+								<w:rFonts w:ascii="仿宋" w:hAnsi="仿宋" w:eastAsia="仿宋"/>
+								<w:b/>
+								<w:bCs/>
+								<w:sz w:val="24"/>
+							</w:rPr>
+							<w:fldChar w:fldCharType="end"/>
+						</w:r>
+					</w:p>
+					<w:p>
+						<w:pPr>
+							<w:rPr>
+								<w:rFonts w:ascii="仿宋" w:hAnsi="仿宋" w:eastAsia="仿宋"/>
+								<w:b/>
+								<w:bCs/>
+								<w:sz w:val="32"/>
+							</w:rPr>
+						</w:pPr>
+						<w:r>
+							<w:rPr>
+								<w:rFonts w:hint="eastAsia" w:ascii="仿宋" w:hAnsi="仿宋" w:eastAsia="仿宋"/>
+								<w:b/>
+								<w:bCs/>
+								<w:sz w:val="24"/>
+							</w:rPr>
+							<w:t>二、指导教师对文献综述</w:t>
+						</w:r>
+						<w:r>
+							<w:rPr>
+								<w:rFonts w:hint="eastAsia" w:ascii="仿宋" w:hAnsi="仿宋" w:eastAsia="仿宋"/>
+								<w:b/>
+								<w:bCs/>
+								<w:sz w:val="24"/>
+								<w:lang w:val="en-US" w:eastAsia="zh-CN"/>
+							</w:rPr>
+							<w:t>和开题报告的具体内容要求</w:t>
+						</w:r>
+					</w:p>
+					<w:p>
+						<w:pPr>
+							<w:ind w:firstLine="420" w:firstLineChars="0"/>
+							<w:rPr>
+								<w:rFonts w:hint="default" w:ascii="仿宋" w:hAnsi="仿宋" w:eastAsia="仿宋"/>
+								<w:bCs/>
+								<w:sz w:val="24"/>
+								<w:lang w:val="en-US" w:eastAsia="zh-CN"/>
+							</w:rPr>
+						</w:pPr>
+						<w:r>
+							<w:rPr>
+								<w:rFonts w:hint="eastAsia" w:ascii="仿宋" w:hAnsi="仿宋" w:eastAsia="仿宋"/>
+								<w:bCs/>
+								<w:sz w:val="24"/>
+								<w:lang w:val="en-US" w:eastAsia="zh-CN"/>
+							</w:rPr>
+							<w:t>文献综述要求：<w:br/>根据阅读的国内外文献撰写文献综述报告，要求根据主题展开，文献综述内容要切题，包括<w:br/>（1）简述与survival analysis 和 conformal prediction 相关的近几年的论文的研究内容和相关进展，掌握当前该领域的研究前沿，分析你毕业论文研究的内容与这些论文的差异和相关。<w:br/>（2）分析与 survival analysis、conformal prediction 和具体要研究的 conformalized survival analysis相关的论文所采用的研究方法，简述这些方法的优劣和你的思考。<w:br/>（3）简述各参考文献的创新性、存在的问题或未能解决的问题。<w:br/>（4）要求翻译其中的一篇外文文献，结构完整，语句通顺。<w:br/><w:br/>参考文献：<w:br/><w:br/>Moore, D. F. (2016). Applied Survival Analysis Using R. Springer International Publishing. https://doi.org/10.1007/978-3-319-31245-3<w:br/>Angelopoulos, A. N., &amp; Bates, S. (2022). A Gentle Introduction to Conformal Prediction and Distribution-Free Uncertainty Quantification (No. arXiv:2107.07511). arXiv. https://doi.org/10.48550/arXiv.2107.07511<w:br/>Lei, J., G’Sell, M., Rinaldo, A., Tibshirani, R. J., &amp; Wasserman, L. (2018). Distribution-Free Predictive Inference for Regression. Journal of the American Statistical Association, 113(523), 1094–1111. https://doi.org/10.1080/01621459.2017.1307116<w:br/>Candès, E., Lei, L., &amp; Ren, Z. (2023). Conformalized survival analysis. Journal of the Royal Statistical Society Series B: Statistical Methodology, 85(1), 24–45. https://doi.org/10.1093/jrsssb/qkac004<w:br/><w:br/><w:br/>开题报告要求：<w:br/>（1）分析survival analysis、conformal prediction 和具体要研究 conformalized survival analysis 的统计方法的意义（包括理论意义和实际意义，并分析课题与本专业的关系）<w:br/>（2）根据文献综述分析课题的研究背景（即要解决什么问题？本文所讨论问题的角度与已有参考文献中所涉及的问题的差异，课题的主要创新点是什么？）<w:br/>（3）选题的可行性分析（一般从数据的可获得性、研究技术的可行性等方面去说明）。<w:br/>（4）主要研究内容（展开写，主要包括理论研究内容、实证分析内容等）。<w:br/>（5）根据研究的内容写出具体的实施计划。<w:br/>（6）明确论文最后预期结果。</w:t>
+						</w:r>
+						
+						
+					</w:p>
+					<w:p>
+						<w:pPr>
+							<w:ind w:firstLine="420" w:firstLineChars="0"/>
+							<w:rPr>
+								<w:rFonts w:hint="default" w:ascii="仿宋" w:hAnsi="仿宋" w:eastAsia="仿宋"/>
+								<w:bCs/>
+								<w:sz w:val="24"/>
+								<w:lang w:val="en-US" w:eastAsia="zh-CN"/>
+							</w:rPr>
+						</w:pPr>
+					</w:p>
+					<w:p>
+						<w:pPr>
+							<w:ind w:firstLine="480" w:firstLineChars="200"/>
+							<w:rPr>
+								<w:rFonts w:ascii="仿宋" w:hAnsi="仿宋" w:eastAsia="仿宋"/>
+								<w:bCs/>
+								<w:sz w:val="24"/>
+							</w:rPr>
+						</w:pPr>
+					</w:p>
+					<w:p>
+						<w:pPr>
+							<w:ind w:firstLine="480" w:firstLineChars="200"/>
+							<w:rPr>
+								<w:rFonts w:ascii="仿宋" w:hAnsi="仿宋" w:eastAsia="仿宋"/>
+								<w:bCs/>
+								<w:sz w:val="24"/>
+							</w:rPr>
+						</w:pPr>
+					</w:p>
+					<w:p>
+						<w:pPr>
+							<w:ind w:firstLine="480" w:firstLineChars="200"/>
+							<w:rPr>
+								<w:rFonts w:ascii="仿宋" w:hAnsi="仿宋" w:eastAsia="仿宋"/>
+								<w:bCs/>
+								<w:sz w:val="24"/>
+							</w:rPr>
+						</w:pPr>
+					</w:p>
+					<w:p>
+						<w:pPr>
+							<w:ind w:firstLine="480" w:firstLineChars="200"/>
+							<w:rPr>
+								<w:rFonts w:ascii="仿宋" w:hAnsi="仿宋" w:eastAsia="仿宋"/>
+								<w:bCs/>
+								<w:sz w:val="24"/>
+							</w:rPr>
+						</w:pPr>
+					</w:p>
+					<w:p>
+						<w:pPr>
+							<w:ind w:firstLine="480" w:firstLineChars="200"/>
+							<w:rPr>
+								<w:rFonts w:ascii="仿宋" w:hAnsi="仿宋" w:eastAsia="仿宋"/>
+								<w:bCs/>
+								<w:sz w:val="24"/>
+							</w:rPr>
+						</w:pPr>
+					</w:p>
+					<w:p>
+						<w:pPr>
+							<w:ind w:firstLine="480" w:firstLineChars="200"/>
+							<w:rPr>
+								<w:rFonts w:ascii="仿宋" w:hAnsi="仿宋" w:eastAsia="仿宋"/>
+								<w:bCs/>
+								<w:sz w:val="24"/>
+							</w:rPr>
+						</w:pPr>
+					</w:p>
+					
+					<w:p>
+						<w:pPr>
+							<w:ind w:firstLine="480" w:firstLineChars="200"/>
+							<w:rPr>
+								<w:rFonts w:ascii="仿宋" w:hAnsi="仿宋" w:eastAsia="仿宋"/>
+								<w:sz w:val="24"/>
+							</w:rPr>
+						</w:pPr>
+						<w:r>
+							<w:rPr>
+								<w:rFonts w:ascii="仿宋" w:hAnsi="仿宋" w:eastAsia="仿宋"/>
+								<w:bCs/>
+								<w:sz w:val="24"/>
+							</w:rPr>
+							<w:fldChar w:fldCharType="begin"/>
+						</w:r>
+						<w:r>
+							<w:rPr>
+								<w:rFonts w:ascii="仿宋" w:hAnsi="仿宋" w:eastAsia="仿宋"/>
+								<w:bCs/>
+								<w:sz w:val="24"/>
+							</w:rPr>
+							<w:instrText xml:space="preserve"> MERGEFIELD  \</w:instrText>
+						</w:r>
+						<w:r>
+							<w:rPr>
+								<w:rFonts w:hint="eastAsia" w:ascii="仿宋" w:hAnsi="仿宋" w:eastAsia="仿宋"/>
+								<w:bCs/>
+								<w:sz w:val="24"/>
+							</w:rPr>
+							<w:instrText xml:space="preserve">任务要求</w:instrText>
+						</w:r>
+						<w:r>
+							<w:rPr>
+								<w:rFonts w:ascii="仿宋" w:hAnsi="仿宋" w:eastAsia="仿宋"/>
+								<w:bCs/>
+								<w:sz w:val="24"/>
+							</w:rPr>
+							<w:fldChar w:fldCharType="end"/>
+						</w:r>
+					</w:p>
+					<w:p>
+						<w:pPr>
+							<w:ind w:firstLine="480" w:firstLineChars="200"/>
+							<w:rPr>
+								<w:rFonts w:ascii="仿宋" w:hAnsi="仿宋" w:eastAsia="仿宋"/>
+								<w:bCs/>
+								<w:sz w:val="24"/>
+							</w:rPr>
+						</w:pPr>
+					</w:p>
+					<w:p>
+						<w:pPr>
+							<w:ind w:firstLine="480" w:firstLineChars="200"/>
+							<w:rPr>
+								<w:rFonts w:ascii="仿宋" w:hAnsi="仿宋" w:eastAsia="仿宋"/>
+								<w:bCs/>
+								<w:sz w:val="24"/>
+							</w:rPr>
+						</w:pPr>
+						<w:r>
+							<w:rPr>
+								<w:rFonts w:ascii="仿宋" w:hAnsi="仿宋" w:eastAsia="仿宋"/>
+								<w:bCs/>
+								<w:sz w:val="24"/>
+							</w:rPr>
+							<w:fldChar w:fldCharType="begin"/>
+						</w:r>
+						<w:r>
+							<w:rPr>
+								<w:rFonts w:ascii="仿宋" w:hAnsi="仿宋" w:eastAsia="仿宋"/>
+								<w:bCs/>
+								<w:sz w:val="24"/>
+							</w:rPr>
+							<w:instrText xml:space="preserve"> MERGEFIELD  \</w:instrText>
+						</w:r>
+						<w:r>
+							<w:rPr>
+								<w:rFonts w:hint="eastAsia" w:ascii="仿宋" w:hAnsi="仿宋" w:eastAsia="仿宋"/>
+								<w:bCs/>
+								<w:sz w:val="24"/>
+							</w:rPr>
+							<w:instrText xml:space="preserve">系所意见</w:instrText>
+						</w:r>
+						<w:r>
+							<w:rPr>
+								<w:rFonts w:ascii="仿宋" w:hAnsi="仿宋" w:eastAsia="仿宋"/>
+								<w:bCs/>
+								<w:sz w:val="24"/>
+							</w:rPr>
+							<w:fldChar w:fldCharType="end"/>
+						</w:r>
+					</w:p>
+					<w:p>
+						<w:pPr>
+							<w:spacing w:beforeLines="50"/>
+							<w:ind w:firstLine="4478" w:firstLineChars="1866"/>
+							<w:rPr>
+								<w:rFonts w:ascii="仿宋" w:hAnsi="仿宋" w:eastAsia="仿宋"/>
+								<w:b/>
+								<w:bCs/>
+								<w:sz w:val="24"/>
+								<w:u w:val="wave"/>
+							</w:rPr>
+						</w:pPr>
+						<w:r>
+							<w:rPr>
+								<w:rFonts w:hint="eastAsia" w:ascii="仿宋" w:hAnsi="仿宋" w:eastAsia="仿宋"/>
+								<w:b/>
+								<w:bCs/>
+								<w:sz w:val="24"/>
+								<w:lang w:val="en-US" w:eastAsia="zh-CN"/>
+							</w:rPr>
+							<w:t>指导教师</w:t>
+						</w:r>
+						<w:r>
+							<w:rPr>
+								<w:rFonts w:hint="eastAsia" w:ascii="仿宋" w:hAnsi="仿宋" w:eastAsia="仿宋"/>
+								<w:sz w:val="24"/>
+							</w:rPr>
+							<w:t>（</w:t>
+						</w:r>
+						<w:r>
+							<w:rPr>
+								<w:rFonts w:hint="eastAsia" w:ascii="仿宋" w:hAnsi="仿宋" w:eastAsia="仿宋"/>
+								<w:b/>
+								<w:bCs/>
+								<w:sz w:val="24"/>
+							</w:rPr>
+							<w:t>签名）</w:t>
+						</w:r>
+						<w:r>
+							<w:rPr>
+								<w:rFonts w:hint="eastAsia" w:ascii="仿宋" w:hAnsi="仿宋" w:eastAsia="仿宋"/>
+								<w:bCs/>
+								<w:sz w:val="24"/>
+								<w:u w:val="single"/>
+							</w:rPr>
+							<w:t xml:space="preserve">                </w:t>
+						</w:r>
+					</w:p>
+					<w:p>
+						<w:pPr>
+							<w:ind w:firstLine="6583" w:firstLineChars="2743"/>
+							<w:rPr>
+								<w:rFonts w:ascii="仿宋" w:hAnsi="仿宋" w:eastAsia="仿宋"/>
+								<w:color w:val="FF0000"/>
+								<w:sz w:val="24"/>
+							</w:rPr>
+						</w:pPr>
+						<w:r>
+							<w:rPr>
+								<w:rFonts w:hint="eastAsia" w:ascii="仿宋" w:hAnsi="仿宋" w:eastAsia="仿宋"/>
+								<w:b/>
+								<w:bCs/>
+								<w:sz w:val="24"/>
+							</w:rPr>
+							<w:t>年   月   日</w:t>
+						</w:r>
+					</w:p>
+					<w:sectPr>
+						<w:headerReference r:id="rId5" w:type="default"/>
+						<w:footerReference r:id="rId7" w:type="default"/>
+						<w:headerReference r:id="rId6" w:type="even"/>
+						<w:footerReference r:id="rId8" w:type="even"/>
+						<w:pgSz w:w="11906" w:h="16838"/>
+						<w:pgMar w:top="1440" w:right="1800" w:bottom="1440" w:left="1800" w:header="1134" w:footer="680" w:gutter="0"/>
+						<w:pgNumType w:start="1"/>
+						<w:cols w:space="425" w:num="1"/>
+						<w:docGrid w:type="linesAndChars" w:linePitch="312" w:charSpace="0"/>
+					</w:sectPr>
+				</w:body>
+			</w:document>
+		</pkg:xmlData>
+	</pkg:part>
+	<pkg:part pkg:name="/customXml/_rels/item1.xml.rels" pkg:contentType="application/vnd.openxmlformats-package.relationships+xml">
+		<pkg:xmlData>
+			<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">
+				<Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/customXmlProps" Target="itemProps1.xml"/>
+			</Relationships>
+		</pkg:xmlData>
+	</pkg:part>
+	<pkg:part pkg:name="/customXml/item1.xml" pkg:contentType="application/xml">
+		<pkg:xmlData>
+			<s:customData xmlns="http://www.wps.cn/officeDocument/2013/wpsCustomData" xmlns:s="http://www.wps.cn/officeDocument/2013/wpsCustomData">
+				<customSectProps>
+					<customSectPr/>
+				</customSectProps>
+			</s:customData>
+		</pkg:xmlData>
+	</pkg:part>
+	<pkg:part pkg:name="/customXml/itemProps1.xml" pkg:contentType="application/vnd.openxmlformats-officedocument.customXmlProperties+xml">
+		<pkg:xmlData>
+			<ds:datastoreItem ds:itemID="{B1977F7D-205B-4081-913C-38D41E755F92}" xmlns:ds="http://schemas.openxmlformats.org/officeDocument/2006/customXml">
+				<ds:schemaRefs>
+					<ds:schemaRef ds:uri="http://www.wps.cn/officeDocument/2013/wpsCustomData"/>
+				</ds:schemaRefs>
+			</ds:datastoreItem>
+		</pkg:xmlData>
+	</pkg:part>
+	<pkg:part pkg:name="/docProps/app.xml" pkg:contentType="application/vnd.openxmlformats-officedocument.extended-properties+xml">
+		<pkg:xmlData>
+			<Properties xmlns="http://schemas.openxmlformats.org/officeDocument/2006/extended-properties" xmlns:vt="http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes">
+				<Template>Normal</Template>
+				<Pages>1</Pages>
+				<Words>39</Words>
+				<Characters>39</Characters>
+				<Lines>1</Lines>
+				<Paragraphs>1</Paragraphs>
+				<TotalTime>6</TotalTime>
+				<ScaleCrop>false</ScaleCrop>
+				<LinksUpToDate>false</LinksUpToDate>
+				<CharactersWithSpaces>61</CharactersWithSpaces>
+				<Application>WPS Office_11.1.0.10938_F1E327BC-269C-435d-A152-05C5408002CA</Application>
+				<DocSecurity>0</DocSecurity>
+			</Properties>
+		</pkg:xmlData>
+	</pkg:part>
+	<pkg:part pkg:name="/docProps/core.xml" pkg:contentType="application/vnd.openxmlformats-package.core-properties+xml">
+		<pkg:xmlData>
+			<cp:coreProperties xmlns:cp="http://schemas.openxmlformats.org/package/2006/metadata/core-properties" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:dcmitype="http://purl.org/dc/dcmitype/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+				<dcterms:created xsi:type="dcterms:W3CDTF">2018-09-28T05:53:00Z</dcterms:created>
+				<dc:creator>陈智峰</dc:creator>
+				<cp:lastModifiedBy>1527</cp:lastModifiedBy>
+				<cp:lastPrinted>2018-06-06T05:40:00Z</cp:lastPrinted>
+				<dcterms:modified xsi:type="dcterms:W3CDTF">2025-01-08T10:55:41Z</dcterms:modified>
+				<dc:title>浙江大学研究生学位论文编写规则</dc:title>
+				<cp:revision>14</cp:revision>
+			</cp:coreProperties>
+		</pkg:xmlData>
+	</pkg:part>
+	<pkg:part pkg:name="/docProps/custom.xml" pkg:contentType="application/vnd.openxmlformats-officedocument.custom-properties+xml">
+		<pkg:xmlData>
+			<Properties xmlns="http://schemas.openxmlformats.org/officeDocument/2006/custom-properties" xmlns:vt="http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes">
+				<property fmtid="{D5CDD505-2E9C-101B-9397-08002B2CF9AE}" pid="2" name="KSOProductBuildVer">
+					<vt:lpwstr>2052-11.1.0.10938</vt:lpwstr>
+				</property>
+				<property fmtid="{D5CDD505-2E9C-101B-9397-08002B2CF9AE}" pid="3" name="ICV">
+					<vt:lpwstr>887432B3D0D74B838F4A5CFB7357D53C</vt:lpwstr>
+				</property>
+			</Properties>
+		</pkg:xmlData>
+	</pkg:part>
+	<pkg:part pkg:name="/docProps/thumbnail.wmf" pkg:contentType="image/x-wmf">
+		<pkg:binaryData>AQAJAAADgjgAAAQAFhAAAAAAFhAAACYGDwAiIFdNRkMBAAAAAAABABWIAAAAAAQAAAAAIAAAiEEA
+AIhhAAABAAAAiAAAAAAAAAAAAAAATwAAAHAAAAAAAAAAAAAAACoIAACTCwAAIEVNRgAAAQCIYQAA
+qAQAAAQAAAAOAAAAbAAAAAAAAACABwAAOAQAAPwBAAAdAQAAAAAAAAAAAAAAAAAAYMAHADZcBABX
+AFAAUwAgAE8AZgBmAGkAYwBlACAARQBNAEYAXwAAADgAAAABAAAAOAAAAAAAAAA4AAAAAAAAAAAR
+AQABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlAAAADAAAAAEAAAAlAAAADAAAAAUAAIArAAAAGAAA
+AAAAAAAAAAAATQAAAG4AAAAjAAAAIAAAAA502jsAAAAAAAAAAA502jsAAAAAAAAAADsAAAAIAAAA
+GwAAABAAAAAAAAAAAAAAADYAAAAQAAAAgi4AAAAAAAA2AAAAEAAAAIIuAADGQQAANgAAABAAAAAA
+AAAAxkEAADYAAAAQAAAAAAAAAAAAAAA8AAAACAAAAEMAAAAMAAAABQAAACMAAAAgAAAADnTaOwAA
+AAAAAAAADnTaOwAAAAAAAAAASwAAABAAAAAAAAAABQAAAEsAAAAQAAAAAAAAAAUAAAAjAAAAIAAA
+AA502jsAAAAAAAAAAA502jsAAAAAAAAAADsAAAAIAAAAGwAAABAAAAAAAAAAAAAAADYAAAAQAAAA
+gi4AAAAAAAA2AAAAEAAAAIIuAADGQQAANgAAABAAAAAAAAAAxkEAADYAAAAQAAAAAAAAAAAAAAA8
+AAAACAAAAEMAAAAMAAAABQAAACMAAAAgAAAADnTaOwAAAAAAAAAADnTaOwAAAAAAAAAASwAAABAA
+AAAAAAAABQAAAEsAAAAQAAAAAAAAAAUAAAAjAAAAIAAAAA502jsAAAAAAAAAAA502jsAAAAAAAAA
+ADsAAAAIAAAAGwAAABAAAAAAAAAAAAAAADYAAAAQAAAAgi4AAAAAAAA2AAAAEAAAAIIuAADGQQAA
+NgAAABAAAAAAAAAAxkEAADYAAAAQAAAAAAAAAAAAAAA8AAAACAAAAEMAAAAMAAAABQAAACMAAAAg
+AAAADnTaOwAAAAAAAAAADnTaOwAAAAAAAAAASwAAABAAAAAAAAAABQAAAEsAAAAQAAAAAAAAAAUA
+AAAjAAAAIAAAAA502jsAAAAAAAAAAA502jsAAAAAAAAAADsAAAAIAAAAGwAAABAAAAAAAAAAAAAA
+ADYAAAAQAAAAgi4AAAAAAAA2AAAAEAAAAIIuAADGQQAANgAAABAAAAAAAAAAxkEAADYAAAAQAAAA
+AAAAAAAAAAA8AAAACAAAAEMAAAAMAAAABQAAACMAAAAgAAAADnTaOwAAAAAAAAAADnTaOwAAAAAA
+AAAASwAAABAAAAAAAAAABQAAAEsAAAAQAAAAAAAAAAUAAAAjAAAAIAAAAA502jsAAAAAAAAAAA50
+2jsAAAAAAAAAADsAAAAIAAAAGwAAABAAAAAAAAAAAAAAADYAAAAQAAAAgi4AAAAAAAA2AAAAEAAA
+AIIuAADGQQAANgAAABAAAAAAAAAAxkEAADYAAAAQAAAAAAAAAAAAAAA8AAAACAAAAEMAAAAMAAAA
+BQAAACMAAAAgAAAADnTaOwAAAAAAAAAADnTaOwAAAAAAAAAASwAAABAAAAAAAAAABQAAAEsAAAAQ
+AAAAAAAAAAUAAAAjAAAAIAAAAA502jsAAAAAAAAAAA502jsAAAAAAAAAADsAAAAIAAAAGwAAABAA
+AAAAAAAAAAAAADYAAAAQAAAAgi4AAAAAAAA2AAAAEAAAAIIuAADGQQAANgAAABAAAAAAAAAAxkEA
+ADYAAAAQAAAAAAAAAAAAAAA8AAAACAAAAEMAAAAMAAAABQAAACMAAAAgAAAADnTaOwAAAAAAAAAA
+DnTaOwAAAAAAAAAASwAAABAAAAAAAAAABQAAAEsAAAAQAAAAAAAAAAUAAAAjAAAAIAAAAA502jsA
+AAAAAAAAAA502jsAAAAAAAAAADsAAAAIAAAAGwAAABAAAAAAAAAAAAAAADYAAAAQAAAAgi4AAAAA
+AAA2AAAAEAAAAIIuAADGQQAANgAAABAAAAAAAAAAxkEAADYAAAAQAAAAAAAAAAAAAAA8AAAACAAA
+AEMAAAAMAAAABQAAACMAAAAgAAAADnTaOwAAAAAAAAAADnTaOwAAAAAAAAAASwAAABAAAAAAAAAA
+BQAAAEsAAAAQAAAAAAAAAAUAAAAjAAAAIAAAAA502jsAAAAAAAAAAA502jsAAAAAAAAAADsAAAAI
+AAAAGwAAABAAAAAAAAAAAAAAADYAAAAQAAAAgi4AAAAAAAA2AAAAEAAAAIIuAADGQQAANgAAABAA
+AAAAAAAAxkEAADYAAAAQAAAAAAAAAAAAAAA8AAAACAAAAEMAAAAMAAAABQAAACMAAAAgAAAADnTa
+OwAAAAAAAAAADnTaOwAAAAAAAAAASwAAABAAAAAAAAAABQAAAEsAAAAQAAAAAAAAAAUAAAAjAAAA
+IAAAAA502jsAAAAAAAAAAA502jsAAAAAAAAAADsAAAAIAAAAGwAAABAAAAAAAAAAAAAAADYAAAAQ
+AAAAgi4AAAAAAAA2AAAAEAAAAIIuAADGQQAANgAAABAAAAAAAAAAxkEAADYAAAAQAAAAAAAAAAAA
+AAA8AAAACAAAAEMAAAAMAAAABQAAACMAAAAgAAAADnTaOwAAAAAAAAAADnTaOwAAAAAAAAAASwAA
+ABAAAAAAAAAABQAAAEsAAAAQAAAAAAAAAAUAAAAjAAAAIAAAAA502jsAAAAAAAAAAA502jsAAAAA
+AAAAADsAAAAIAAAAGwAAABAAAAAAAAAAAAAAADYAAAAQAAAAgi4AAAAAAAA2AAAAEAAAAIIuAADG
+QQAANgAAABAAAAAAAAAAxkEAADYAAAAQAAAAAAAAAAAAAAA8AAAACAAAAEMAAAAMAAAABQAAACMA
+AAAgAAAADnTaOwAAAAAAAAAADnTaOwAAAAAAAAAASwAAABAAAAAAAAAABQAAAEsAAAAQAAAAAAAA
+AAUAAAAjAAAAIAAAAA502jsAAAAAAAAAAA502jsAAAAAAAAAADsAAAAIAAAAGwAAABAAAAAAAAAA
+AAAAADYAAAAQAAAAgi4AAAAAAAA2AAAAEAAAAIIuAADGQQAANgAAABAAAAAAAAAAxkEAADYAAAAQ
+AAAAAAAAAAAAAAA8AAAACAAAAEMAAAAMAAAABQAAACMAAAAgAAAADnTaOwAAAAAAAAAADnTaOwAA
+AAAAAAAASwAAABAAAAAAAAAABQAAAEsAAAAQAAAAAAAAAAUAAAAjAAAAIAAAAA502jsAAAAAAAAA
+AA502jsAAAAAAAAAADsAAAAIAAAAGwAAABAAAAAAAAAAAAAAADYAAAAQAAAAgi4AAAAAAAA2AAAA
+EAAAAIIuAADGQQAANgAAABAAAAAAAAAAxkEAADYAAAAQAAAAAAAAAAAAAAA8AAAACAAAAEMAAAAM
+AAAABQAAACMAAAAgAAAADnTaOwAAAAAAAAAADnTaOwAAAAAAAAAASwAAABAAAAAAAAAABQAAAEsA
+AAAQAAAAAAAAAAUAAAAjAAAAIAAAAA502jsAAAAAAAAAAA502jsAAAAAAAAAADsAAAAIAAAAGwAA
+ABAAAAAAAAAAAAAAADYAAAAQAAAAgi4AAAAAAAA2AAAAEAAAAIIuAADGQQAANgAAABAAAAAAAAAA
+xkEAADYAAAAQAAAAAAAAAAAAAAA8AAAACAAAAEMAAAAMAAAABQAAACMAAAAgAAAADnTaOwAAAAAA
+AAAADnTaOwAAAAAAAAAASwAAABAAAAAAAAAABQAAAEsAAAAQAAAAAAAAAAUAAAAjAAAAIAAAAA50
+2jsAAAAAAAAAAA502jsAAAAAAAAAADsAAAAIAAAAGwAAABAAAAAAAAAAAAAAADYAAAAQAAAAgi4A
+AAAAAAA2AAAAEAAAAIIuAADGQQAANgAAABAAAAAAAAAAxkEAADYAAAAQAAAAAAAAAAAAAAA8AAAA
+CAAAAEMAAAAMAAAABQAAACMAAAAgAAAADnTaOwAAAAAAAAAADnTaOwAAAAAAAAAASwAAABAAAAAA
+AAAABQAAAEsAAAAQAAAAAAAAAAUAAAAjAAAAIAAAAA502jsAAAAAAAAAAA502jsAAAAAAAAAADsA
+AAAIAAAAGwAAABAAAAAAAAAAAAAAADYAAAAQAAAAgi4AAAAAAAA2AAAAEAAAAIIuAADGQQAANgAA
+ABAAAAAAAAAAxkEAADYAAAAQAAAAAAAAAAAAAAA8AAAACAAAAEMAAAAMAAAABQAAACMAAAAgAAAA
+DnTaOwAAAAAAAAAADnTaOwAAAAAAAAAASwAAABAAAAAAAAAABQAAAEsAAAAQAAAAAAAAAAUAAAAj
+AAAAIAAAAA502jsAAAAAAAAAAA502jsAAAAAAAAAADsAAAAIAAAAGwAAABAAAAAAAAAAAAAAADYA
+AAAQAAAAgi4AAAAAAAA2AAAAEAAAAIIuAADGQQAANgAAABAAAAAAAAAAxkEAADYAAAAQAAAAAAAA
+AAAAAAA8AAAACAAAAEMAAAAMAAAABQAAACMAAAAgAAAADnTaOwAAAAAAAAAADnTaOwAAAAAAAAAA
+SwAAABAAAAAAAAAABQAAAEsAAAAQAAAAAAAAAAUAAAAjAAAAIAAAAA502jsAAAAAAAAAAA502jsA
+AAAAAAAAADsAAAAIAAAAGwAAABAAAAAAAAAAAAAAADYAAAAQAAAAgi4AAAAAAAA2AAAAEAAAAIIu
+AADGQQAANgAAABAAAAAAAAAAxkEAADYAAAAQAAAAAAAAAAAAAAA8AAAACAAAAEMAAAAMAAAABQAA
+ACMAAAAgAAAADnTaOwAAAAAAAAAADnTaOwAAAAAAAAAASwAAABAAAAAAAAAABQAAAEsAAAAQAAAA
+AAAAAAUAAAAjAAAAIAAAAA502jsAAAAAAAAAAA502jsAAAAAAAAAADsAAAAIAAAAGwAAABAAAAAA
+AAAAAAAAADYAAAAQAAAAgi4AAAAAAAA2AAAAEAAAAIIuAADGQQAANgAAABAAAAAAAAAAxkEAADYA
+AAAQAAAAAAAAAAAAAAA8AAAACAAAAEMAAAAMAAAABQAAACMAAAAgAAAADnTaOwAAAAAAAAAADnTa
+OwAAAAAAAAAASwAAABAAAAAAAAAABQAAAEsAAAAQAAAAAAAAAAUAAAAjAAAAIAAAAA502jsAAAAA
+AAAAAA502jsAAAAAAAAAADsAAAAIAAAAGwAAABAAAAAAAAAAAAAAADYAAAAQAAAAgi4AAAAAAAA2
+AAAAEAAAAIIuAADGQQAANgAAABAAAAAAAAAAxkEAADYAAAAQAAAAAAAAAAAAAAA8AAAACAAAAEMA
+AAAMAAAABQAAACMAAAAgAAAADnTaOwAAAAAAAAAADnTaOwAAAAAAAAAASwAAABAAAAAAAAAABQAA
+AEsAAAAQAAAAAAAAAAUAAAAjAAAAIAAAAA502jsAAAAAAAAAAA502jsAAAAAAAAAADsAAAAIAAAA
+GwAAABAAAAAAAAAAAAAAADYAAAAQAAAAgi4AAAAAAAA2AAAAEAAAAIIuAADGQQAANgAAABAAAAAA
+AAAAxkEAADYAAAAQAAAAAAAAAAAAAAA8AAAACAAAAEMAAAAMAAAABQAAACMAAAAgAAAADnTaOwAA
+AAAAAAAADnTaOwAAAAAAAAAASwAAABAAAAAAAAAABQAAAEsAAAAQAAAAAAAAAAUAAAAjAAAAIAAA
+AA502jsAAAAAAAAAAA502jsAAAAAAAAAADsAAAAIAAAAGwAAABAAAAAAAAAAAAAAADYAAAAQAAAA
+gi4AAAAAAAA2AAAAEAAAAIIuAADGQQAANgAAABAAAAAAAAAAxkEAADYAAAAQAAAAAAAAAAAAAAA8
+AAAACAAAAEMAAAAMAAAABQAAACMAAAAgAAAADnTaOwAAAAAAAAAADnTaOwAAAAAAAAAASwAAABAA
+AAAAAAAABQAAAEsAAAAQAAAAAAAAAAUAAAAjAAAAIAAAAA502jsAAAAAAAAAAA502jsAAAAAAAAA
+ADsAAAAIAAAAGwAAABAAAAAAAAAAAAAAADYAAAAQAAAAgi4AAAAAAAA2AAAAEAAAAIIuAADGQQAA
+NgAAABAAAAAAAAAAxkEAADYAAAAQAAAAAAAAAAAAAAA8AAAACAAAAEMAAAAMAAAABQAAACMAAAAg
+AAAADnTaOwAAAAAAAAAADnTaOwAAAAAAAAAASwAAABAAAAAAAAAABQAAAEsAAAAQAAAAAAAAAAUA
+AAAjAAAAIAAAAA502jsAAAAAAAAAAA502jsAAAAAAAAAADsAAAAIAAAAGwAAABAAAAAAAAAAAAAA
+ADYAAAAQAAAAgi4AAAAAAAA2AAAAEAAAAIIuAADGQQAANgAAABAAAAAAAAAAxkEAADYAAAAQAAAA
+AAAAAAAAAAA8AAAACAAAAEMAAAAMAAAABQAAACMAAAAgAAAADnTaOwAAAAAAAAAADnTaOwAAAAAA
+AAAASwAAABAAAAAAAAAABQAAAEsAAAAQAAAAAAAAAAUAAAAjAAAAIAAAAA502jsAAAAAAAAAAA50
+2jsAAAAAAAAAADsAAAAIAAAAGwAAABAAAAAAAAAAAAAAADYAAAAQAAAAgi4AAAAAAAA2AAAAEAAA
+AIIuAADGQQAANgAAABAAAAAAAAAAxkEAADYAAAAQAAAAAAAAAAAAAAA8AAAACAAAAEMAAAAMAAAA
+BQAAACMAAAAgAAAADnTaOwAAAAAAAAAADnTaOwAAAAAAAAAASwAAABAAAAAAAAAABQAAAEsAAAAQ
+AAAAAAAAAAUAAAAjAAAAIAAAAA502jsAAAAAAAAAAA502jsAAAAAAAAAADsAAAAIAAAAGwAAABAA
+AAAAAAAAAAAAADYAAAAQAAAAgi4AAAAAAAA2AAAAEAAAAIIuAADGQQAANgAAABAAAAAAAAAAxkEA
+ADYAAAAQAAAAAAAAAAAAAAA8AAAACAAAAEMAAAAMAAAABQAAACMAAAAgAAAADnTaOwAAAAAAAAAA
+DnTaOwAAAAAAAAAASwAAABAAAAAAAAAABQAAAEsAAAAQAAAAAAAAAAUAAAAjAAAAIAAAAA502jsA
+AAAAAAAAAA502jsAAAAAAAAAADsAAAAIAAAAGwAAABAAAAAAAAAAAAAAADYAAAAQAAAAgi4AAAAA
+AAA2AAAAEAAAAIIuAADGQQAANgAAABAAAAAAAAAAxkEAADYAAAAQAAAAAAAAAAAAAAA8AAAACAAA
+AEMAAAAMAAAABQAAACMAAAAgAAAADnTaOwAAAAAAAAAADnTaOwAAAAAAAAAASwAAABAAAAAAAAAA
+BQAAAEsAAAAQAAAAAAAAAAUAAAAjAAAAIAAAAA502jsAAAAAAAAAAA502jsAAAAAAAAAADsAAAAI
+AAAAGwAAABAAAAAAAAAAAAAAADYAAAAQAAAAgi4AAAAAAAA2AAAAEAAAAIIuAADGQQAANgAAABAA
+AAAAAAAAxkEAADYAAAAQAAAAAAAAAAAAAAA8AAAACAAAAEMAAAAMAAAABQAAACMAAAAgAAAADnTa
+OwAAAAAAAAAADnTaOwAAAAAAAAAASwAAABAAAAAAAAAABQAAAEsAAAAQAAAAAAAAAAUAAAAjAAAA
+IAAAAA502jsAAAAAAAAAAA502jsAAAAAAAAAADsAAAAIAAAAGwAAABAAAAAAAAAAAAAAADYAAAAQ
+AAAAgi4AAAAAAAA2AAAAEAAAAIIuAADGQQAANgAAABAAAAAAAAAAxkEAADYAAAAQAAAAAAAAAAAA
+AAA8AAAACAAAAEMAAAAMAAAABQAAACMAAAAgAAAADnTaOwAAAAAAAAAADnTaOwAAAAAAAAAASwAA
+ABAAAAAAAAAABQAAAEsAAAAQAAAAAAAAAAUAAAAjAAAAIAAAAA502jsAAAAAAAAAAA502jsAAAAA
+AAAAADsAAAAIAAAAGwAAABAAAAAAAAAAAAAAADYAAAAQAAAAgi4AAAAAAAA2AAAAEAAAAIIuAADG
+QQAANgAAABAAAAAAAAAAxkEAADYAAAAQAAAAAAAAAAAAAAA8AAAACAAAAEMAAAAMAAAABQAAACMA
+AAAgAAAADnTaOwAAAAAAAAAADnTaOwAAAAAAAAAASwAAABAAAAAAAAAABQAAAEsAAAAQAAAAAAAA
+AAUAAAAjAAAAIAAAAA502jsAAAAAAAAAAA502jsAAAAAAAAAADsAAAAIAAAAGwAAABAAAAAAAAAA
+AAAAADYAAAAQAAAAgi4AAAAAAAA2AAAAEAAAAIIuAADGQQAANgAAABAAAAAAAAAAxkEAADYAAAAQ
+AAAAAAAAAAAAAAA8AAAACAAAAEMAAAAMAAAABQAAACMAAAAgAAAADnTaOwAAAAAAAAAADnTaOwAA
+AAAAAAAASwAAABAAAAAAAAAABQAAAEsAAAAQAAAAAAAAAAUAAAAjAAAAIAAAAA502jsAAAAAAAAA
+AA502jsAAAAAAAAAADsAAAAIAAAAGwAAABAAAAAAAAAAAAAAADYAAAAQAAAAgi4AAAAAAAA2AAAA
+EAAAAIIuAADGQQAANgAAABAAAAAAAAAAxkEAADYAAAAQAAAAAAAAAAAAAAA8AAAACAAAAEMAAAAM
+AAAABQAAACMAAAAgAAAADnTaOwAAAAAAAAAADnTaOwAAAAAAAAAASwAAABAAAAAAAAAABQAAAEsA
+AAAQAAAAAAAAAAUAAAAjAAAAIAAAAA502jsAAAAAAAAAAA502jsAAAAAAAAAADsAAAAIAAAAGwAA
+ABAAAAAAAAAAAAAAADYAAAAQAAAAgi4AAAAAAAA2AAAAEAAAAIIuAADGQQAANgAAABAAAAAAAAAA
+xkEAADYAAAAQAAAAAAAAAAAAAAA8AAAACAAAAEMAAAAMAAAABQAAACMAAAAgAAAADnTaOwAAAAAA
+AAAADnTaOwAAAAAAAAAASwAAABAAAAAAAAAABQAAAEsAAAAQAAAAAAAAAAUAAAAjAAAAIAAAAA50
+2jsAAAAAAAAAAA502jsAAAAAAAAAADsAAAAIAAAAGwAAABAAAAAAAAAAAAAAADYAAAAQAAAAgi4A
+AAAAAAA2AAAAEAAAAIIuAADGQQAANgAAABAAAAAAAAAAxkEAADYAAAAQAAAAAAAAAAAAAAA8AAAA
+CAAAAEMAAAAMAAAABQAAACMAAAAgAAAADnTaOwAAAAAAAAAADnTaOwAAAAAAAAAASwAAABAAAAAA
+AAAABQAAAEsAAAAQAAAAAAAAAAUAAAAjAAAAIAAAAA502jsAAAAAAAAAAA502jsAAAAAAAAAADsA
+AAAIAAAAGwAAABAAAAAAAAAAAAAAADYAAAAQAAAAgi4AAAAAAAA2AAAAEAAAAIIuAADGQQAANgAA
+ABAAAAAAAAAAxkEAADYAAAAQAAAAAAAAAAAAAAA8AAAACAAAAEMAAAAMAAAABQAAACMAAAAgAAAA
+DnTaOwAAAAAAAAAADnTaOwAAAAAAAAAASwAAABAAAAAAAAAABQAAAEsAAAAQAAAAAAAAAAUAAAAj
+AAAAIAAAAA502jsAAAAAAAAAAA502jsAAAAAAAAAADsAAAAIAAAAGwAAABAAAAAAAAAAAAAAADYA
+AAAQAAAAgi4AAAAAAAA2AAAAEAAAAIIuAADGQQAANgAAABAAAAAAAAAAxkEAADYAAAAQAAAAAAAA
+AAAAAAA8AAAACAAAAEMAAAAMAAAABQAAACMAAAAgAAAADnTaOwAAAAAAAAAADnTaOwAAAAAAAAAA
+SwAAABAAAAAAAAAABQAAAEsAAAAQAAAAAAAAAAUAAAAjAAAAIAAAAA502jsAAAAAAAAAAA502jsA
+AAAAAAAAADsAAAAIAAAAGwAAABAAAAAAAAAAAAAAADYAAAAQAAAAgi4AAAAAAAA2AAAAEAAAAIIu
+AADGQQAANgAAABAAAAAAAAAAxkEAADYAAAAQAAAAAAAAAAAAAAA8AAAACAAAAEMAAAAMAAAABQAA
+ACMAAAAgAAAADnTaOwAAAAAAAAAADnTaOwAAAAAAAAAASwAAABAAAAAAAAAABQAAAEsAAAAQAAAA
+AAAAAAUAAAAjAAAAIAAAAA502jsAAAAAAAAAAA502jsAAAAAAAAAADsAAAAIAAAAGwAAABAAAAAA
+AAAAAAAAADYAAAAQAAAAgi4AAAAAAAA2AAAAEAAAAIIuAADGQQAANgAAABAAAAAAAAAAxkEAADYA
+AAAQAAAAAAAAAAAAAAA8AAAACAAAAEMAAAAMAAAABQAAACMAAAAgAAAADnTaOwAAAAAAAAAADnTa
+OwAAAAAAAAAASwAAABAAAAAAAAAABQAAAEsAAAAQAAAAAAAAAAUAAAAjAAAAIAAAAA502jsAAAAA
+AAAAAA502jsAAAAAAAAAADsAAAAIAAAAGwAAABAAAAAAAAAAAAAAADYAAAAQAAAAgi4AAAAAAAA2
+AAAAEAAAAIIuAADGQQAANgAAABAAAAAAAAAAxkEAADYAAAAQAAAAAAAAAAAAAAA8AAAACAAAAEMA
+AAAMAAAABQAAACMAAAAgAAAADnTaOwAAAAAAAAAADnTaOwAAAAAAAAAASwAAABAAAAAAAAAABQAA
+AEsAAAAQAAAAAAAAAAUAAAAjAAAAIAAAAA502jsAAAAAAAAAAA502jsAAAAAAAAAADsAAAAIAAAA
+GwAAABAAAAAAAAAAAAAAADYAAAAQAAAAgi4AAAAAAAA2AAAAEAAAAIIuAADGQQAANgAAABAAAAAA
+AAAAxkEAADYAAAAQAAAAAAAAAAAAAAA8AAAACAAAAEMAAAAMAAAABQAAACMAAAAgAAAADnTaOwAA
+AAAAAAAADnTaOwAAAAAAAAAASwAAABAAAAAAAAAABQAAAEsAAAAQAAAAAAAAABYQAAAmBg8AIiBX
+TUZDAQAAAAAAAQAAAAAAAAAEAAAAACAAAIghAACIYQAABQAAACMAAAAgAAAADnTaOwAAAAAAAAAA
+DnTaOwAAAAAAAAAAOwAAAAgAAAAbAAAAEAAAAAAAAAAAAAAANgAAABAAAACCLgAAAAAAADYAAAAQ
+AAAAgi4AAMZBAAA2AAAAEAAAAAAAAADGQQAANgAAABAAAAAAAAAAAAAAADwAAAAIAAAAQwAAAAwA
+AAAFAAAAIwAAACAAAAAOdNo7AAAAAAAAAAAOdNo7AAAAAAAAAABLAAAAEAAAAAAAAAAFAAAASwAA
+ABAAAAAAAAAABQAAACMAAAAgAAAADnTaOwAAAAAAAAAADnTaOwAAAAAAAAAAOwAAAAgAAAAbAAAA
+EAAAAAAAAAAAAAAANgAAABAAAACCLgAAAAAAADYAAAAQAAAAgi4AAMZBAAA2AAAAEAAAAAAAAADG
+QQAANgAAABAAAAAAAAAAAAAAADwAAAAIAAAAQwAAAAwAAAAFAAAAIwAAACAAAAAOdNo7AAAAAAAA
+AAAOdNo7AAAAAAAAAABLAAAAEAAAAAAAAAAFAAAASwAAABAAAAAAAAAABQAAACMAAAAgAAAADnTa
+OwAAAAAAAAAADnTaOwAAAAAAAAAAOwAAAAgAAAAbAAAAEAAAAAAAAAAAAAAANgAAABAAAACCLgAA
+AAAAADYAAAAQAAAAgi4AAMZBAAA2AAAAEAAAAAAAAADGQQAANgAAABAAAAAAAAAAAAAAADwAAAAI
+AAAAQwAAAAwAAAAFAAAAIwAAACAAAAAOdNo7AAAAAAAAAAAOdNo7AAAAAAAAAABLAAAAEAAAAAAA
+AAAFAAAASwAAABAAAAAAAAAABQAAACMAAAAgAAAADnTaOwAAAAAAAAAADnTaOwAAAAAAAAAAOwAA
+AAgAAAAbAAAAEAAAAAAAAAAAAAAANgAAABAAAACCLgAAAAAAADYAAAAQAAAAgi4AAMZBAAA2AAAA
+EAAAAAAAAADGQQAANgAAABAAAAAAAAAAAAAAADwAAAAIAAAAQwAAAAwAAAAFAAAAIwAAACAAAAAO
+dNo7AAAAAAAAAAAOdNo7AAAAAAAAAABLAAAAEAAAAAAAAAAFAAAASwAAABAAAAAAAAAABQAAACMA
+AAAgAAAADnTaOwAAAAAAAAAADnTaOwAAAAAAAAAAOwAAAAgAAAAbAAAAEAAAAAAAAAAAAAAANgAA
+ABAAAACCLgAAAAAAADYAAAAQAAAAgi4AAMZBAAA2AAAAEAAAAAAAAADGQQAANgAAABAAAAAAAAAA
+AAAAADwAAAAIAAAAQwAAAAwAAAAFAAAAIwAAACAAAAAOdNo7AAAAAAAAAAAOdNo7AAAAAAAAAABL
+AAAAEAAAAAAAAAAFAAAASwAAABAAAAAAAAAABQAAACMAAAAgAAAADnTaOwAAAAAAAAAADnTaOwAA
+AAAAAAAAOwAAAAgAAAAbAAAAEAAAAAAAAAAAAAAANgAAABAAAACCLgAAAAAAADYAAAAQAAAAgi4A
+AMZBAAA2AAAAEAAAAAAAAADGQQAANgAAABAAAAAAAAAAAAAAADwAAAAIAAAAQwAAAAwAAAAFAAAA
+IwAAACAAAAAOdNo7AAAAAAAAAAAOdNo7AAAAAAAAAABLAAAAEAAAAAAAAAAFAAAASwAAABAAAAAA
+AAAABQAAACMAAAAgAAAADnTaOwAAAAAAAAAADnTaOwAAAAAAAAAAOwAAAAgAAAAbAAAAEAAAAAAA
+AAAAAAAANgAAABAAAACCLgAAAAAAADYAAAAQAAAAgi4AAMZBAAA2AAAAEAAAAAAAAADGQQAANgAA
+ABAAAAAAAAAAAAAAADwAAAAIAAAAQwAAAAwAAAAFAAAAIwAAACAAAAAOdNo7AAAAAAAAAAAOdNo7
+AAAAAAAAAABLAAAAEAAAAAAAAAAFAAAASwAAABAAAAAAAAAABQAAACMAAAAgAAAADnTaOwAAAAAA
+AAAADnTaOwAAAAAAAAAAOwAAAAgAAAAbAAAAEAAAAAAAAAAAAAAANgAAABAAAACCLgAAAAAAADYA
+AAAQAAAAgi4AAMZBAAA2AAAAEAAAAAAAAADGQQAANgAAABAAAAAAAAAAAAAAADwAAAAIAAAAQwAA
+AAwAAAAFAAAAIwAAACAAAAAOdNo7AAAAAAAAAAAOdNo7AAAAAAAAAABLAAAAEAAAAAAAAAAFAAAA
+SwAAABAAAAAAAAAABQAAACMAAAAgAAAADnTaOwAAAAAAAAAADnTaOwAAAAAAAAAAOwAAAAgAAAAb
+AAAAEAAAAAAAAAAAAAAANgAAABAAAACCLgAAAAAAADYAAAAQAAAAgi4AAMZBAAA2AAAAEAAAAAAA
+AADGQQAANgAAABAAAAAAAAAAAAAAADwAAAAIAAAAQwAAAAwAAAAFAAAAIwAAACAAAAAOdNo7AAAA
+AAAAAAAOdNo7AAAAAAAAAABLAAAAEAAAAAAAAAAFAAAASwAAABAAAAAAAAAABQAAACMAAAAgAAAA
+DnTaOwAAAAAAAAAADnTaOwAAAAAAAAAAOwAAAAgAAAAbAAAAEAAAAAAAAAAAAAAANgAAABAAAACC
+LgAAAAAAADYAAAAQAAAAgi4AAMZBAAA2AAAAEAAAAAAAAADGQQAANgAAABAAAAAAAAAAAAAAADwA
+AAAIAAAAQwAAAAwAAAAFAAAAIwAAACAAAAAOdNo7AAAAAAAAAAAOdNo7AAAAAAAAAABLAAAAEAAA
+AAAAAAAFAAAASwAAABAAAAAAAAAABQAAACMAAAAgAAAADnTaOwAAAAAAAAAADnTaOwAAAAAAAAAA
+OwAAAAgAAAAbAAAAEAAAAAAAAAAAAAAANgAAABAAAACCLgAAAAAAADYAAAAQAAAAgi4AAMZBAAA2
+AAAAEAAAAAAAAADGQQAANgAAABAAAAAAAAAAAAAAADwAAAAIAAAAQwAAAAwAAAAFAAAAIwAAACAA
+AAAOdNo7AAAAAAAAAAAOdNo7AAAAAAAAAABLAAAAEAAAAAAAAAAFAAAASwAAABAAAAAAAAAABQAA
+ACMAAAAgAAAADnTaOwAAAAAAAAAADnTaOwAAAAAAAAAAOwAAAAgAAAAbAAAAEAAAAAAAAAAAAAAA
+NgAAABAAAACCLgAAAAAAADYAAAAQAAAAgi4AAMZBAAA2AAAAEAAAAAAAAADGQQAANgAAABAAAAAA
+AAAAAAAAADwAAAAIAAAAQwAAAAwAAAAFAAAAIwAAACAAAAAOdNo7AAAAAAAAAAAOdNo7AAAAAAAA
+AABLAAAAEAAAAAAAAAAFAAAASwAAABAAAAAAAAAABQAAACMAAAAgAAAADnTaOwAAAAAAAAAADnTa
+OwAAAAAAAAAAOwAAAAgAAAAbAAAAEAAAAAAAAAAAAAAANgAAABAAAACCLgAAAAAAADYAAAAQAAAA
+gi4AAMZBAAA2AAAAEAAAAAAAAADGQQAANgAAABAAAAAAAAAAAAAAADwAAAAIAAAAQwAAAAwAAAAF
+AAAAIwAAACAAAAAOdNo7AAAAAAAAAAAOdNo7AAAAAAAAAABLAAAAEAAAAAAAAAAFAAAASwAAABAA
+AAAAAAAABQAAACMAAAAgAAAADnTaOwAAAAAAAAAADnTaOwAAAAAAAAAAOwAAAAgAAAAbAAAAEAAA
+AAAAAAAAAAAANgAAABAAAACCLgAAAAAAADYAAAAQAAAAgi4AAMZBAAA2AAAAEAAAAAAAAADGQQAA
+NgAAABAAAAAAAAAAAAAAADwAAAAIAAAAQwAAAAwAAAAFAAAAIwAAACAAAAAOdNo7AAAAAAAAAAAO
+dNo7AAAAAAAAAABLAAAAEAAAAAAAAAAFAAAASwAAABAAAAAAAAAABQAAACMAAAAgAAAADnTaOwAA
+AAAAAAAADnTaOwAAAAAAAAAAOwAAAAgAAAAbAAAAEAAAAAAAAAAAAAAANgAAABAAAACCLgAAAAAA
+ADYAAAAQAAAAgi4AAMZBAAA2AAAAEAAAAAAAAADGQQAANgAAABAAAAAAAAAAAAAAADwAAAAIAAAA
+QwAAAAwAAAAFAAAAIwAAACAAAAAOdNo7AAAAAAAAAAAOdNo7AAAAAAAAAABLAAAAEAAAAAAAAAAF
+AAAASwAAABAAAAAAAAAABQAAACMAAAAgAAAADnTaOwAAAAAAAAAADnTaOwAAAAAAAAAAOwAAAAgA
+AAAbAAAAEAAAAAAAAAAAAAAANgAAABAAAACCLgAAAAAAADYAAAAQAAAAgi4AAMZBAAA2AAAAEAAA
+AAAAAADGQQAANgAAABAAAAAAAAAAAAAAADwAAAAIAAAAQwAAAAwAAAAFAAAAIwAAACAAAAAOdNo7
+AAAAAAAAAAAOdNo7AAAAAAAAAABLAAAAEAAAAAAAAAAFAAAASwAAABAAAAAAAAAABQAAACMAAAAg
+AAAADnTaOwAAAAAAAAAADnTaOwAAAAAAAAAAOwAAAAgAAAAbAAAAEAAAAAAAAAAAAAAANgAAABAA
+AACCLgAAAAAAADYAAAAQAAAAgi4AAMZBAAA2AAAAEAAAAAAAAADGQQAANgAAABAAAAAAAAAAAAAA
+ADwAAAAIAAAAQwAAAAwAAAAFAAAAIwAAACAAAAAOdNo7AAAAAAAAAAAOdNo7AAAAAAAAAABLAAAA
+EAAAAAAAAAAFAAAASwAAABAAAAAAAAAABQAAACMAAAAgAAAADnTaOwAAAAAAAAAADnTaOwAAAAAA
+AAAAOwAAAAgAAAAbAAAAEAAAAAAAAAAAAAAANgAAABAAAACCLgAAAAAAADYAAAAQAAAAgi4AAMZB
+AAA2AAAAEAAAAAAAAADGQQAANgAAABAAAAAAAAAAAAAAADwAAAAIAAAAQwAAAAwAAAAFAAAAIwAA
+ACAAAAAOdNo7AAAAAAAAAAAOdNo7AAAAAAAAAABSAAAATAEAAAIAAABq////AAAAAAAAAAAAAAAA
+kAEAAAAAAAEAAAAAi1tTTwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAACUAAAAMAAAAAgAAABYAAAAMAAAAGAAAABIAAAAMAAAAAQAAAFQA
+AACIAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAKMfAABFBQAACgAAAEwAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAGAAAADVaxpOuouHZQj/vouhiwn/mJjudpUAAACVAAAAKwEAAJUAAACVAAAA
+lQAAAJUAAAArAQAAlQAAAJUAAABLAAAAEAAAAAAAAAAFAAAASwAAABAAAAAAAAAABQAAACMAAAAg
+AAAADnTaOwAAAAAAAAAADnTaOwAAAAAAAAAAOwAAAAgAAAAbAAAAEAAAAAAAAAAAAAAANgAAABAA
+AACCLgAAAAAAADYAAAAQAAAAgi4AAMZBAAA2AAAAEAAAAAAAAADGQQAANgAAABAAAAAAAAAAAAAA
+ADwAAAAIAAAAQwAAAAwAAAAFAAAAIwAAACAAAAAOdNo7AAAAAAAAAAAOdNo7AAAAAAAAAABSAAAA
+TAEAAAMAAADU/v//AAAAAAAAAAAAAAAAvAIAAAAAAAEAAAAA/06LWwAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACUAAAAMAAAAAwAAACgA
+AAAMAAAAAgAAACMAAAAgAAAADnTaOwAAAAAAAAAADnTaOwAAAAAAAAAAVAAAAGwAAAAAAAAAAAAA
+AAAAAAAAAAAAAQAAAAAAAAAAAAAABwcAAAcHAAAFAAAATAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+WAAAAABOATCYmO52Gv8AACsBAACVAAAAKwEAAJUAAAArAQAASwAAABAAAAAAAAAABQAAAEsAAAAQ
+AAAAAAAAAAUAAAAjAAAAIAAAAA502jsAAAAAAAAAAA502jsAAAAAAAAAADsAAAAIAAAAGwAAABAA
+AAAAAAAAAAAAADYAAAAQAAAAgi4AAAAAAAA2AAAAEAAAAIIuAADGQQAANgAAABAAAAAAAAAAxkEA
+ADYAAAAQAAAAAAAAAAAAAAA8AAAACAAAAEMAAAAMAAAABQAAACMAAAAgAAAADnTaOwAAAAAAAAAA
+DnTaOwAAAAAAAAAAVAAAAGAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAtwsAAAcHAAAD
+AAAATAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAVAAAAAddSU7vjQAAKwEAAJUAAAArAQAASwAAABAA
+AAAAAAAABQAAAEsAAAAQAAAAAAAAAAUAAAAjAAAAIAAAAA502jsAAAAAAAAAAA502jsAAAAAAAAA
+ADsAAAAIAAAAGwAAABAAAAAAAAAAAAAAADYAAAAQAAAAgi4AAAAAAAA2AAAAEAAAAIIuAADGQQAA
+NgAAABAAAAAAAAAAxkEAADYAAAAQAAAAAAAAAAAAAAA8AAAACAAAAEMAAAAMAAAABQAAACMAAAAg
+AAAADnTaOwAAAAAAAAAADnTaOwAAAAAAAAAAVAAAAFgAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAA
+AAAAAAAApQ4AAAcHAAACAAAATAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAUAAAADQANACWAAAAlgAA
+AEsAAAAQAAAAAAAAAAUAAABLAAAAEAAAAAAAAAAFAAAAIwAAACAAAAAOdNo7AAAAAAAAAAAOdNo7
+AAAAAAAAAAA7AAAACAAAABsAAAAQAAAAAAAAAAAAAAA2AAAAEAAAAIIuAAAAAAAANgAAABAAAACC
+LgAAxkEAADYAAAAQAAAAAAAAAMZBAAA2AAAAEAAAAAAAAAAAAAAAPAAAAAgAAABDAAAADAAAAAUA
+AAAjAAAAIAAAAA502jsAAAAAAAAAAA502jsAAAAAAAAAAFIAAABMAQAAAgAAANT+//8AAAAAAAAA
+AAAAAAC8AgAAAAAAAQAAAAD/TotbAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJQAAAAwAAAACAAAAKAAAAAwAAAADAAAAVAAAAJAAAAAA
+AAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAABwcAAMkIAAALAAAATAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAZAAAAIxOATAHY/xbWWUIXvlbh2Uuc/x+8I8AACsBAACVAAAAKwEAAJUAAAArAQAAKwEA
+AJUAAAArAQAAlQAAACsBAAArAQAASwAAABAAAAAAAAAABQAAAEsAAAAQAAAAAAAAAAUAAAAjAAAA
+IAAAAA502jsAAAAAAAAAAA502jsAAAAAAAAAADsAAAAIAAAAGwAAABAAAAAAAAAAAAAAADYAAAAQ
+AAAAgi4AAAAAAAA2AAAAEAAAAIIuAADGQQAANgAAABAAAAAAAAAAxkEAADYAAAAQAAAAAAAAAAAA
+AAA8AAAACAAAAEMAAAAMAAAABQAAACMAAAAgAAAADnTaOwAAAAAAAAAADnTaOwAAAAAAAAAAVAAA
+AJQAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAkxEAAMkIAAAMAAAATAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAZAAAAIxUAF+YmKViSlSEdndRU0+FUblbgYlCbCsBAACVAAAAKwEAAJUAAAAr
+AQAAKwEAAJUAAAArAQAAlQAAACsBAAArAQAAlQAAAEsAAAAQAAAAAAAAAAUAAABLAAAAEAAAAAAA
+AAAFAAAAIwAAACAAAAAOdNo7AAAAAAAAAAAOdNo7AAAAAAAAAAA7AAAACAAAABsAAAAQAAAAAAAA
+AAAAAAA2AAAAEAAAAIIuAAAAAAAANgAAABAAAACCLgAAxkEAADYAAAAQAAAAAAAAAMZBAAA2AAAA
+EAAAAAAAAAAAAAAAPAAAAAgAAABDAAAADAAAAAUAAAAjAAAAIAAAAA502jsAAAAAAAAAAA502jsA
+AAAAAAAAAFIAAABMAQAAAwAAANT+//8AAAAAAAAAAAAAAACQAQAAAAAAAQAAAAD/TotbAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJQAA
+AAwAAAADAAAAKAAAAAwAAAACAAAAVAAAAHgAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAA
+yQgAAIsKAAAHAAAATAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAXAAAADRsNXU5jYdlJ1nwWFOQAAAr
+AQAAlQAAACsBAACVAAAAKwEAACsBAACVAAAASwAAABAAAAAAAAAABQAAAEsAAAAQAAAAAAAAAAUA
+AAAjAAAAIAAAAA502jsAAAAAAAAAAA502jsAAAAAAAAAADsAAAAIAAAAGwAAABAAAAAAAAAAAAAA
+ADYAAAAQAAAAgi4AAAAAAAA2AAAAEAAAAIIuAADGQQAANgAAABAAAAAAAAAAxkEAADYAAAAQAAAA
+AAAAAAAAAAA8AAAACAAAAEMAAAAMAAAABQAAACMAAAAgAAAADnTaOwAAAAAAAAAADnTaOwAAAAAA
+AAAAUgAAAEwBAAACAAAA1P7//wAAAAAAAAAAAAAAAJABAAAAAAABAAAAAP9Oi1sAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlAAAADAAA
+AAIAAAAoAAAADAAAAAMAAABUAAAAbAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAHBwAA
+TQwAAAUAAABMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABYAAAALHsJTrllOk66TgAAKwEAAJUAAAAr
+AQAAlQAAACsBAABLAAAAEAAAAAAAAAAFAAAASwAAABAAAAAAAAAABQAAACMAAAAgAAAADnTaOwAA
+AAAAAAAADnTaOwAAAAAAAAAAOwAAAAgAAAAbAAAAEAAAAAAAAAAAAAAANgAAABAAAACCLgAAAAAA
+ADYAAAAQAAAAgi4AAMZBAAA2AAAAEAAAAAAAAADGQQAANgAAABAAAAAAAAAAAAAAADwAAAAIAAAA
+QwAAAAwAAAAFAAAAIwAAACAAAAAOdNo7AAAAAAAAAAAOdNo7AAAAAAAAAABSAAAATAEAAAMAAADU
+/v//AAAAAAAAAAAAAAAAkAEAAAAAAAEAAAAA/06LWwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAWEAAAJgYPACIgV01GQwEAAAAAAAEAAAAAAAAABAAAAAAgAACIAQAA
+iGEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAJQAAAAwAAAADAAAAKAAAAAwAAAACAAAAVAAAAKwAAAAAAAAA
+AAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAABwcAAKUOAAAQAAAATAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAbAAAADRsNXU5jRh1g4CEdoJVglWCVYxO5VRsUfhThHbOmDxoKwEAAJUAAAArAQAAlQAAACsB
+AAArAQAAlQAAACsBAACVAAAAKwEAACsBAACVAAAAKwEAAJUAAAArAQAAKwEAAEsAAAAQAAAAAAAA
+AAUAAABLAAAAEAAAAAAAAAAFAAAAIwAAACAAAAAOdNo7AAAAAAAAAAAOdNo7AAAAAAAAAAA7AAAA
+CAAAABsAAAAQAAAAAAAAAAAAAAA2AAAAEAAAAIIuAAAAAAAANgAAABAAAACCLgAAxkEAADYAAAAQ
+AAAAAAAAAMZBAAA2AAAAEAAAAAAAAAAAAAAAPAAAAAgAAABDAAAADAAAAAUAAAAjAAAAIAAAAA50
+2jsAAAAAAAAAAA502jsAAAAAAAAAAFIAAABMAQAAAgAAANT+//8AAAAAAAAAAAAAAAC8AgAAAAAA
+AQAAAAD/TotbAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAJQAAAAwAAAACAAAAKAAAAAwAAAADAAAAVAAAAGQAAAAAAAAAAAAAAAAAAAAA
+AAAAAQAAAAAAAAAAAAAAmxgAAG0oAAAEAAAATAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAVAAAAAdj
+/FtZZQheKwEAAJUAAAArAQAAlQAAAEsAAAAQAAAAAAAAAAUAAABLAAAAEAAAAAAAAAAFAAAAIwAA
+ACAAAAAOdNo7AAAAAAAAAAAOdNo7AAAAAAAAAAA7AAAACAAAABsAAAAQAAAAAAAAAAAAAAA2AAAA
+EAAAAIIuAAAAAAAANgAAABAAAACCLgAAxkEAADYAAAAQAAAAAAAAAMZBAAA2AAAAEAAAAAAAAAAA
+AAAAPAAAAAgAAABDAAAADAAAAAUAAAAjAAAAIAAAAA502jsAAAAAAAAAAA502jsAAAAAAAAAAFIA
+AABMAQAAAwAAANT+//8AAAAAAAAAAAAAAACQAQAAAAAAAQAAAAD/TotbAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJQAAAAwAAAADAAAA
+KAAAAAwAAAACAAAAVAAAAFQAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAHxwAAG0oAAAB
+AAAATAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAUAAAAAj/AAArAQAASwAAABAAAAAAAAAABQAAAEsA
+AAAQAAAAAAAAAAUAAAAjAAAAIAAAAA502jsAAAAAAAAAAA502jsAAAAAAAAAADsAAAAIAAAAGwAA
+ABAAAAAAAAAAAAAAADYAAAAQAAAAgi4AAAAAAAA2AAAAEAAAAIIuAADGQQAANgAAABAAAAAAAAAA
+xkEAADYAAAAQAAAAAAAAAAAAAAA8AAAACAAAAEMAAAAMAAAABQAAACMAAAAgAAAADnTaOwAAAAAA
+AAAADnTaOwAAAAAAAAAAUgAAAEwBAAACAAAA1P7//wAAAAAAAAAAAAAAALwCAAAAAAABAAAAAP9O
+i1sAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAlAAAADAAAAAIAAAAoAAAADAAAAAMAAABUAAAAYAAAAAAAAAAAAAAAAAAAAAAAAAABAAAA
+AAAAAAAAAABLHQAAbSgAAAMAAABMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABUAAAAfnsNVAn/AAAr
+AQAAlQAAACsBAABLAAAAEAAAAAAAAAAFAAAASwAAABAAAAAAAAAABQAAACMAAAAgAAAADnTaOwAA
+AAAAAAAADnTaOwAAAAAAAAAAOwAAAAgAAAAbAAAAEAAAAAAAAAAAAAAANgAAABAAAACCLgAAAAAA
+ADYAAAAQAAAAgi4AAMZBAAA2AAAAEAAAAAAAAADGQQAANgAAABAAAAAAAAAAAAAAADwAAAAIAAAA
+QwAAAAwAAAAFAAAAIwAAACAAAAAOdNo7AAAAAAAAAAAOdNo7AAAAAAAAAABLAAAAEAAAAAAAAAAF
+AAAASwAAABAAAAAAAAAABQAAACMAAAAgAAAADnTaOwAAAAAAAAAADnTaOwAAAAAAAAAAOwAAAAgA
+AAAbAAAAEAAAAAAAAAAAAAAANgAAABAAAACCLgAAAAAAADYAAAAQAAAAgi4AAMZBAAA2AAAAEAAA
+AAAAAADGQQAANgAAABAAAAAAAAAAAAAAADwAAAAIAAAAQwAAAAwAAAAFAAAAIwAAACAAAAAOdNo7
+AAAAAAAAAAAOdNo7AAAAAAAAAABLAAAAEAAAAAAAAAAFAAAASwAAABAAAAAAAAAABQAAACMAAAAg
+AAAADnTaOwAAAAAAAAAADnTaOwAAAAAAAAAAOwAAAAgAAAAbAAAAEAAAAAAAAAAAAAAANgAAABAA
+AACCLgAAAAAAADYAAAAQAAAAgi4AAMZBAAA2AAAAEAAAAAAAAADGQQAANgAAABAAAAAAAAAAAAAA
+ADwAAAAIAAAAQwAAAAwAAAAFAAAAIwAAACAAAAAOdNo7AAAAAAAAAAAOdNo7AAAAAAAAAABLAAAA
+EAAAAAAAAAAFAAAASwAAABAAAAAAAAAABQAAACMAAAAgAAAADnTaOwAAAAAAAAAADnTaOwAAAAAA
+AAAAOwAAAAgAAAAbAAAAEAAAAAAAAAAAAAAANgAAABAAAACCLgAAAAAAADYAAAAQAAAAgi4AAMZB
+AAA2AAAAEAAAAAAAAADGQQAANgAAABAAAAAAAAAAAAAAADwAAAAIAAAAQwAAAAwAAAAFAAAAIwAA
+ACAAAAAOdNo7AAAAAAAAAAAOdNo7AAAAAAAAAABLAAAAEAAAAAAAAAAFAAAASwAAABAAAAAAAAAA
+BQAAACMAAAAgAAAADnTaOwAAAAAAAAAADnTaOwAAAAAAAAAAOwAAAAgAAAAbAAAAEAAAAAAAAAAA
+AAAANgAAABAAAACCLgAAAAAAADYAAAAQAAAAgi4AAMZBAAA2AAAAEAAAAAAAAADGQQAANgAAABAA
+AAAAAAAAAAAAADwAAAAIAAAAQwAAAAwAAAAFAAAAIwAAACAAAAAOdNo7AAAAAAAAAAAOdNo7AAAA
+AAAAAABLAAAAEAAAAAAAAAAFAAAASwAAABAAAAAAAAAABQAAACMAAAAgAAAADnTaOwAAAAAAAAAA
+DnTaOwAAAAAAAAAAOwAAAAgAAAAbAAAAEAAAAAAAAAAAAAAANgAAABAAAACCLgAAAAAAADYAAAAQ
+AAAAgi4AAMZBAAA2AAAAEAAAAAAAAADGQQAANgAAABAAAAAAAAAAAAAAADwAAAAIAAAAQwAAAAwA
+AAAFAAAAIwAAACAAAAAOdNo7AAAAAAAAAAAOdNo7AAAAAAAAAABLAAAAEAAAAAAAAAAFAAAASwAA
+ABAAAAAAAAAABQAAACMAAAAgAAAADnTaOwAAAAAAAAAADnTaOwAAAAAAAAAAOwAAAAgAAAAbAAAA
+EAAAAAAAAAAAAAAANgAAABAAAACCLgAAAAAAADYAAAAQAAAAgi4AAMZBAAA2AAAAEAAAAAAAAADG
+QQAANgAAABAAAAAAAAAAAAAAADwAAAAIAAAAQwAAAAwAAAAFAAAAIwAAACAAAAAOdNo7AAAAAAAA
+AAAOdNo7AAAAAAAAAABLAAAAEAAAAAAAAAAFAAAASwAAABAAAAAAAAAABQAAACMAAAAgAAAADnTa
+OwAAAAAAAAAADnTaOwAAAAAAAAAAOwAAAAgAAAAbAAAAEAAAAAAAAAAAAAAANgAAABAAAACCLgAA
+AAAAADYAAAAQAAAAgi4AAMZBAAA2AAAAEAAAAAAAAADGQQAANgAAABAAAAAAAAAAAAAAADwAAAAI
+AAAAQwAAAAwAAAAFAAAAIwAAACAAAAAOdNo7AAAAAAAAAAAOdNo7AAAAAAAAAABLAAAAEAAAAAAA
+AAAFAAAASwAAABAAAAAAAAAABQAAACMAAAAgAAAADnTaOwAAAAAAAAAADnTaOwAAAAAAAAAAOwAA
+AAgAAAAbAAAAEAAAAAAAAAAAAAAANgAAABAAAACCLgAAAAAAADYAAAAQAAAAgi4AAMZBAAA2AAAA
+EAAAAAAAAADGQQAANgAAABAAAAAAAAAAAAAAADwAAAAIAAAAQwAAAAwAAAAFAAAAIwAAACAAAAAO
+dNo7AAAAAAAAAAAOdNo7AAAAAAAAAABLAAAAEAAAAAAAAAAFAAAASwAAABAAAAAAAAAABQAAACMA
+AAAgAAAADnTaOwAAAAAAAAAADnTaOwAAAAAAAAAAOwAAAAgAAAAbAAAAEAAAAAAAAAAAAAAANgAA
+ABAAAACCLgAAAAAAADYAAAAQAAAAgi4AAMZBAAA2AAAAEAAAAAAAAADGQQAANgAAABAAAAAAAAAA
+AAAAADwAAAAIAAAAQwAAAAwAAAAFAAAAIwAAACAAAAAOdNo7AAAAAAAAAAAOdNo7AAAAAAAAAABL
+AAAAEAAAAAAAAAAFAAAASwAAABAAAAAAAAAABQAAACMAAAAgAAAADnTaOwAAAAAAAAAADnTaOwAA
+AAAAAAAAOwAAAAgAAAAbAAAAEAAAAAAAAAAAAAAANgAAABAAAACCLgAAAAAAADYAAAAQAAAAgi4A
+AMZBAAA2AAAAEAAAAAAAAADGQQAANgAAABAAAAAAAAAAAAAAADwAAAAIAAAAQwAAAAwAAAAFAAAA
+IwAAACAAAAAOdNo7AAAAAAAAAAAOdNo7AAAAAAAAAABLAAAAEAAAAAAAAAAFAAAASwAAABAAAAAA
+AAAABQAAACMAAAAgAAAADnTaOwAAAAAAAAAADnTaOwAAAAAAAAAAOwAAAAgAAAAbAAAAEAAAAAAA
+AAAAAAAANgAAABAAAACCLgAAAAAAADYAAAAQAAAAgi4AAMZBAAA2AAAAEAAAAAAAAADGQQAANgAA
+ABAAAAAAAAAAAAAAADwAAAAIAAAAQwAAAAwAAAAFAAAAIwAAACAAAAAOdNo7AAAAAAAAAAAOdNo7
+AAAAAAAAAABLAAAAEAAAAAAAAAAFAAAASwAAABAAAAAAAAAABQAAACMAAAAgAAAADnTaOwAAAAAA
+AAAADnTaOwAAAAAAAAAAOwAAAAgAAAAbAAAAEAAAAAAAAAAAAAAANgAAABAAAACCLgAAAAAAADYA
+AAAQAAAAgi4AAMZBAAA2AAAAEAAAAAAAAADGQQAANgAAABAAAAAAAAAAAAAAADwAAAAIAAAAQwAA
+AAwAAAAFAAAAIwAAACAAAAAOdNo7AAAAAAAAAAAOdNo7AAAAAAAAAABLAAAAEAAAAAAAAAAFAAAA
+SwAAABAAAAAAAAAABQAAACMAAAAgAAAADnTaOwAAAAAAAAAADnTaOwAAAAAAAAAAOwAAAAgAAAAb
+AAAAEAAAAAAAAAAAAAAANgAAABAAAACCLgAAAAAAADYAAAAQAAAAgi4AAMZBAAA2AAAAEAAAAAAA
+AADGQQAANgAAABAAAAAAAAAAAAAAADwAAAAIAAAAQwAAAAwAAAAFAAAAIwAAACAAAAAOdNo7AAAA
+AAAAAAAOdNo7AAAAAAAAAABLAAAAEAAAAAAAAAAFAAAASwAAABAAAAAAAAAABQAAACMAAAAgAAAA
+DnTaOwAAAAAAAAAADnTaOwAAAAAAAAAAOwAAAAgAAAAbAAAAEAAAAAAAAAAAAAAANgAAABAAAACC
+LgAAAAAAADYAAAAQAAAAgi4AAMZBAAA2AAAAEAAAAAAAAADGQQAANgAAABAAAAAAAAAAAAAAADwA
+AAAIAAAAQwAAAAwAAAAFAAAAIwAAACAAAAAOdNo7AAAAAAAAAAAOdNo7AAAAAAAAAABLAAAAEAAA
+AAAAAAAFAAAASwAAABAAAAAAAAAABQAAACMAAAAgAAAADnTaOwAAAAAAAAAADnTaOwAAAAAAAAAA
+OwAAAAgAAAAbAAAAEAAAAAAAAAAAAAAANgAAABAAAACCLgAAAAAAADYAAAAQAAAAgi4AAMZBAAA2
+AAAAEAAAAAAAAADGQQAANgAAABAAAAAAAAAAAAAAADwAAAAIAAAAQwAAAAwAAAAFAAAAIwAAACAA
+AAAOdNo7AAAAAAAAAAAOdNo7AAAAAAAAAABfAAAAOAAAAAMAAAA4AAAAAAAAADgAAAAAAAAAABIA
+AAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACUAAAAMAAAAAwAAACgAAAAMAAAAAQAAAAcAAAA0AAAA
+AAAAAAAAAAAAAAAAAAAAAAEAAAACAAAAAgAAADkgAAADKQAAQScAAAMpAABfAAAAOAAAAAEAAAA4
+AAAAAAAAADgAAAAAAAAAABEBAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACUAAAAMAAAAAQAAACgA
+AAAMAAAAAwAAAEsAAAAQAAAAAAAAAAUAAABLAAAAEAAAAAAAAAAFAAAAIwAAACAAAAAOdNo7AAAA
+AAAAAAAOdNo7AAAAAAAAAAA7AAAACAAAABsAAAAQAAAAAAAAAAAAAAA2AAAAEAAAAIIuAAAAAAAA
+NgAAABAAAACCLgAAxkEAADYAAAAQAAAAAAAAAMZBAAA2AAAAEAAAAAAAAAAAAAAAPAAAAAgAAABD
+AAAADAAAAAUAAAAjAAAAIAAAAA502jsAAAAAAAAAAA502jsAAAAAAAAAAFIAAABMAQAAAwAAANT+
+//8AAAAAAAAAAAAAAAC8AgAAAAAAAQAAAAD/TotbAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJQAAAAwAAAADAAAAKAAAAAwAAAACAAAA
+VAAAAFQAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAzyAAAC8qAAABAAAATAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAUAAAAHReAAArAQAASwAAABAAAAAAAAAABQAAAEsAAAAQAAAAAAAAAAUA
+AAAjAAAAIAAAAA502jsAAAAAAAAAAA502jsAAAAAAAAAADsAAAAIAAAAGwAAABAAAAAAAAAAAAAA
+ADYAAAAQAAAAgi4AAAAAAAA2AAAAEAAAAIIuAADGQQAANgAAABAAAAAAAAAAxkEAADYAAAAQAAAA
+AAAAAAAAAAA8AAAACAAAAEMAAAAMAAAABQAAACMAAAAgAAAADnTaOwAAAAAAAAAADnTaOwAAAAAA
+AAAASwAAABAAAAAAAAAABQAAAEsAAAAQAAAAAAAAAAUAAAAjAAAAIAAAAA502jsAAAAAAAAAAA50
+2jsAAAAAAAAAADsAAAAIAAAAGwAAABAAAAAAAAAAAAAAADYAAAAQAAAAgi4AAAAAAAA2AAAAEAAA
+AIIuAADGQQAANgAAABAAAAAAAAAAxkEAADYAAAAQAAAAAAAAAAAAAAA8AAAACAAAAEMAAAAMAAAA
+BQAAACMAAAAgAAAADnTaOwAAAAAAAAAADnTaOwAAAAAAAAAASwAAABAAAAAAAAAABQAAAEsAAAAQ
+AAAAAAAAAAUAAAAjAAAAIAAAAA502jsAAAAAAAAAAA502jsAAAAAAAAAADsAAAAIAAAAGwAAABAA
+AAAAAAAAAAAAADYAAAAQAAAAgi4AAAAAAAA2AAAAEAAAAIIuAADGQQAANgAAABAAAAAAAAAAxkEA
+ADYAAAAQAAAAAAAAAAAAAAA8AAAACAAAAEMAAAAMAAAABQAAACMAAAAgAAAADnTaOwAAAAAAAAAA
+DnTaOwAAAAAAAAAASwAAABAAAAAAAAAABQAAAEsAAAAQAAAAAAAAAAUAAAAjAAAAIAAAAA502jsA
+AAAAAAAAAA502jsAAAAAAAAAADsAAAAIAAAAGwAAABAAAAAAAAAAAAAAADYAAAAQAAAAgi4AAAAA
+AAA2AAAAEAAAAIIuAADGQQAANgAAABAAAAAAAAAAxkEAADYAAAAQAAAAAAAAAAAAAAA8AAAACAAA
+AEMAAAAMAAAABQAAACMAAAAgAAAADnTaOwAAAAAAAAAADnTaOwAAAAAAAAAAVAAAAFQAAAAAAAAA
+AAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAJyMAAC8qAAABAAAATAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAUAAAAAhnAAArAQAASwAAABAAAAAAAAAABQAAAEsAAAAQAAAAAAAAAAUAAAAjAAAAIAAAAA50
+2jsAAAAAAAAAAA502jsAAAAAAAAAADsAAAAIAAAAGwAAABAAAAAAAAAAAAAAADYAAAAQAAAAgi4A
+AAAAAAA2AAAAEAAAAIIuAADGQQAANgAAABAAAAAAAAAAxkEAADYAAAAQAAAAAAAAAAAAAAA8AAAA
+CAAAAEMAAAAMAAAABQAAACMAAAAgAAAADnTaOwAAAAAAAAAADnTaOwAAAAAAAAAASwAAABAAAAAA
+AAAABQAAAEsAAAAQAAAAAAAAAAUAAAAjAAAAIAAAAA502jsAAAAAAAAAAA502jsAAAAAAAAAADsA
+AAAIAAAAGwAAABAAAAAAAAAAAAAAADYAAAAQAAAAgi4AAAAAAAA2AAAAEAAAAIIuAADGQQAANgAA
+ABAAAAAAAAAAxkEAADYAAAAQAAAAAAAAAAAAAAA8AAAACAAAAEMAAAAMAAAABQAAACMAAAAgAAAA
+DnTaOwAAAAAAAAAADnTaOwAAAAAAAAAASwAAABAAAAAAAAAABQAAAEsAAAAQAAAAAAAAAAUAAAAj
+AAAAIAAAAA502jsAAAAAAAAAAA502jsAAAAAAAAAADsAAAAIAAAAGwAAABAAAAAAAAAAAAAAADYA
+AAAQAAAAgi4AAAAAAAA2AAAAEAAAAIIuAADGQQAANgAAABAAAAAAAAAAxkEAADYAAAAQAAAAAAAA
+AAAAAAA8AAAACAAAAEMAAAAMAAAABQAAACMAAAAgAAAADnTaOwAAAAAAAAAADnTaOwAAAAAAAAAA
+SwAAABAAAAAAAAAABQAAAEsAAAAQAAAAAAAAAAUAAAAjAAAAIAAAAA502jsAAAAAAAAAAA502jsA
+AAAAAAAAADsAAAAIAAAAGwAAABAAAAAAAAAAAAAAADYAAAAQAAAAgi4AAAAAAAA2AAAAEAAAAIIu
+AADGQQAANgAAABAAAAAAAAAAxkEAADYAAAAQAAAAAAAAAAAAAAA8AAAACAAAAEMAAAAMAAAABQAA
+ACMAAAAgAAAADnTaOwAAAAAAAAAADnTaOwAAAAAAAAAAVAAAAFQAAAAAAAAA2gAAACYGDwCqAVdN
+RkMBAAAAAAABAAAAAAAAAAQAAACIAQAAAAAAAIhhAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAB/
+JQAALyoAAAEAAABMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABQAAAA5WUAACsBAABLAAAAEAAAAAAA
+AAAFAAAASwAAABAAAAAAAAAABQAAACMAAAAgAAAADnTaOwAAAAAAAAAADnTaOwAAAAAAAAAAOwAA
+AAgAAAAbAAAAEAAAAAAAAAAAAAAANgAAABAAAACCLgAAAAAAADYAAAAQAAAAgi4AAMZBAAA2AAAA
+EAAAAAAAAADGQQAANgAAABAAAAAAAAAAAAAAADwAAAAIAAAAQwAAAAwAAAAFAAAAIwAAACAAAAAO
+dNo7AAAAAAAAAAAOdNo7AAAAAAAAAAAjAAAAIAAAAA502jsAAAAAAAAAAA502jsAAAAAAAAAAEsA
+AAAQAAAAAAAAAAUAAAAlAAAADAAAAAcAAIAoAAAADAAAAAEAAAAlAAAADAAAAA0AAIAoAAAADAAA
+AAMAAAAOAAAAFAAAAAAAAAAQAAAAFAAAAAQAAAADAQgABQAAAAsCAAAAAAUAAAAMAnAATwAIAAAA
++gIAAAEAAAAAAAAABAAAAC0BAAAHAAAA/AIBAAAAAAAAAAQAAAAtAQEABwAAABsEbwBOAAAAAAAE
+AAAALAEAAAcAAAAWBHEAUAAAAAAABAAAACwBAAAHAAAAFgRxAFAAAAAAAAQAAAAsAQAABwAAABYE
+cQBQAAAAAAAEAAAALAEAAAcAAAAWBHEAUAAAAAAABAAAACwBAAAHAAAAFgRxAFAAAAAAAAQAAAAs
+AQAABwAAABYEcQBQAAAAAAAEAAAALAEAAAcAAAAWBHEAUAAAAAAABAAAACwBAAAHAAAAFgRxAFAA
+AAAAAAQAAAAsAQAABwAAABYEcQBQAAAAAAAEAAAALAEAAAcAAAAWBHEAUAAAAAAABAAAACwBAAAH
+AAAAFgRxAFAAAAAAAAQAAAAsAQAABwAAABYEcQBQAAAAAAAEAAAALAEAAAcAAAAWBHEAUAAAAAAA
+BAAAACwBAAAHAAAAFgRxAFAAAAAAAAQAAAAsAQAABwAAABYEcQBQAAAAAAAEAAAALAEAAAcAAAAW
+BHEAUAAAAAAABAAAACwBAAAHAAAAFgRxAFAAAAAAAAQAAAAsAQAABwAAABYEcQBQAAAAAAAEAAAA
+LAEAAAcAAAAWBHEAUAAAAAAABAAAACwBAAAHAAAAFgRxAFAAAAAAAAQAAAAsAQAABwAAABYEcQBQ
+AAAAAAAEAAAALAEAAAcAAAAWBHEAUAAAAAAABAAAACwBAAAHAAAAFgRxAFAAAAAAAAQAAAAsAQAA
+BwAAABYEcQBQAAAAAAAEAAAALAEAAAcAAAAWBHEAUAAAAAAABAAAACwBAAAHAAAAFgRxAFAAAAAA
+AAQAAAAsAQAABwAAABYEcQBQAAAAAAAEAAAALAEAAAcAAAAWBHEAUAAAAAAABAAAACwBAAAHAAAA
+FgRxAFAAAAAAAAQAAAAsAQAABwAAABYEcQBQAAAAAAAEAAAALAEAAAcAAAAWBHEAUAAAAAAABAAA
+ACwBAAAHAAAAFgRxAFAAAAAAAAQAAAAsAQAABwAAABYEcQBQAAAAAAAEAAAALAEAAAcAAAAWBHEA
+UAAAAAAABAAAACwBAAAHAAAAFgRxAFAAAAAAAAQAAAAsAQAABwAAABYEcQBQAAAAAAAEAAAALAEA
+AAcAAAAWBHEAUAAAAAAABAAAACwBAAAHAAAAFgRxAFAAAAAAAAQAAAAsAQAABwAAABYEcQBQAAAA
+AAAEAAAALAEAAAcAAAAWBHEAUAAAAAAABAAAACwBAAAHAAAAFgRxAFAAAAAAAAQAAAAsAQAABwAA
+ABYEcQBQAAAAAAAEAAAALAEAAAcAAAAWBHEAUAAAAAAABAAAACwBAAAHAAAAFgRxAFAAAAAAAAQA
+AAAsAQAABwAAABYEcQBQAAAAAAAEAAAALAEAAAcAAAAWBHEAUAAAAAAABAAAACwBAAAHAAAAFgRx
+AFAAAAAAAAQAAAAsAQAABwAAABYEcQBQAAAAAAAEAAAALAEAAAcAAAAWBHEAUAAAAAAABAAAACwB
+AAAHAAAAFgRxAFAAAAAAAAQAAAAsAQAABwAAABYEcQBQAAAAAAAEAAAALAEAAAcAAAAWBHEAUAAA
+AAAABAAAACwBAAAHAAAAFgRxAFAAAAAAAAQAAAAsAQAABwAAABYEcQBQAAAAAAAEAAAALAEAAAcA
+AAAWBHEAUAAAAAAABAAAACwBAAAHAAAAFgRxAFAAAAAAAAQAAAAsAQAABwAAABYEcQBQAAAAAAAc
+AAAA+wL//wAAAAAAAJABAAAAAQAAAADLzszlAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQA
+AAAtAQIABAAAAC4BGAAEAAAAAgEBACUAAAAyCgkANgAUAAAAsc/StcLbzsSjqMnovMajqczixL8B
+AAAAAQAAAAIAAAABAAAAAQAAAAEAAAABAAAAAgAAAAEAAAABAAAABAAAACwBAAAHAAAAFgRxAFAA
+AAAAABwAAAD7Av7/AAAAAAAAvAIAAAABAAAAALfCy84AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAABAAAAC0BAwAEAAAA8AECABYAAAAyCgwADAAKAAAA0ruhoszixL+jugIAAAABAAAAAgAAAAEA
+AAACAAAABAAAACwBAAAHAAAAFgRxAFAAAAAAABAAAAAyCgwAFAAGAAAAs+fS5cK3AgAAAAEAAAAC
+AAAABAAAACwBAAAHAAAAFgRxAFAAAAAAAAoAAAAyCgwAGQACAAAANDQBAAEABAAAACwBAAAHAAAA
+FgRxAFAAAAAAABwAAAD7Av7/AAAAAAAAvAIAAAABAAAAALfCy84AAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAABAAAAC0BAgAEAAAA8AEDACgAAAAyCg8ADAAWAAAAtv6hota4tby9zMqmttTOxM/X
+19vK9gIAAAABAAAAAgAAAAEAAAACAAAAAgAAAAEAAAACAAAAAQAAAAIAAAACAAAABAAAACwBAAAH
+AAAAFgRxAFAAAAAAACsAAAAyCg8AHgAYAAAAus2/qszisai45rXEvt/M5cTayN3SqsfzAgAAAAEA
+AAACAAAAAQAAAAIAAAACAAAAAQAAAAIAAAABAAAAAgAAAAIAAAABAAAABAAAACwBAAAHAAAAFgRx
+AFAAAAAAABwAAAD7Av7/AAAAAAAAkAEAAAABAAAAALfCy84AAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAABAAAAC0BAwAEAAAA8AECABwAAAAyChIADwAOAAAAy66157fRzsS088n5tcACAAAAAQAA
+AAIAAAABAAAAAgAAAAIAAAABAAAABAAAACwBAAAHAAAAFgRxAFAAAAAAABwAAAD7Av7/AAAAAAAA
+kAEAAAABAAAAALfCy84AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAC0BAgAEAAAA8AED
+ABYAAAAyChUADAAKAAAAtdrI/be9zqrIywIAAAABAAAAAgAAAAEAAAACAAAABAAAACwBAAAHAAAA
+FgRxAFAAAAAAABwAAAD7Av7/AAAAAAAAkAEAAAABAAAAALfCy84AAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAABAAAAC0BAwAEAAAA8AECADcAAAAyChkADAAgAAAAy66157fRuMrL4LXEzrnOuc65
+tv6457mry761xLfnuPECAAAAAQAAAAIAAAABAAAAAgAAAAIAAAABAAAAAgAAAAEAAAACAAAAAgAA
+AAEAAAACAAAAAQAAAAIAAAACAAAABAAAACwBAAAHAAAAFgRxAFAAAAAAABwAAAD7Av7/AAAAAAAA
+vAIAAAABAAAAALfCy84AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAC0BAgAEAAAA8AED
+ABMAAAAyCkUAKgAIAAAA1ri1vL3MyqYCAAAAAQAAAAIAAAABAAAABAAAACwBAAAHAAAAFgRxAFAA
+AAAAABwAAAD7Av7/AAAAAAAAkAEAAAABAAAAALfCy84AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAABAAAAC0BAwAEAAAA8AECAAoAAAAyCkUAMAACAAAAo6gCAAAABAAAACwBAAAHAAAAFgRxAFAA
+AAAAABwAAAD7Av7/AAAAAAAAvAIAAAABAAAAALfCy84AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAABAAAAC0BAgAEAAAA8AEDABAAAAAyCkUAMgAGAAAAx6nD+6OpAgAAAAEAAAACAAAABAAAACwB
+AAAHAAAAFgRxAFAAAAAAAAQAAAAsAQAABwAAABYEcQBQAAAAAAAEAAAALAEAAAcAAAAWBHEAUAAA
+AAAABAAAACwBAAAHAAAAFgRxAFAAAAAAAAQAAAAsAQAABwAAABYEcQBQAAAAAAAEAAAALAEAAAcA
+AAAWBHEAUAAAAAAABAAAACwBAAAHAAAAFgRxAFAAAAAAAAQAAAAsAQAABwAAABYEcQBQAAAAAAAE
+AAAALAEAAAcAAAAWBHEAUAAAAAAABAAAACwBAAAHAAAAFgRxAFAAAAAAAAQAAAAsAQAABwAAABYE
+cQBQAAAAAAAEAAAALAEAAAcAAAAWBHEAUAAAAAAABAAAACwBAAAHAAAAFgRxAFAAAAAAAAQAAAAs
+AQAABwAAABYEcQBQAAAAAAAEAAAALAEAAAcAAAAWBHEAUAAAAAAABAAAACwBAAAHAAAAFgRxAFAA
+AAAAAAgAAAD6AgAAAAAAAAAAAAAEAAAALQEDAAQAAADwAQAACAAAACUDAgA3AEYAQwBGAAgAAAD6
+AgAAAAAAAAAAAAAEAAAALQEAAAQAAADwAQMABAAAACwBAAAHAAAAFgRxAFAAAAAAABwAAAD7Av7/
+AAAAAAAAvAIAAAABAAAAALfCy84AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAC0BAwAE
+AAAA8AECAAoAAAAyCkgAOAACAAAAxOoCAAAABAAAACwBAAAHAAAAFgRxAFAAAAAAAAQAAAAsAQAA
+BwAAABYEcQBQAAAAAAAEAAAALAEAAAcAAAAWBHEAUAAAAAAABAAAACwBAAAHAAAAFgRxAFAAAAAA
+AAoAAAAyCkgAPAACAAAA1MICAAAABAAAACwBAAAHAAAAFgRxAFAAAAAAAAQAAAAsAQAABwAAABYE
+cQBQAAAAAAAEAAAALAEAAAcAAAAWBHEAUAAAAAAABAAAACwBAAAHAAAAFgRxAFAAAAAAAAoAAAAy
+CkgAQAACAAAAyNUCAAAABAAAACwBAAAHAAAAFgRxAFAAAAAAAAgAAAD6AgAAAAAAAAAAAAAEAAAA
+LQECAAQAAADwAQAAHAAAAPsCAAAAAAAAAAC8AgAAAIYBAgIiU3lzdGVtAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAEAAAALQEAAAQAAADwAQMAAwAAAAAA</pkg:binaryData>
+	</pkg:part>
+	<pkg:part pkg:name="/word/endnotes.xml" pkg:contentType="application/vnd.openxmlformats-officedocument.wordprocessingml.endnotes+xml">
+		<pkg:xmlData>
+			<w:endnotes xmlns:wpc="http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:wp14="http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing" xmlns:wp="http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing" xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main" xmlns:w14="http://schemas.microsoft.com/office/word/2010/wordml" xmlns:w15="http://schemas.microsoft.com/office/word/2012/wordml" xmlns:w10="urn:schemas-microsoft-com:office:word" xmlns:wpg="http://schemas.microsoft.com/office/word/2010/wordprocessingGroup" xmlns:wpi="http://schemas.microsoft.com/office/word/2010/wordprocessingInk" xmlns:wne="http://schemas.microsoft.com/office/word/2006/wordml" xmlns:wps="http://schemas.microsoft.com/office/word/2010/wordprocessingShape" xmlns:wpsCustomData="http://www.wps.cn/officeDocument/2013/wpsCustomData" mc:Ignorable="w14 w15 wp14">
+				<w:endnote w:type="separator" w:id="0">
+					<w:p>
+						<w:pPr>
+							<w:spacing w:line="240" w:lineRule="auto"/>
+						</w:pPr>
+						<w:r>
+							<w:separator/>
+						</w:r>
+					</w:p>
+				</w:endnote>
+				<w:endnote w:type="continuationSeparator" w:id="1">
+					<w:p>
+						<w:pPr>
+							<w:spacing w:line="240" w:lineRule="auto"/>
+						</w:pPr>
+						<w:r>
+							<w:continuationSeparator/>
+						</w:r>
+					</w:p>
+				</w:endnote>
+			</w:endnotes>
+		</pkg:xmlData>
+	</pkg:part>
+	<pkg:part pkg:name="/word/fontTable.xml" pkg:contentType="application/vnd.openxmlformats-officedocument.wordprocessingml.fontTable+xml">
+		<pkg:xmlData>
+			<w:fonts xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main" xmlns:w14="http://schemas.microsoft.com/office/word/2010/wordml" mc:Ignorable="w14">
+				<w:font w:name="Times New Roman">
+					<w:panose1 w:val="02020603050405020304"/>
+					<w:charset w:val="00"/>
+					<w:family w:val="roman"/>
+					<w:pitch w:val="variable"/>
+					<w:sig w:usb0="20007A87" w:usb1="80000000" w:usb2="00000008" w:usb3="00000000" w:csb0="000001FF" w:csb1="00000000"/>
+				</w:font>
+				<w:font w:name="宋体">
+					<w:panose1 w:val="02010600030101010101"/>
+					<w:charset w:val="86"/>
+					<w:family w:val="auto"/>
+					<w:pitch w:val="default"/>
+					<w:sig w:usb0="00000003" w:usb1="288F0000" w:usb2="00000006" w:usb3="00000000" w:csb0="00040001" w:csb1="00000000"/>
+				</w:font>
+				<w:font w:name="Wingdings">
+					<w:panose1 w:val="05000000000000000000"/>
+					<w:charset w:val="02"/>
+					<w:family w:val="auto"/>
+					<w:pitch w:val="default"/>
+					<w:sig w:usb0="00000000" w:usb1="00000000" w:usb2="00000000" w:usb3="00000000" w:csb0="80000000" w:csb1="00000000"/>
+				</w:font>
+				<w:font w:name="Arial">
+					<w:panose1 w:val="020B0604020202020204"/>
+					<w:charset w:val="01"/>
+					<w:family w:val="swiss"/>
+					<w:pitch w:val="default"/>
+					<w:sig w:usb0="E0002EFF" w:usb1="C000785B" w:usb2="00000009" w:usb3="00000000" w:csb0="400001FF" w:csb1="FFFF0000"/>
+				</w:font>
+				<w:font w:name="黑体">
+					<w:panose1 w:val="02010609060101010101"/>
+					<w:charset w:val="86"/>
+					<w:family w:val="auto"/>
+					<w:pitch w:val="default"/>
+					<w:sig w:usb0="800002BF" w:usb1="38CF7CFA" w:usb2="00000016" w:usb3="00000000" w:csb0="00040001" w:csb1="00000000"/>
+				</w:font>
+				<w:font w:name="Courier New">
+					<w:panose1 w:val="02070309020205020404"/>
+					<w:charset w:val="01"/>
+					<w:family w:val="modern"/>
+					<w:pitch w:val="default"/>
+					<w:sig w:usb0="E0002EFF" w:usb1="C0007843" w:usb2="00000009" w:usb3="00000000" w:csb0="400001FF" w:csb1="FFFF0000"/>
+				</w:font>
+				<w:font w:name="Symbol">
+					<w:panose1 w:val="05050102010706020507"/>
+					<w:charset w:val="02"/>
+					<w:family w:val="roman"/>
+					<w:pitch w:val="default"/>
+					<w:sig w:usb0="00000000" w:usb1="00000000" w:usb2="00000000" w:usb3="00000000" w:csb0="80000000" w:csb1="00000000"/>
+				</w:font>
+				<w:font w:name="Calibri">
+					<w:panose1 w:val="020F0502020204030204"/>
+					<w:charset w:val="00"/>
+					<w:family w:val="swiss"/>
+					<w:pitch w:val="default"/>
+					<w:sig w:usb0="E0002EFF" w:usb1="C000247B" w:usb2="00000009" w:usb3="00000000" w:csb0="200001FF" w:csb1="00000000"/>
+				</w:font>
+				<w:font w:name="仿宋">
+					<w:panose1 w:val="02010609060101010101"/>
+					<w:charset w:val="86"/>
+					<w:family w:val="modern"/>
+					<w:pitch w:val="default"/>
+					<w:sig w:usb0="800002BF" w:usb1="38CF7CFA" w:usb2="00000016" w:usb3="00000000" w:csb0="00040001" w:csb1="00000000"/>
+				</w:font>
+				<w:font w:name="Cambria">
+					<w:panose1 w:val="02040503050406030204"/>
+					<w:charset w:val="00"/>
+					<w:family w:val="roman"/>
+					<w:pitch w:val="default"/>
+					<w:sig w:usb0="E00006FF" w:usb1="420024FF" w:usb2="02000000" w:usb3="00000000" w:csb0="2000019F" w:csb1="00000000"/>
+				</w:font>
+				<w:font w:name="Tahoma">
+					<w:panose1 w:val="020B0604030504040204"/>
+					<w:charset w:val="00"/>
+					<w:family w:val="auto"/>
+					<w:pitch w:val="default"/>
+					<w:sig w:usb0="E1002EFF" w:usb1="C000605B" w:usb2="00000029" w:usb3="00000000" w:csb0="200101FF" w:csb1="20280000"/>
+				</w:font>
+				<w:font w:name="SimSun-ExtB">
+					<w:panose1 w:val="02010609060101010101"/>
+					<w:charset w:val="86"/>
+					<w:family w:val="auto"/>
+					<w:pitch w:val="default"/>
+					<w:sig w:usb0="00000001" w:usb1="02000000" w:usb2="00000000" w:usb3="00000000" w:csb0="00040001" w:csb1="00000000"/>
+				</w:font>
+			</w:fonts>
+		</pkg:xmlData>
+	</pkg:part>
+	<pkg:part pkg:name="/word/footer1.xml" pkg:contentType="application/vnd.openxmlformats-officedocument.wordprocessingml.footer+xml">
+		<pkg:xmlData>
+			<w:ftr xmlns:wpc="http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:wp14="http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing" xmlns:wp="http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing" xmlns:w10="urn:schemas-microsoft-com:office:word" xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main" xmlns:w14="http://schemas.microsoft.com/office/word/2010/wordml" xmlns:w15="http://schemas.microsoft.com/office/word/2012/wordml" xmlns:wpg="http://schemas.microsoft.com/office/word/2010/wordprocessingGroup" xmlns:wpi="http://schemas.microsoft.com/office/word/2010/wordprocessingInk" xmlns:wne="http://schemas.microsoft.com/office/word/2006/wordml" xmlns:wps="http://schemas.microsoft.com/office/word/2010/wordprocessingShape" xmlns:wpsCustomData="http://www.wps.cn/officeDocument/2013/wpsCustomData" mc:Ignorable="w14 w15 wp14">
+				<w:p>
+					<w:pPr>
+						<w:pStyle w:val="18"/>
+						<w:jc w:val="center"/>
+					</w:pPr>
+				</w:p>
+				<w:p>
+					<w:pPr>
+						<w:pStyle w:val="18"/>
+					</w:pPr>
+				</w:p>
+			</w:ftr>
+		</pkg:xmlData>
+	</pkg:part>
+	<pkg:part pkg:name="/word/footer2.xml" pkg:contentType="application/vnd.openxmlformats-officedocument.wordprocessingml.footer+xml">
+		<pkg:xmlData>
+			<w:ftr xmlns:wpc="http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:wp14="http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing" xmlns:wp="http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing" xmlns:w10="urn:schemas-microsoft-com:office:word" xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main" xmlns:w14="http://schemas.microsoft.com/office/word/2010/wordml" xmlns:w15="http://schemas.microsoft.com/office/word/2012/wordml" xmlns:wpg="http://schemas.microsoft.com/office/word/2010/wordprocessingGroup" xmlns:wpi="http://schemas.microsoft.com/office/word/2010/wordprocessingInk" xmlns:wne="http://schemas.microsoft.com/office/word/2006/wordml" xmlns:wps="http://schemas.microsoft.com/office/word/2010/wordprocessingShape" xmlns:wpsCustomData="http://www.wps.cn/officeDocument/2013/wpsCustomData" mc:Ignorable="w14 w15 wp14">
+				<w:p>
+					<w:pPr>
+						<w:pStyle w:val="18"/>
+						<w:jc w:val="center"/>
+					</w:pPr>
+				</w:p>
+				<w:p>
+					<w:pPr>
+						<w:pStyle w:val="18"/>
+					</w:pPr>
+				</w:p>
+			</w:ftr>
+		</pkg:xmlData>
+	</pkg:part>
+	<pkg:part pkg:name="/word/footnotes.xml" pkg:contentType="application/vnd.openxmlformats-officedocument.wordprocessingml.footnotes+xml">
+		<pkg:xmlData>
+			<w:footnotes xmlns:wpc="http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:wp14="http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing" xmlns:wp="http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing" xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main" xmlns:w14="http://schemas.microsoft.com/office/word/2010/wordml" xmlns:w15="http://schemas.microsoft.com/office/word/2012/wordml" xmlns:w10="urn:schemas-microsoft-com:office:word" xmlns:wpg="http://schemas.microsoft.com/office/word/2010/wordprocessingGroup" xmlns:wpi="http://schemas.microsoft.com/office/word/2010/wordprocessingInk" xmlns:wne="http://schemas.microsoft.com/office/word/2006/wordml" xmlns:wps="http://schemas.microsoft.com/office/word/2010/wordprocessingShape" xmlns:wpsCustomData="http://www.wps.cn/officeDocument/2013/wpsCustomData" mc:Ignorable="w14 w15 wp14">
+				<w:footnote w:type="separator" w:id="0">
+					<w:p>
+						<w:pPr>
+							<w:spacing w:line="360" w:lineRule="auto"/>
+						</w:pPr>
+						<w:r>
+							<w:separator/>
+						</w:r>
+					</w:p>
+				</w:footnote>
+				<w:footnote w:type="continuationSeparator" w:id="1">
+					<w:p>
+						<w:pPr>
+							<w:spacing w:line="360" w:lineRule="auto"/>
+						</w:pPr>
+						<w:r>
+							<w:continuationSeparator/>
+						</w:r>
+					</w:p>
+				</w:footnote>
+			</w:footnotes>
+		</pkg:xmlData>
+	</pkg:part>
+	<pkg:part pkg:name="/word/header1.xml" pkg:contentType="application/vnd.openxmlformats-officedocument.wordprocessingml.header+xml">
+		<pkg:xmlData>
+			<w:hdr xmlns:wpc="http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:wp14="http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing" xmlns:wp="http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing" xmlns:w10="urn:schemas-microsoft-com:office:word" xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main" xmlns:w14="http://schemas.microsoft.com/office/word/2010/wordml" xmlns:w15="http://schemas.microsoft.com/office/word/2012/wordml" xmlns:wpg="http://schemas.microsoft.com/office/word/2010/wordprocessingGroup" xmlns:wpi="http://schemas.microsoft.com/office/word/2010/wordprocessingInk" xmlns:wne="http://schemas.microsoft.com/office/word/2006/wordml" xmlns:wps="http://schemas.microsoft.com/office/word/2010/wordprocessingShape" xmlns:wpsCustomData="http://www.wps.cn/officeDocument/2013/wpsCustomData" mc:Ignorable="w14 w15 wp14">
+				<w:p>
+					<w:pPr>
+						<w:pStyle w:val="19"/>
+						<w:pBdr>
+							<w:bottom w:val="none" w:color="auto" w:sz="0" w:space="0"/>
+						</w:pBdr>
+					</w:pPr>
+					<w:r>
+						<w:rPr>
+							<w:rFonts w:hint="eastAsia" w:ascii="Tahoma" w:hAnsi="Tahoma" w:cs="Tahoma"/>
+							<w:i w:val="0"/>
+							<w:iCs w:val="0"/>
+							<w:caps w:val="0"/>
+							<w:color w:val="000000"/>
+							<w:spacing w:val="0"/>
+							<w:sz w:val="22"/>
+							<w:szCs w:val="22"/>
+							<w:lang w:val="en-US" w:eastAsia="zh-CN"/>
+						</w:rPr>
+						<w:t xml:space="preserve">                                                       </w:t>
+					</w:r>
+					<w:r>
+						<w:rPr>
+							<w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体" w:cs="宋体"/>
+							<w:i w:val="0"/>
+							<w:iCs w:val="0"/>
+							<w:caps w:val="0"/>
+							<w:color w:val="000000"/>
+							<w:spacing w:val="0"/>
+							<w:sz w:val="18"/>
+							<w:szCs w:val="18"/>
+							<w:lang w:val="en-US" w:eastAsia="zh-CN"/>
+						</w:rPr>
+						<w:t xml:space="preserve"> </w:t>
+					</w:r>
+					<w:r>
+						<w:rPr>
+							<w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体" w:cs="宋体"/>
+							<w:i w:val="0"/>
+							<w:iCs w:val="0"/>
+							<w:caps w:val="0"/>
+							<w:color w:val="000000"/>
+							<w:spacing w:val="0"/>
+							<w:sz w:val="18"/>
+							<w:szCs w:val="18"/>
+						</w:rPr>
+						<w:t>毕业论文（设计）题目</w:t> 
+					</w:r>
+				</w:p>
+			</w:hdr>
+		</pkg:xmlData>
+	</pkg:part>
+	<pkg:part pkg:name="/word/header2.xml" pkg:contentType="application/vnd.openxmlformats-officedocument.wordprocessingml.header+xml">
+		<pkg:xmlData>
+			<w:hdr xmlns:wpc="http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:wp14="http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing" xmlns:wp="http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing" xmlns:w10="urn:schemas-microsoft-com:office:word" xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main" xmlns:w14="http://schemas.microsoft.com/office/word/2010/wordml" xmlns:w15="http://schemas.microsoft.com/office/word/2012/wordml" xmlns:wpg="http://schemas.microsoft.com/office/word/2010/wordprocessingGroup" xmlns:wpi="http://schemas.microsoft.com/office/word/2010/wordprocessingInk" xmlns:wne="http://schemas.microsoft.com/office/word/2006/wordml" xmlns:wps="http://schemas.microsoft.com/office/word/2010/wordprocessingShape" xmlns:wpsCustomData="http://www.wps.cn/officeDocument/2013/wpsCustomData" mc:Ignorable="w14 w15 wp14">
+				<w:p>
+					<w:pPr>
+						<w:pStyle w:val="19"/>
+						<w:pBdr>
+							<w:bottom w:val="none" w:color="auto" w:sz="0" w:space="0"/>
+						</w:pBdr>
+					</w:pPr>
+				</w:p>
+			</w:hdr>
+		</pkg:xmlData>
+	</pkg:part>
+	<pkg:part pkg:name="/word/numbering.xml" pkg:contentType="application/vnd.openxmlformats-officedocument.wordprocessingml.numbering+xml">
+		<pkg:xmlData>
+			<w:numbering xmlns:wpc="http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:wp14="http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing" xmlns:wp="http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing" xmlns:w10="urn:schemas-microsoft-com:office:word" xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main" xmlns:w14="http://schemas.microsoft.com/office/word/2010/wordml" xmlns:wpg="http://schemas.microsoft.com/office/word/2010/wordprocessingGroup" xmlns:wpi="http://schemas.microsoft.com/office/word/2010/wordprocessingInk" xmlns:wne="http://schemas.microsoft.com/office/word/2006/wordml" xmlns:wps="http://schemas.microsoft.com/office/word/2010/wordprocessingShape" xmlns:wpsCustomData="http://www.wps.cn/officeDocument/2013/wpsCustomData" mc:Ignorable="w14 wp14">
+				<w:abstractNum w:abstractNumId="0">
+					<w:nsid w:val="0AE367E9"/>
+					<w:multiLevelType w:val="multilevel"/>
+					<w:tmpl w:val="0AE367E9"/>
+					<w:lvl w:ilvl="0" w:tentative="0">
+						<w:start w:val="1"/>
+						<w:numFmt w:val="none"/>
+						<w:pStyle w:val="41"/>
+						<w:lvlText w:val="%1示例"/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:tabs>
+								<w:tab w:val="left" w:pos="1120"/>
+							</w:tabs>
+							<w:ind w:left="0" w:firstLine="400"/>
+						</w:pPr>
+						<w:rPr>
+							<w:rFonts w:hint="eastAsia" w:ascii="宋体" w:eastAsia="宋体"/>
+							<w:b w:val="0"/>
+							<w:i w:val="0"/>
+							<w:sz w:val="18"/>
+						</w:rPr>
+					</w:lvl>
+					<w:lvl w:ilvl="1" w:tentative="0">
+						<w:start w:val="1"/>
+						<w:numFmt w:val="lowerLetter"/>
+						<w:lvlText w:val="%2)"/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:tabs>
+								<w:tab w:val="left" w:pos="840"/>
+							</w:tabs>
+							<w:ind w:left="840" w:hanging="420"/>
+						</w:pPr>
+					</w:lvl>
+					<w:lvl w:ilvl="2" w:tentative="0">
+						<w:start w:val="1"/>
+						<w:numFmt w:val="lowerRoman"/>
+						<w:lvlText w:val="%3."/>
+						<w:lvlJc w:val="right"/>
+						<w:pPr>
+							<w:tabs>
+								<w:tab w:val="left" w:pos="1260"/>
+							</w:tabs>
+							<w:ind w:left="1260" w:hanging="420"/>
+						</w:pPr>
+					</w:lvl>
+					<w:lvl w:ilvl="3" w:tentative="0">
+						<w:start w:val="1"/>
+						<w:numFmt w:val="decimal"/>
+						<w:lvlText w:val="%4."/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:tabs>
+								<w:tab w:val="left" w:pos="1680"/>
+							</w:tabs>
+							<w:ind w:left="1680" w:hanging="420"/>
+						</w:pPr>
+					</w:lvl>
+					<w:lvl w:ilvl="4" w:tentative="0">
+						<w:start w:val="1"/>
+						<w:numFmt w:val="lowerLetter"/>
+						<w:lvlText w:val="%5)"/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:tabs>
+								<w:tab w:val="left" w:pos="2100"/>
+							</w:tabs>
+							<w:ind w:left="2100" w:hanging="420"/>
+						</w:pPr>
+					</w:lvl>
+					<w:lvl w:ilvl="5" w:tentative="0">
+						<w:start w:val="1"/>
+						<w:numFmt w:val="lowerRoman"/>
+						<w:lvlText w:val="%6."/>
+						<w:lvlJc w:val="right"/>
+						<w:pPr>
+							<w:tabs>
+								<w:tab w:val="left" w:pos="2520"/>
+							</w:tabs>
+							<w:ind w:left="2520" w:hanging="420"/>
+						</w:pPr>
+					</w:lvl>
+					<w:lvl w:ilvl="6" w:tentative="0">
+						<w:start w:val="1"/>
+						<w:numFmt w:val="decimal"/>
+						<w:lvlText w:val="%7."/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:tabs>
+								<w:tab w:val="left" w:pos="2940"/>
+							</w:tabs>
+							<w:ind w:left="2940" w:hanging="420"/>
+						</w:pPr>
+					</w:lvl>
+					<w:lvl w:ilvl="7" w:tentative="0">
+						<w:start w:val="1"/>
+						<w:numFmt w:val="lowerLetter"/>
+						<w:lvlText w:val="%8)"/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:tabs>
+								<w:tab w:val="left" w:pos="3360"/>
+							</w:tabs>
+							<w:ind w:left="3360" w:hanging="420"/>
+						</w:pPr>
+					</w:lvl>
+					<w:lvl w:ilvl="8" w:tentative="0">
+						<w:start w:val="1"/>
+						<w:numFmt w:val="lowerRoman"/>
+						<w:lvlText w:val="%9."/>
+						<w:lvlJc w:val="right"/>
+						<w:pPr>
+							<w:tabs>
+								<w:tab w:val="left" w:pos="3780"/>
+							</w:tabs>
+							<w:ind w:left="3780" w:hanging="420"/>
+						</w:pPr>
+					</w:lvl>
+				</w:abstractNum>
+				<w:abstractNum w:abstractNumId="1">
+					<w:nsid w:val="1B912F4C"/>
+					<w:multiLevelType w:val="multilevel"/>
+					<w:tmpl w:val="1B912F4C"/>
+					<w:lvl w:ilvl="0" w:tentative="0">
+						<w:start w:val="1"/>
+						<w:numFmt w:val="decimal"/>
+						<w:pStyle w:val="2"/>
+						<w:lvlText w:val="%1"/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:ind w:left="432" w:hanging="432"/>
+						</w:pPr>
+						<w:rPr>
+							<w:rFonts w:hint="eastAsia"/>
+						</w:rPr>
+					</w:lvl>
+					<w:lvl w:ilvl="1" w:tentative="0">
+						<w:start w:val="1"/>
+						<w:numFmt w:val="decimal"/>
+						<w:pStyle w:val="3"/>
+						<w:lvlText w:val="%1.%2"/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:ind w:left="576" w:hanging="576"/>
+						</w:pPr>
+						<w:rPr>
+							<w:rFonts w:hint="eastAsia"/>
+						</w:rPr>
+					</w:lvl>
+					<w:lvl w:ilvl="2" w:tentative="0">
+						<w:start w:val="1"/>
+						<w:numFmt w:val="decimal"/>
+						<w:lvlText w:val="%1.%2.%3"/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:ind w:left="720" w:hanging="720"/>
+						</w:pPr>
+						<w:rPr>
+							<w:rFonts w:hint="eastAsia"/>
+						</w:rPr>
+					</w:lvl>
+					<w:lvl w:ilvl="3" w:tentative="0">
+						<w:start w:val="1"/>
+						<w:numFmt w:val="decimal"/>
+						<w:pStyle w:val="5"/>
+						<w:lvlText w:val="%1.%2.%3.%4"/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:ind w:left="864" w:hanging="864"/>
+						</w:pPr>
+						<w:rPr>
+							<w:rFonts w:hint="eastAsia"/>
+						</w:rPr>
+					</w:lvl>
+					<w:lvl w:ilvl="4" w:tentative="0">
+						<w:start w:val="1"/>
+						<w:numFmt w:val="decimal"/>
+						<w:pStyle w:val="6"/>
+						<w:lvlText w:val="%1.%2.%3.%4.%5"/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:ind w:left="1008" w:hanging="1008"/>
+						</w:pPr>
+						<w:rPr>
+							<w:rFonts w:hint="eastAsia"/>
+						</w:rPr>
+					</w:lvl>
+					<w:lvl w:ilvl="5" w:tentative="0">
+						<w:start w:val="1"/>
+						<w:numFmt w:val="decimal"/>
+						<w:pStyle w:val="7"/>
+						<w:lvlText w:val="%1.%2.%3.%4.%5.%6"/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:ind w:left="1152" w:hanging="1152"/>
+						</w:pPr>
+						<w:rPr>
+							<w:rFonts w:hint="eastAsia"/>
+						</w:rPr>
+					</w:lvl>
+					<w:lvl w:ilvl="6" w:tentative="0">
+						<w:start w:val="1"/>
+						<w:numFmt w:val="decimal"/>
+						<w:pStyle w:val="8"/>
+						<w:lvlText w:val="%1.%2.%3.%4.%5.%6.%7"/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:ind w:left="1296" w:hanging="1296"/>
+						</w:pPr>
+						<w:rPr>
+							<w:rFonts w:hint="eastAsia"/>
+						</w:rPr>
+					</w:lvl>
+					<w:lvl w:ilvl="7" w:tentative="0">
+						<w:start w:val="1"/>
+						<w:numFmt w:val="decimal"/>
+						<w:pStyle w:val="9"/>
+						<w:lvlText w:val="%1.%2.%3.%4.%5.%6.%7.%8"/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:ind w:left="1440" w:hanging="1440"/>
+						</w:pPr>
+						<w:rPr>
+							<w:rFonts w:hint="eastAsia"/>
+						</w:rPr>
+					</w:lvl>
+					<w:lvl w:ilvl="8" w:tentative="0">
+						<w:start w:val="1"/>
+						<w:numFmt w:val="decimal"/>
+						<w:pStyle w:val="10"/>
+						<w:lvlText w:val="%1.%2.%3.%4.%5.%6.%7.%8.%9"/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:ind w:left="1584" w:hanging="1584"/>
+						</w:pPr>
+						<w:rPr>
+							<w:rFonts w:hint="eastAsia"/>
+						</w:rPr>
+					</w:lvl>
+				</w:abstractNum>
+				<w:abstractNum w:abstractNumId="2">
+					<w:nsid w:val="6CEA2025"/>
+					<w:multiLevelType w:val="multilevel"/>
+					<w:tmpl w:val="6CEA2025"/>
+					<w:lvl w:ilvl="0" w:tentative="0">
+						<w:start w:val="1"/>
+						<w:numFmt w:val="none"/>
+						<w:pStyle w:val="33"/>
+						<w:suff w:val="nothing"/>
+						<w:lvlText w:val="%1"/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:ind w:left="0" w:firstLine="0"/>
+						</w:pPr>
+						<w:rPr>
+							<w:rFonts w:hint="default" w:ascii="Times New Roman" w:hAnsi="Times New Roman"/>
+							<w:b/>
+							<w:i w:val="0"/>
+							<w:sz w:val="21"/>
+						</w:rPr>
+					</w:lvl>
+					<w:lvl w:ilvl="1" w:tentative="0">
+						<w:start w:val="1"/>
+						<w:numFmt w:val="decimal"/>
+						<w:suff w:val="nothing"/>
+						<w:lvlText w:val="%1%2　"/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:ind w:left="0" w:firstLine="0"/>
+						</w:pPr>
+						<w:rPr>
+							<w:rFonts w:hint="eastAsia" w:ascii="黑体" w:hAnsi="Times New Roman" w:eastAsia="黑体"/>
+							<w:b w:val="0"/>
+							<w:i w:val="0"/>
+							<w:sz w:val="21"/>
+						</w:rPr>
+					</w:lvl>
+					<w:lvl w:ilvl="2" w:tentative="0">
+						<w:start w:val="1"/>
+						<w:numFmt w:val="decimal"/>
+						<w:suff w:val="nothing"/>
+						<w:lvlText w:val="%1%2.%3　"/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:ind w:left="0" w:firstLine="0"/>
+						</w:pPr>
+						<w:rPr>
+							<w:rFonts w:hint="eastAsia" w:ascii="黑体" w:hAnsi="Times New Roman" w:eastAsia="黑体"/>
+							<w:b w:val="0"/>
+							<w:i w:val="0"/>
+							<w:sz w:val="21"/>
+						</w:rPr>
+					</w:lvl>
+					<w:lvl w:ilvl="3" w:tentative="0">
+						<w:start w:val="1"/>
+						<w:numFmt w:val="decimal"/>
+						<w:suff w:val="nothing"/>
+						<w:lvlText w:val="%1%2.%3.%4　"/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:ind w:left="0" w:firstLine="0"/>
+						</w:pPr>
+						<w:rPr>
+							<w:rFonts w:hint="eastAsia" w:ascii="黑体" w:hAnsi="Times New Roman" w:eastAsia="黑体"/>
+							<w:b w:val="0"/>
+							<w:i w:val="0"/>
+							<w:sz w:val="21"/>
+						</w:rPr>
+					</w:lvl>
+					<w:lvl w:ilvl="4" w:tentative="0">
+						<w:start w:val="1"/>
+						<w:numFmt w:val="decimal"/>
+						<w:suff w:val="nothing"/>
+						<w:lvlText w:val="%1%2.%3.%4.%5　"/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:ind w:left="0" w:firstLine="0"/>
+						</w:pPr>
+						<w:rPr>
+							<w:rFonts w:hint="eastAsia" w:ascii="黑体" w:hAnsi="Times New Roman" w:eastAsia="黑体"/>
+							<w:b w:val="0"/>
+							<w:i w:val="0"/>
+							<w:sz w:val="21"/>
+						</w:rPr>
+					</w:lvl>
+					<w:lvl w:ilvl="5" w:tentative="0">
+						<w:start w:val="1"/>
+						<w:numFmt w:val="decimal"/>
+						<w:suff w:val="nothing"/>
+						<w:lvlText w:val="%1%2.%3.%4.%5.%6　"/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:ind w:left="0" w:firstLine="0"/>
+						</w:pPr>
+						<w:rPr>
+							<w:rFonts w:hint="eastAsia" w:ascii="黑体" w:hAnsi="Times New Roman" w:eastAsia="黑体"/>
+							<w:b w:val="0"/>
+							<w:i w:val="0"/>
+							<w:sz w:val="21"/>
+						</w:rPr>
+					</w:lvl>
+					<w:lvl w:ilvl="6" w:tentative="0">
+						<w:start w:val="1"/>
+						<w:numFmt w:val="decimal"/>
+						<w:suff w:val="nothing"/>
+						<w:lvlText w:val="%1%2.%3.%4.%5.%6.%7　"/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:ind w:left="0" w:firstLine="0"/>
+						</w:pPr>
+						<w:rPr>
+							<w:rFonts w:hint="eastAsia" w:ascii="黑体" w:hAnsi="Times New Roman" w:eastAsia="黑体"/>
+							<w:b w:val="0"/>
+							<w:i w:val="0"/>
+							<w:sz w:val="21"/>
+						</w:rPr>
+					</w:lvl>
+					<w:lvl w:ilvl="7" w:tentative="0">
+						<w:start w:val="1"/>
+						<w:numFmt w:val="decimal"/>
+						<w:lvlText w:val="%1.%2.%3.%4.%5.%6.%7.%8"/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:tabs>
+								<w:tab w:val="left" w:pos="4351"/>
+							</w:tabs>
+							<w:ind w:left="3969" w:hanging="1418"/>
+						</w:pPr>
+						<w:rPr>
+							<w:rFonts w:hint="eastAsia"/>
+						</w:rPr>
+					</w:lvl>
+					<w:lvl w:ilvl="8" w:tentative="0">
+						<w:start w:val="1"/>
+						<w:numFmt w:val="decimal"/>
+						<w:lvlText w:val="%1.%2.%3.%4.%5.%6.%7.%8.%9"/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:tabs>
+								<w:tab w:val="left" w:pos="4777"/>
+							</w:tabs>
+							<w:ind w:left="4677" w:hanging="1700"/>
+						</w:pPr>
+						<w:rPr>
+							<w:rFonts w:hint="eastAsia"/>
+						</w:rPr>
+					</w:lvl>
+				</w:abstractNum>
+				<w:abstractNum w:abstractNumId="3">
+					<w:nsid w:val="76933334"/>
+					<w:multiLevelType w:val="multilevel"/>
+					<w:tmpl w:val="76933334"/>
+					<w:lvl w:ilvl="0" w:tentative="0">
+						<w:start w:val="1"/>
+						<w:numFmt w:val="none"/>
+						<w:pStyle w:val="42"/>
+						<w:lvlText w:val="%1——"/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:tabs>
+								<w:tab w:val="left" w:pos="1140"/>
+							</w:tabs>
+							<w:ind w:left="840" w:hanging="420"/>
+						</w:pPr>
+						<w:rPr>
+							<w:rFonts w:hint="eastAsia"/>
+						</w:rPr>
+					</w:lvl>
+					<w:lvl w:ilvl="1" w:tentative="0">
+						<w:start w:val="1"/>
+						<w:numFmt w:val="lowerLetter"/>
+						<w:lvlText w:val="%2)"/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:tabs>
+								<w:tab w:val="left" w:pos="840"/>
+							</w:tabs>
+							<w:ind w:left="840" w:hanging="420"/>
+						</w:pPr>
+					</w:lvl>
+					<w:lvl w:ilvl="2" w:tentative="0">
+						<w:start w:val="1"/>
+						<w:numFmt w:val="lowerRoman"/>
+						<w:lvlText w:val="%3."/>
+						<w:lvlJc w:val="right"/>
+						<w:pPr>
+							<w:tabs>
+								<w:tab w:val="left" w:pos="1260"/>
+							</w:tabs>
+							<w:ind w:left="1260" w:hanging="420"/>
+						</w:pPr>
+					</w:lvl>
+					<w:lvl w:ilvl="3" w:tentative="0">
+						<w:start w:val="1"/>
+						<w:numFmt w:val="decimal"/>
+						<w:lvlText w:val="%4."/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:tabs>
+								<w:tab w:val="left" w:pos="1680"/>
+							</w:tabs>
+							<w:ind w:left="1680" w:hanging="420"/>
+						</w:pPr>
+					</w:lvl>
+					<w:lvl w:ilvl="4" w:tentative="0">
+						<w:start w:val="1"/>
+						<w:numFmt w:val="lowerLetter"/>
+						<w:lvlText w:val="%5)"/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:tabs>
+								<w:tab w:val="left" w:pos="2100"/>
+							</w:tabs>
+							<w:ind w:left="2100" w:hanging="420"/>
+						</w:pPr>
+					</w:lvl>
+					<w:lvl w:ilvl="5" w:tentative="0">
+						<w:start w:val="1"/>
+						<w:numFmt w:val="lowerRoman"/>
+						<w:lvlText w:val="%6."/>
+						<w:lvlJc w:val="right"/>
+						<w:pPr>
+							<w:tabs>
+								<w:tab w:val="left" w:pos="2520"/>
+							</w:tabs>
+							<w:ind w:left="2520" w:hanging="420"/>
+						</w:pPr>
+					</w:lvl>
+					<w:lvl w:ilvl="6" w:tentative="0">
+						<w:start w:val="1"/>
+						<w:numFmt w:val="decimal"/>
+						<w:lvlText w:val="%7."/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:tabs>
+								<w:tab w:val="left" w:pos="2940"/>
+							</w:tabs>
+							<w:ind w:left="2940" w:hanging="420"/>
+						</w:pPr>
+					</w:lvl>
+					<w:lvl w:ilvl="7" w:tentative="0">
+						<w:start w:val="1"/>
+						<w:numFmt w:val="lowerLetter"/>
+						<w:lvlText w:val="%8)"/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:tabs>
+								<w:tab w:val="left" w:pos="3360"/>
+							</w:tabs>
+							<w:ind w:left="3360" w:hanging="420"/>
+						</w:pPr>
+					</w:lvl>
+					<w:lvl w:ilvl="8" w:tentative="0">
+						<w:start w:val="1"/>
+						<w:numFmt w:val="lowerRoman"/>
+						<w:lvlText w:val="%9."/>
+						<w:lvlJc w:val="right"/>
+						<w:pPr>
+							<w:tabs>
+								<w:tab w:val="left" w:pos="3780"/>
+							</w:tabs>
+							<w:ind w:left="3780" w:hanging="420"/>
+						</w:pPr>
+					</w:lvl>
+				</w:abstractNum>
+				<w:num w:numId="1">
+					<w:abstractNumId w:val="1"/>
+				</w:num>
+				<w:num w:numId="2">
+					<w:abstractNumId w:val="2"/>
+				</w:num>
+				<w:num w:numId="3">
+					<w:abstractNumId w:val="0"/>
+				</w:num>
+				<w:num w:numId="4">
+					<w:abstractNumId w:val="3"/>
+				</w:num>
+			</w:numbering>
+		</pkg:xmlData>
+	</pkg:part>
+	<pkg:part pkg:name="/word/settings.xml" pkg:contentType="application/vnd.openxmlformats-officedocument.wordprocessingml.settings+xml">
+		<pkg:xmlData>
+			<w:settings xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w10="urn:schemas-microsoft-com:office:word" xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main" xmlns:w14="http://schemas.microsoft.com/office/word/2010/wordml" xmlns:sl="http://schemas.openxmlformats.org/schemaLibrary/2006/main" xmlns:wpsCustomData="http://www.wps.cn/officeDocument/2013/wpsCustomData" mc:Ignorable="w14">
+				<w:zoom w:percent="120"/>
+				<w:bordersDoNotSurroundHeader w:val="0"/>
+				<w:bordersDoNotSurroundFooter w:val="0"/>
+				<w:documentProtection w:enforcement="0"/>
+				<w:defaultTabStop w:val="420"/>
+				<w:evenAndOddHeaders w:val="1"/>
+				<w:drawingGridHorizontalSpacing w:val="105"/>
+				<w:drawingGridVerticalSpacing w:val="156"/>
+				<w:displayHorizontalDrawingGridEvery w:val="1"/>
+				<w:displayVerticalDrawingGridEvery w:val="1"/>
+				<w:noPunctuationKerning w:val="1"/>
+				<w:characterSpacingControl w:val="compressPunctuation"/>
+				<w:footnotePr>
+					<w:footnote w:id="0"/>
+					<w:footnote w:id="1"/>
+				</w:footnotePr>
+				<w:endnotePr>
+					<w:endnote w:id="0"/>
+					<w:endnote w:id="1"/>
+				</w:endnotePr>
+				<w:compat>
+					<w:spaceForUL/>
+					<w:balanceSingleByteDoubleByteWidth/>
+					<w:doNotLeaveBackslashAlone/>
+					<w:ulTrailSpace/>
+					<w:doNotExpandShiftReturn/>
+					<w:adjustLineHeightInTable/>
+					<w:doNotWrapTextWithPunct/>
+					<w:doNotUseEastAsianBreakRules/>
+					<w:useFELayout/>
+					<w:doNotUseIndentAsNumberingTabStop/>
+					<w:compatSetting w:name="compatibilityMode" w:uri="http://schemas.microsoft.com/office/word" w:val="14"/>
+					<w:compatSetting w:name="overrideTableStyleFontSizeAndJustification" w:uri="http://schemas.microsoft.com/office/word" w:val="1"/>
+					<w:compatSetting w:name="enableOpenTypeFeatures" w:uri="http://schemas.microsoft.com/office/word" w:val="1"/>
+					<w:compatSetting w:name="doNotFlipMirrorIndents" w:uri="http://schemas.microsoft.com/office/word" w:val="1"/>
+				</w:compat>
+				<w:rsids>
+					<w:rsidRoot w:val="001355AC"/>
+					<w:rsid w:val="00004548"/>
+					<w:rsid w:val="00006623"/>
+					<w:rsid w:val="000107DD"/>
+					<w:rsid w:val="00014137"/>
+					<w:rsid w:val="00014267"/>
+					<w:rsid w:val="000253AA"/>
+					<w:rsid w:val="00026DD8"/>
+					<w:rsid w:val="00030305"/>
+					<w:rsid w:val="0003787F"/>
+					<w:rsid w:val="00040960"/>
+					<w:rsid w:val="00045E7F"/>
+					<w:rsid w:val="0004632A"/>
+					<w:rsid w:val="00050D8F"/>
+					<w:rsid w:val="00053998"/>
+					<w:rsid w:val="00057CD7"/>
+					<w:rsid w:val="0006218B"/>
+					<w:rsid w:val="000639A4"/>
+					<w:rsid w:val="00063CFC"/>
+					<w:rsid w:val="000649E8"/>
+					<w:rsid w:val="00066262"/>
+					<w:rsid w:val="00066FE7"/>
+					<w:rsid w:val="0007178E"/>
+					<w:rsid w:val="0007366C"/>
+					<w:rsid w:val="00080B90"/>
+					<w:rsid w:val="000829F1"/>
+					<w:rsid w:val="000900EF"/>
+					<w:rsid w:val="00090203"/>
+					<w:rsid w:val="00090590"/>
+					<w:rsid w:val="00091B1C"/>
+					<w:rsid w:val="000920C0"/>
+					<w:rsid w:val="00093BF4"/>
+					<w:rsid w:val="000969CF"/>
+					<w:rsid w:val="00097EF9"/>
+					<w:rsid w:val="000A1C2A"/>
+					<w:rsid w:val="000A2D77"/>
+					<w:rsid w:val="000A32A2"/>
+					<w:rsid w:val="000A5810"/>
+					<w:rsid w:val="000A7B8A"/>
+					<w:rsid w:val="000A7DE0"/>
+					<w:rsid w:val="000C2C04"/>
+					<w:rsid w:val="000C4952"/>
+					<w:rsid w:val="000D1128"/>
+					<w:rsid w:val="000D1461"/>
+					<w:rsid w:val="000D163C"/>
+					<w:rsid w:val="000D20AC"/>
+					<w:rsid w:val="000D320F"/>
+					<w:rsid w:val="000D75F8"/>
+					<w:rsid w:val="000E27CA"/>
+					<w:rsid w:val="000E4363"/>
+					<w:rsid w:val="000E5ED7"/>
+					<w:rsid w:val="000F0AB0"/>
+					<w:rsid w:val="000F20A5"/>
+					<w:rsid w:val="000F37DC"/>
+					<w:rsid w:val="000F7FAE"/>
+					<w:rsid w:val="00100354"/>
+					<w:rsid w:val="001005FD"/>
+					<w:rsid w:val="00101262"/>
+					<w:rsid w:val="00105842"/>
+					<w:rsid w:val="00107D1F"/>
+					<w:rsid w:val="00112495"/>
+					<w:rsid w:val="00121FD1"/>
+					<w:rsid w:val="001222BF"/>
+					<w:rsid w:val="001223D9"/>
+					<w:rsid w:val="00123DB2"/>
+					<w:rsid w:val="00124C17"/>
+					<w:rsid w:val="00126480"/>
+					<w:rsid w:val="0013251C"/>
+					<w:rsid w:val="001355AC"/>
+					<w:rsid w:val="00136A28"/>
+					<w:rsid w:val="0014411E"/>
+					<w:rsid w:val="0014537C"/>
+					<w:rsid w:val="00146EDE"/>
+					<w:rsid w:val="00153D27"/>
+					<w:rsid w:val="001558E7"/>
+					<w:rsid w:val="00157234"/>
+					<w:rsid w:val="00162E44"/>
+					<w:rsid w:val="00165BE1"/>
+					<w:rsid w:val="00165CD8"/>
+					<w:rsid w:val="00166860"/>
+					<w:rsid w:val="001710F3"/>
+					<w:rsid w:val="001716BE"/>
+					<w:rsid w:val="00181CFB"/>
+					<w:rsid w:val="00184F67"/>
+					<w:rsid w:val="001858B9"/>
+					<w:rsid w:val="00190D2E"/>
+					<w:rsid w:val="001922B1"/>
+					<w:rsid w:val="001925DE"/>
+					<w:rsid w:val="00194923"/>
+					<w:rsid w:val="001966C5"/>
+					<w:rsid w:val="001A1D08"/>
+					<w:rsid w:val="001A20E7"/>
+					<w:rsid w:val="001A273C"/>
+					<w:rsid w:val="001A5BAF"/>
+					<w:rsid w:val="001A5F73"/>
+					<w:rsid w:val="001B1546"/>
+					<w:rsid w:val="001B4299"/>
+					<w:rsid w:val="001B5690"/>
+					<w:rsid w:val="001B5E2E"/>
+					<w:rsid w:val="001C5558"/>
+					<w:rsid w:val="001C60E9"/>
+					<w:rsid w:val="001D0CCA"/>
+					<w:rsid w:val="001D273C"/>
+					<w:rsid w:val="001D6CEC"/>
+					<w:rsid w:val="001E67CD"/>
+					<w:rsid w:val="001E7514"/>
+					<w:rsid w:val="001E779D"/>
+					<w:rsid w:val="001F2256"/>
+					<w:rsid w:val="001F4E91"/>
+					<w:rsid w:val="002013B7"/>
+					<w:rsid w:val="00203346"/>
+					<w:rsid w:val="00203BDC"/>
+					<w:rsid w:val="002045E3"/>
+					<w:rsid w:val="0020520F"/>
+					<w:rsid w:val="00207597"/>
+					<w:rsid w:val="002127B0"/>
+					<w:rsid w:val="00212CF4"/>
+					<w:rsid w:val="00213364"/>
+					<w:rsid w:val="00215D56"/>
+					<w:rsid w:val="00223C9A"/>
+					<w:rsid w:val="00225DD9"/>
+					<w:rsid w:val="00226697"/>
+					<w:rsid w:val="00227EB6"/>
+					<w:rsid w:val="002313FB"/>
+					<w:rsid w:val="00231A83"/>
+					<w:rsid w:val="00234B9D"/>
+					<w:rsid w:val="00235A1B"/>
+					<w:rsid w:val="00240848"/>
+					<w:rsid w:val="002416C0"/>
+					<w:rsid w:val="00243223"/>
+					<w:rsid w:val="0024323A"/>
+					<w:rsid w:val="002450B8"/>
+					<w:rsid w:val="00250F8B"/>
+					<w:rsid w:val="00251DF0"/>
+					<w:rsid w:val="002537FD"/>
+					<w:rsid w:val="00253DC8"/>
+					<w:rsid w:val="00254AEB"/>
+					<w:rsid w:val="00255AC7"/>
+					<w:rsid w:val="00256635"/>
+					<w:rsid w:val="0025739A"/>
+					<w:rsid w:val="0026121B"/>
+					<w:rsid w:val="0026146A"/>
+					<w:rsid w:val="00270BF6"/>
+					<w:rsid w:val="00271EE0"/>
+					<w:rsid w:val="00272187"/>
+					<w:rsid w:val="00273D6A"/>
+					<w:rsid w:val="00277983"/>
+					<w:rsid w:val="00280AA8"/>
+					<w:rsid w:val="00280B16"/>
+					<w:rsid w:val="00281B50"/>
+					<w:rsid w:val="00284458"/>
+					<w:rsid w:val="00284A59"/>
+					<w:rsid w:val="00286E90"/>
+					<w:rsid w:val="00290285"/>
+					<w:rsid w:val="00291AF4"/>
+					<w:rsid w:val="002938B1"/>
+					<w:rsid w:val="002A2B97"/>
+					<w:rsid w:val="002A3F48"/>
+					<w:rsid w:val="002A56CE"/>
+					<w:rsid w:val="002B04B8"/>
+					<w:rsid w:val="002B2826"/>
+					<w:rsid w:val="002B7B30"/>
+					<w:rsid w:val="002C09EE"/>
+					<w:rsid w:val="002C2643"/>
+					<w:rsid w:val="002C3396"/>
+					<w:rsid w:val="002C4A6B"/>
+					<w:rsid w:val="002C72C6"/>
+					<w:rsid w:val="002C74CA"/>
+					<w:rsid w:val="002D3FB0"/>
+					<w:rsid w:val="002F0415"/>
+					<w:rsid w:val="002F12F0"/>
+					<w:rsid w:val="002F2BC8"/>
+					<w:rsid w:val="002F69DA"/>
+					<w:rsid w:val="0030122F"/>
+					<w:rsid w:val="003056CD"/>
+					<w:rsid w:val="003066A3"/>
+					<w:rsid w:val="00306CC7"/>
+					<w:rsid w:val="003156EB"/>
+					<w:rsid w:val="00317C8F"/>
+					<w:rsid w:val="00322C35"/>
+					<w:rsid w:val="00323673"/>
+					<w:rsid w:val="00330B68"/>
+					<w:rsid w:val="003352AC"/>
+					<w:rsid w:val="00335BAB"/>
+					<w:rsid w:val="00335EE7"/>
+					<w:rsid w:val="00340DC3"/>
+					<w:rsid w:val="003427C4"/>
+					<w:rsid w:val="003449DD"/>
+					<w:rsid w:val="00345E0D"/>
+					<w:rsid w:val="00346204"/>
+					<w:rsid w:val="00351C29"/>
+					<w:rsid w:val="00351C9D"/>
+					<w:rsid w:val="00352746"/>
+					<w:rsid w:val="003562E3"/>
+					<w:rsid w:val="003601A0"/>
+					<w:rsid w:val="003603F4"/>
+					<w:rsid w:val="003623BA"/>
+					<w:rsid w:val="003623E6"/>
+					<w:rsid w:val="003632F4"/>
+					<w:rsid w:val="00363B49"/>
+					<w:rsid w:val="003654BE"/>
+					<w:rsid w:val="0037074C"/>
+					<w:rsid w:val="00370E3C"/>
+					<w:rsid w:val="00377035"/>
+					<w:rsid w:val="00377154"/>
+					<w:rsid w:val="00377274"/>
+					<w:rsid w:val="003810EC"/>
+					<w:rsid w:val="003863E3"/>
+					<w:rsid w:val="0039385F"/>
+					<w:rsid w:val="0039423F"/>
+					<w:rsid w:val="003971C4"/>
+					<w:rsid w:val="003B19A5"/>
+					<w:rsid w:val="003B2AEA"/>
+					<w:rsid w:val="003B6D10"/>
+					<w:rsid w:val="003B6F5E"/>
+					<w:rsid w:val="003B7593"/>
+					<w:rsid w:val="003C5708"/>
+					<w:rsid w:val="003C7870"/>
+					<w:rsid w:val="003C7D9D"/>
+					<w:rsid w:val="003D1452"/>
+					<w:rsid w:val="003D3798"/>
+					<w:rsid w:val="003D3B1B"/>
+					<w:rsid w:val="003D659C"/>
+					<w:rsid w:val="003D79F0"/>
+					<w:rsid w:val="003D7B88"/>
+					<w:rsid w:val="003E2AA0"/>
+					<w:rsid w:val="003E5585"/>
+					<w:rsid w:val="003E7E72"/>
+					<w:rsid w:val="003F302B"/>
+					<w:rsid w:val="003F3134"/>
+					<w:rsid w:val="003F3A1D"/>
+					<w:rsid w:val="003F40C1"/>
+					<w:rsid w:val="00404630"/>
+					<w:rsid w:val="00404791"/>
+					<w:rsid w:val="0040698E"/>
+					<w:rsid w:val="0041013E"/>
+					<w:rsid w:val="004108D1"/>
+					<w:rsid w:val="00412DEC"/>
+					<w:rsid w:val="00413E1C"/>
+					<w:rsid w:val="00415166"/>
+					<w:rsid w:val="004169C2"/>
+					<w:rsid w:val="004177B7"/>
+					<w:rsid w:val="00421A36"/>
+					<w:rsid w:val="00422349"/>
+					<w:rsid w:val="00423069"/>
+					<w:rsid w:val="004234BA"/>
+					<w:rsid w:val="00424A64"/>
+					<w:rsid w:val="00425F59"/>
+					<w:rsid w:val="004271E2"/>
+					<w:rsid w:val="00432481"/>
+					<w:rsid w:val="00432A83"/>
+					<w:rsid w:val="00434841"/>
+					<w:rsid w:val="004348DC"/>
+					<w:rsid w:val="00434955"/>
+					<w:rsid w:val="00442FB6"/>
+					<w:rsid w:val="004453D6"/>
+					<w:rsid w:val="004457AC"/>
+					<w:rsid w:val="004509C7"/>
+					<w:rsid w:val="004512DD"/>
+					<w:rsid w:val="004538E1"/>
+					<w:rsid w:val="00455029"/>
+					<w:rsid w:val="00455313"/>
+					<w:rsid w:val="0045726F"/>
+					<w:rsid w:val="0046063B"/>
+					<w:rsid w:val="004607A1"/>
+					<w:rsid w:val="00472BDD"/>
+					<w:rsid w:val="00473DF0"/>
+					<w:rsid w:val="0047470B"/>
+					<w:rsid w:val="00481252"/>
+					<w:rsid w:val="00481654"/>
+					<w:rsid w:val="00483841"/>
+					<w:rsid w:val="004843D5"/>
+					<w:rsid w:val="0048554B"/>
+					<w:rsid w:val="00487DD0"/>
+					<w:rsid w:val="004934C3"/>
+					<w:rsid w:val="00494ABB"/>
+					<w:rsid w:val="00494C21"/>
+					<w:rsid w:val="00496219"/>
+					<w:rsid w:val="0049744F"/>
+					<w:rsid w:val="004A1CB1"/>
+					<w:rsid w:val="004A46A6"/>
+					<w:rsid w:val="004A717D"/>
+					<w:rsid w:val="004B0F83"/>
+					<w:rsid w:val="004B1228"/>
+					<w:rsid w:val="004B2F3A"/>
+					<w:rsid w:val="004B63A9"/>
+					<w:rsid w:val="004B66C7"/>
+					<w:rsid w:val="004B6AEF"/>
+					<w:rsid w:val="004B6FEB"/>
+					<w:rsid w:val="004C0699"/>
+					<w:rsid w:val="004C16FF"/>
+					<w:rsid w:val="004C2A5D"/>
+					<w:rsid w:val="004C4654"/>
+					<w:rsid w:val="004C68F5"/>
+					<w:rsid w:val="004D07D4"/>
+					<w:rsid w:val="004D5493"/>
+					<w:rsid w:val="004E2E43"/>
+					<w:rsid w:val="004E385A"/>
+					<w:rsid w:val="004F007C"/>
+					<w:rsid w:val="004F02B5"/>
+					<w:rsid w:val="004F06F6"/>
+					<w:rsid w:val="004F5E45"/>
+					<w:rsid w:val="004F7CA1"/>
+					<w:rsid w:val="00500E45"/>
+					<w:rsid w:val="005018AA"/>
+					<w:rsid w:val="0050252A"/>
+					<w:rsid w:val="005059E2"/>
+					<w:rsid w:val="00510C47"/>
+					<w:rsid w:val="00511C23"/>
+					<w:rsid w:val="00513F66"/>
+					<w:rsid w:val="00515060"/>
+					<w:rsid w:val="00515397"/>
+					<w:rsid w:val="005210F6"/>
+					<w:rsid w:val="005214C3"/>
+					<w:rsid w:val="00526D09"/>
+					<w:rsid w:val="00530022"/>
+					<w:rsid w:val="00530443"/>
+					<w:rsid w:val="00533305"/>
+					<w:rsid w:val="0053502F"/>
+					<w:rsid w:val="00536C97"/>
+					<w:rsid w:val="00537065"/>
+					<w:rsid w:val="0054005F"/>
+					<w:rsid w:val="00540D01"/>
+					<w:rsid w:val="00541557"/>
+					<w:rsid w:val="00541A1D"/>
+					<w:rsid w:val="00543718"/>
+					<w:rsid w:val="00546229"/>
+					<w:rsid w:val="00546447"/>
+					<w:rsid w:val="0055213E"/>
+					<w:rsid w:val="00553314"/>
+					<w:rsid w:val="00557DB1"/>
+					<w:rsid w:val="005627AF"/>
+					<w:rsid w:val="0056318B"/>
+					<w:rsid w:val="00567F7C"/>
+					<w:rsid w:val="0057029F"/>
+					<w:rsid w:val="00574D61"/>
+					<w:rsid w:val="0057644B"/>
+					<w:rsid w:val="00577BC4"/>
+					<w:rsid w:val="00582310"/>
+					<w:rsid w:val="00586A19"/>
+					<w:rsid w:val="00586B8F"/>
+					<w:rsid w:val="00586FC8"/>
+					<w:rsid w:val="00590000"/>
+					<w:rsid w:val="00591218"/>
+					<w:rsid w:val="0059496E"/>
+					<w:rsid w:val="005961AF"/>
+					<w:rsid w:val="005A031E"/>
+					<w:rsid w:val="005A0487"/>
+					<w:rsid w:val="005A0613"/>
+					<w:rsid w:val="005A7C86"/>
+					<w:rsid w:val="005B631B"/>
+					<w:rsid w:val="005C1EE4"/>
+					<w:rsid w:val="005C3236"/>
+					<w:rsid w:val="005C710D"/>
+					<w:rsid w:val="005C73BA"/>
+					<w:rsid w:val="005C754B"/>
+					<w:rsid w:val="005D6541"/>
+					<w:rsid w:val="005E357E"/>
+					<w:rsid w:val="005E584C"/>
+					<w:rsid w:val="005E5FB5"/>
+					<w:rsid w:val="005E6264"/>
+					<w:rsid w:val="005F1D27"/>
+					<w:rsid w:val="005F2FE6"/>
+					<w:rsid w:val="005F4A2B"/>
+					<w:rsid w:val="0060049E"/>
+					<w:rsid w:val="00603299"/>
+					<w:rsid w:val="00607B3D"/>
+					<w:rsid w:val="00610049"/>
+					<w:rsid w:val="00610B97"/>
+					<w:rsid w:val="006116FC"/>
+					<w:rsid w:val="00612ABD"/>
+					<w:rsid w:val="00614A42"/>
+					<w:rsid w:val="006158A1"/>
+					<w:rsid w:val="006228B6"/>
+					<w:rsid w:val="00623098"/>
+					<w:rsid w:val="00626457"/>
+					<w:rsid w:val="00627516"/>
+					<w:rsid w:val="00630F41"/>
+					<w:rsid w:val="0063300D"/>
+					<w:rsid w:val="00634718"/>
+					<w:rsid w:val="00634E45"/>
+					<w:rsid w:val="0063522A"/>
+					<w:rsid w:val="0064455F"/>
+					<w:rsid w:val="00644F46"/>
+					<w:rsid w:val="00646C9E"/>
+					<w:rsid w:val="006477E9"/>
+					<w:rsid w:val="0065047D"/>
+					<w:rsid w:val="00654834"/>
+					<w:rsid w:val="00654D22"/>
+					<w:rsid w:val="00654EC0"/>
+					<w:rsid w:val="00665027"/>
+					<w:rsid w:val="00666CC8"/>
+					<w:rsid w:val="006748D7"/>
+					<w:rsid w:val="00680FD1"/>
+					<w:rsid w:val="0068134B"/>
+					<w:rsid w:val="006820FF"/>
+					<w:rsid w:val="0068337B"/>
+					<w:rsid w:val="006848CA"/>
+					<w:rsid w:val="00686223"/>
+					<w:rsid w:val="00687F16"/>
+					<w:rsid w:val="00692177"/>
+					<w:rsid w:val="00693487"/>
+					<w:rsid w:val="00696620"/>
+					<w:rsid w:val="006A1EF6"/>
+					<w:rsid w:val="006C01F9"/>
+					<w:rsid w:val="006C47A2"/>
+					<w:rsid w:val="006D024C"/>
+					<w:rsid w:val="006D038D"/>
+					<w:rsid w:val="006D0601"/>
+					<w:rsid w:val="006D5E7F"/>
+					<w:rsid w:val="006D7223"/>
+					<w:rsid w:val="006E29E5"/>
+					<w:rsid w:val="006E4F1A"/>
+					<w:rsid w:val="006E588B"/>
+					<w:rsid w:val="006F5A69"/>
+					<w:rsid w:val="006F6B21"/>
+					<w:rsid w:val="00701908"/>
+					<w:rsid w:val="00702002"/>
+					<w:rsid w:val="00703CA0"/>
+					<w:rsid w:val="00707B3F"/>
+					<w:rsid w:val="00710FB9"/>
+					<w:rsid w:val="0071185B"/>
+					<w:rsid w:val="00711928"/>
+					<w:rsid w:val="00714413"/>
+					<w:rsid w:val="00716295"/>
+					<w:rsid w:val="00716519"/>
+					<w:rsid w:val="00717210"/>
+					<w:rsid w:val="007211A4"/>
+					<w:rsid w:val="00722174"/>
+					<w:rsid w:val="007261ED"/>
+					<w:rsid w:val="00730B8B"/>
+					<w:rsid w:val="0073417B"/>
+					<w:rsid w:val="00734258"/>
+					<w:rsid w:val="00734D08"/>
+					<w:rsid w:val="0074000A"/>
+					<w:rsid w:val="00740E23"/>
+					<w:rsid w:val="007608CB"/>
+					<w:rsid w:val="00764C1D"/>
+					<w:rsid w:val="007710D0"/>
+					<w:rsid w:val="007723B6"/>
+					<w:rsid w:val="00776D75"/>
+					<w:rsid w:val="00777772"/>
+					<w:rsid w:val="00781AEF"/>
+					<w:rsid w:val="0078480C"/>
+					<w:rsid w:val="00785160"/>
+					<w:rsid w:val="00791755"/>
+					<w:rsid w:val="00791A82"/>
+					<w:rsid w:val="00792082"/>
+					<w:rsid w:val="00792A90"/>
+					<w:rsid w:val="00794234"/>
+					<w:rsid w:val="007975A9"/>
+					<w:rsid w:val="007977D2"/>
+					<w:rsid w:val="007A0B77"/>
+					<w:rsid w:val="007A2C2D"/>
+					<w:rsid w:val="007A421B"/>
+					<w:rsid w:val="007B09C9"/>
+					<w:rsid w:val="007B17B8"/>
+					<w:rsid w:val="007B27E7"/>
+					<w:rsid w:val="007B4C28"/>
+					<w:rsid w:val="007B5CBC"/>
+					<w:rsid w:val="007B690A"/>
+					<w:rsid w:val="007B7449"/>
+					<w:rsid w:val="007C0689"/>
+					<w:rsid w:val="007C12C6"/>
+					<w:rsid w:val="007C2D55"/>
+					<w:rsid w:val="007D0383"/>
+					<w:rsid w:val="007D09C8"/>
+					<w:rsid w:val="007D12EE"/>
+					<w:rsid w:val="007D1E0A"/>
+					<w:rsid w:val="007D3FF9"/>
+					<w:rsid w:val="007D4461"/>
+					<w:rsid w:val="007D744F"/>
+					<w:rsid w:val="007D7DB9"/>
+					<w:rsid w:val="007D7E4C"/>
+					<w:rsid w:val="007E003C"/>
+					<w:rsid w:val="007E5928"/>
+					<w:rsid w:val="007E5E99"/>
+					<w:rsid w:val="007E7937"/>
+					<w:rsid w:val="007F1005"/>
+					<w:rsid w:val="007F2142"/>
+					<w:rsid w:val="007F4B91"/>
+					<w:rsid w:val="008037AA"/>
+					<w:rsid w:val="00803819"/>
+					<w:rsid w:val="008046C4"/>
+					<w:rsid w:val="008069B7"/>
+					<w:rsid w:val="0080710F"/>
+					<w:rsid w:val="00812A79"/>
+					<w:rsid w:val="00816562"/>
+					<w:rsid w:val="00824BD0"/>
+					<w:rsid w:val="00825F00"/>
+					<w:rsid w:val="00832D34"/>
+					<w:rsid w:val="00835956"/>
+					<w:rsid w:val="00836FB3"/>
+					<w:rsid w:val="00837B90"/>
+					<w:rsid w:val="008412CB"/>
+					<w:rsid w:val="0084641A"/>
+					<w:rsid w:val="008517B3"/>
+					<w:rsid w:val="00854999"/>
+					<w:rsid w:val="00856384"/>
+					<w:rsid w:val="008618AD"/>
+					<w:rsid w:val="00862A4E"/>
+					<w:rsid w:val="008636D3"/>
+					<w:rsid w:val="008653A1"/>
+					<w:rsid w:val="008671B9"/>
+					<w:rsid w:val="008731C1"/>
+					<w:rsid w:val="0087370A"/>
+					<w:rsid w:val="00873B0B"/>
+					<w:rsid w:val="0087740C"/>
+					<w:rsid w:val="008833E2"/>
+					<w:rsid w:val="00884F43"/>
+					<w:rsid w:val="00890450"/>
+					<w:rsid w:val="00890A70"/>
+					<w:rsid w:val="008924C0"/>
+					<w:rsid w:val="0089427B"/>
+					<w:rsid w:val="0089497E"/>
+					<w:rsid w:val="0089614B"/>
+					<w:rsid w:val="00896648"/>
+					<w:rsid w:val="00896BD1"/>
+					<w:rsid w:val="00897D21"/>
+					<w:rsid w:val="008A20B0"/>
+					<w:rsid w:val="008A23A5"/>
+					<w:rsid w:val="008A39A8"/>
+					<w:rsid w:val="008B187B"/>
+					<w:rsid w:val="008B4F72"/>
+					<w:rsid w:val="008B77B7"/>
+					<w:rsid w:val="008B7D99"/>
+					<w:rsid w:val="008C1001"/>
+					<w:rsid w:val="008C62A3"/>
+					<w:rsid w:val="008C6B4C"/>
+					<w:rsid w:val="008D14F9"/>
+					<w:rsid w:val="008D3AFF"/>
+					<w:rsid w:val="008D53EF"/>
+					<w:rsid w:val="008E10EB"/>
+					<w:rsid w:val="008E347C"/>
+					<w:rsid w:val="008E3A09"/>
+					<w:rsid w:val="008E5AD6"/>
+					<w:rsid w:val="008E75D2"/>
+					<w:rsid w:val="008F054D"/>
+					<w:rsid w:val="008F0BD3"/>
+					<w:rsid w:val="008F1189"/>
+					<w:rsid w:val="008F34C6"/>
+					<w:rsid w:val="008F4F77"/>
+					<w:rsid w:val="00901A5C"/>
+					<w:rsid w:val="00903E39"/>
+					<w:rsid w:val="009116F6"/>
+					<w:rsid w:val="00911AC9"/>
+					<w:rsid w:val="00916917"/>
+					<w:rsid w:val="00921379"/>
+					<w:rsid w:val="00921C68"/>
+					<w:rsid w:val="009232A9"/>
+					<w:rsid w:val="009251F5"/>
+					<w:rsid w:val="009279A1"/>
+					<w:rsid w:val="0093060E"/>
+					<w:rsid w:val="0093238F"/>
+					<w:rsid w:val="00932F76"/>
+					<w:rsid w:val="009334E2"/>
+					<w:rsid w:val="0093444E"/>
+					<w:rsid w:val="00936527"/>
+					<w:rsid w:val="00937C02"/>
+					<w:rsid w:val="00944172"/>
+					<w:rsid w:val="0094529A"/>
+					<w:rsid w:val="00945CCB"/>
+					<w:rsid w:val="00946FA9"/>
+					<w:rsid w:val="009516DC"/>
+					<w:rsid w:val="0095190B"/>
+					<w:rsid w:val="00951ADD"/>
+					<w:rsid w:val="00953857"/>
+					<w:rsid w:val="009545AE"/>
+					<w:rsid w:val="009566BA"/>
+					<w:rsid w:val="009616F7"/>
+					<w:rsid w:val="0096362E"/>
+					<w:rsid w:val="0096760D"/>
+					<w:rsid w:val="00971087"/>
+					<w:rsid w:val="0097122A"/>
+					<w:rsid w:val="0097122F"/>
+					<w:rsid w:val="009739AA"/>
+					<w:rsid w:val="00974666"/>
+					<w:rsid w:val="00976BCF"/>
+					<w:rsid w:val="00977051"/>
+					<w:rsid w:val="00980E48"/>
+					<w:rsid w:val="009811ED"/>
+					<w:rsid w:val="00986D47"/>
+					<w:rsid w:val="00992DDC"/>
+					<w:rsid w:val="00993059"/>
+					<w:rsid w:val="009946AF"/>
+					<w:rsid w:val="009A08A7"/>
+					<w:rsid w:val="009A2949"/>
+					<w:rsid w:val="009A2EB1"/>
+					<w:rsid w:val="009A5825"/>
+					<w:rsid w:val="009B3D8B"/>
+					<w:rsid w:val="009B4BCE"/>
+					<w:rsid w:val="009C04EB"/>
+					<w:rsid w:val="009C0952"/>
+					<w:rsid w:val="009C4A55"/>
+					<w:rsid w:val="009C60DF"/>
+					<w:rsid w:val="009D0431"/>
+					<w:rsid w:val="009D0BB6"/>
+					<w:rsid w:val="009D4B94"/>
+					<w:rsid w:val="009D60AE"/>
+					<w:rsid w:val="009D60DE"/>
+					<w:rsid w:val="009D71DC"/>
+					<w:rsid w:val="009E0B07"/>
+					<w:rsid w:val="009E3634"/>
+					<w:rsid w:val="009E55C1"/>
+					<w:rsid w:val="009E6563"/>
+					<w:rsid w:val="009E6ECA"/>
+					<w:rsid w:val="009F0896"/>
+					<w:rsid w:val="009F10D1"/>
+					<w:rsid w:val="009F1414"/>
+					<w:rsid w:val="009F37E6"/>
+					<w:rsid w:val="009F4DA3"/>
+					<w:rsid w:val="009F58E1"/>
+					<w:rsid w:val="009F638B"/>
+					<w:rsid w:val="009F68D6"/>
+					<w:rsid w:val="00A011B7"/>
+					<w:rsid w:val="00A0526A"/>
+					<w:rsid w:val="00A054BA"/>
+					<w:rsid w:val="00A10C8A"/>
+					<w:rsid w:val="00A11665"/>
+					<w:rsid w:val="00A16BEB"/>
+					<w:rsid w:val="00A21982"/>
+					<w:rsid w:val="00A27DEF"/>
+					<w:rsid w:val="00A310E3"/>
+					<w:rsid w:val="00A31EE3"/>
+					<w:rsid w:val="00A32262"/>
+					<w:rsid w:val="00A35CDB"/>
+					<w:rsid w:val="00A362F1"/>
+					<w:rsid w:val="00A44E2B"/>
+					<w:rsid w:val="00A47614"/>
+					<w:rsid w:val="00A477F0"/>
+					<w:rsid w:val="00A50D28"/>
+					<w:rsid w:val="00A513BA"/>
+					<w:rsid w:val="00A5588F"/>
+					<w:rsid w:val="00A57134"/>
+					<w:rsid w:val="00A574E0"/>
+					<w:rsid w:val="00A5786C"/>
+					<w:rsid w:val="00A60802"/>
+					<w:rsid w:val="00A64E8E"/>
+					<w:rsid w:val="00A67CF2"/>
+					<w:rsid w:val="00A72D7D"/>
+					<w:rsid w:val="00A731A6"/>
+					<w:rsid w:val="00A738EA"/>
+					<w:rsid w:val="00A75A4B"/>
+					<w:rsid w:val="00A76761"/>
+					<w:rsid w:val="00A77063"/>
+					<w:rsid w:val="00A8281C"/>
+					<w:rsid w:val="00A83C84"/>
+					<w:rsid w:val="00A84A63"/>
+					<w:rsid w:val="00A85493"/>
+					<w:rsid w:val="00A85652"/>
+					<w:rsid w:val="00A8746E"/>
+					<w:rsid w:val="00A90481"/>
+					<w:rsid w:val="00A96DD4"/>
+					<w:rsid w:val="00AA0A1E"/>
+					<w:rsid w:val="00AB1BE6"/>
+					<w:rsid w:val="00AB28CF"/>
+					<w:rsid w:val="00AB3468"/>
+					<w:rsid w:val="00AB6245"/>
+					<w:rsid w:val="00AC1218"/>
+					<w:rsid w:val="00AC6E1C"/>
+					<w:rsid w:val="00AD1533"/>
+					<w:rsid w:val="00AD3E2D"/>
+					<w:rsid w:val="00AD4D99"/>
+					<w:rsid w:val="00AE09DF"/>
+					<w:rsid w:val="00AE42E5"/>
+					<w:rsid w:val="00AE4674"/>
+					<w:rsid w:val="00AE5C88"/>
+					<w:rsid w:val="00AF015E"/>
+					<w:rsid w:val="00AF1323"/>
+					<w:rsid w:val="00AF1436"/>
+					<w:rsid w:val="00AF335D"/>
+					<w:rsid w:val="00AF5B42"/>
+					<w:rsid w:val="00B0284B"/>
+					<w:rsid w:val="00B02C84"/>
+					<w:rsid w:val="00B06013"/>
+					<w:rsid w:val="00B06209"/>
+					<w:rsid w:val="00B0774E"/>
+					<w:rsid w:val="00B07BAD"/>
+					<w:rsid w:val="00B101C0"/>
+					<w:rsid w:val="00B25B4E"/>
+					<w:rsid w:val="00B26406"/>
+					<w:rsid w:val="00B27AE7"/>
+					<w:rsid w:val="00B36371"/>
+					<w:rsid w:val="00B40EA8"/>
+					<w:rsid w:val="00B41302"/>
+					<w:rsid w:val="00B42614"/>
+					<w:rsid w:val="00B44C3A"/>
+					<w:rsid w:val="00B45EA5"/>
+					<w:rsid w:val="00B50BD2"/>
+					<w:rsid w:val="00B52E52"/>
+					<w:rsid w:val="00B539B3"/>
+					<w:rsid w:val="00B54FE1"/>
+					<w:rsid w:val="00B55101"/>
+					<w:rsid w:val="00B57A66"/>
+					<w:rsid w:val="00B608C9"/>
+					<w:rsid w:val="00B610D7"/>
+					<w:rsid w:val="00B61D8D"/>
+					<w:rsid w:val="00B63096"/>
+					<w:rsid w:val="00B63657"/>
+					<w:rsid w:val="00B64120"/>
+					<w:rsid w:val="00B64873"/>
+					<w:rsid w:val="00B6663D"/>
+					<w:rsid w:val="00B73218"/>
+					<w:rsid w:val="00B7328F"/>
+					<w:rsid w:val="00B83B3F"/>
+					<w:rsid w:val="00B84B17"/>
+					<w:rsid w:val="00B85C63"/>
+					<w:rsid w:val="00B87F1D"/>
+					<w:rsid w:val="00B928C0"/>
+					<w:rsid w:val="00B92C59"/>
+					<w:rsid w:val="00BA1707"/>
+					<w:rsid w:val="00BA2C2F"/>
+					<w:rsid w:val="00BA5E18"/>
+					<w:rsid w:val="00BA6C80"/>
+					<w:rsid w:val="00BB137D"/>
+					<w:rsid w:val="00BB2130"/>
+					<w:rsid w:val="00BB45A6"/>
+					<w:rsid w:val="00BB5787"/>
+					<w:rsid w:val="00BC1588"/>
+					<w:rsid w:val="00BC34F3"/>
+					<w:rsid w:val="00BC4AC0"/>
+					<w:rsid w:val="00BD0966"/>
+					<w:rsid w:val="00BD6B9C"/>
+					<w:rsid w:val="00BD7396"/>
+					<w:rsid w:val="00BE21F1"/>
+					<w:rsid w:val="00BF0013"/>
+					<w:rsid w:val="00BF3258"/>
+					<w:rsid w:val="00BF43CF"/>
+					<w:rsid w:val="00BF5E0B"/>
+					<w:rsid w:val="00C0130D"/>
+					<w:rsid w:val="00C01B0A"/>
+					<w:rsid w:val="00C0551C"/>
+					<w:rsid w:val="00C0559C"/>
+					<w:rsid w:val="00C10092"/>
+					<w:rsid w:val="00C11958"/>
+					<w:rsid w:val="00C1446E"/>
+					<w:rsid w:val="00C16A00"/>
+					<w:rsid w:val="00C1755C"/>
+					<w:rsid w:val="00C17EA9"/>
+					<w:rsid w:val="00C2134F"/>
+					<w:rsid w:val="00C234C7"/>
+					<w:rsid w:val="00C24F76"/>
+					<w:rsid w:val="00C25A61"/>
+					<w:rsid w:val="00C3103E"/>
+					<w:rsid w:val="00C3354F"/>
+					<w:rsid w:val="00C34CFC"/>
+					<w:rsid w:val="00C3547A"/>
+					<w:rsid w:val="00C36EE9"/>
+					<w:rsid w:val="00C41FE4"/>
+					<w:rsid w:val="00C43AAA"/>
+					<w:rsid w:val="00C45BBA"/>
+					<w:rsid w:val="00C541D6"/>
+					<w:rsid w:val="00C55546"/>
+					<w:rsid w:val="00C5736B"/>
+					<w:rsid w:val="00C61159"/>
+					<w:rsid w:val="00C61628"/>
+					<w:rsid w:val="00C6404E"/>
+					<w:rsid w:val="00C71F00"/>
+					<w:rsid w:val="00C7266B"/>
+					<w:rsid w:val="00C735C0"/>
+					<w:rsid w:val="00C773A0"/>
+					<w:rsid w:val="00C80A09"/>
+					<w:rsid w:val="00C82627"/>
+					<w:rsid w:val="00C8394A"/>
+					<w:rsid w:val="00C84460"/>
+					<w:rsid w:val="00C84AB9"/>
+					<w:rsid w:val="00C92537"/>
+					<w:rsid w:val="00C939F6"/>
+					<w:rsid w:val="00C94FAF"/>
+					<w:rsid w:val="00C958A0"/>
+					<w:rsid w:val="00CA0711"/>
+					<w:rsid w:val="00CA0E16"/>
+					<w:rsid w:val="00CA2CC6"/>
+					<w:rsid w:val="00CA306C"/>
+					<w:rsid w:val="00CA45C6"/>
+					<w:rsid w:val="00CB1685"/>
+					<w:rsid w:val="00CB18CA"/>
+					<w:rsid w:val="00CB2C38"/>
+					<w:rsid w:val="00CB315F"/>
+					<w:rsid w:val="00CB404F"/>
+					<w:rsid w:val="00CC1B7B"/>
+					<w:rsid w:val="00CC1BE2"/>
+					<w:rsid w:val="00CC381D"/>
+					<w:rsid w:val="00CC5D47"/>
+					<w:rsid w:val="00CC6636"/>
+					<w:rsid w:val="00CC6B5F"/>
+					<w:rsid w:val="00CD41A0"/>
+					<w:rsid w:val="00CD4972"/>
+					<w:rsid w:val="00CD5036"/>
+					<w:rsid w:val="00CD60F8"/>
+					<w:rsid w:val="00CD61BF"/>
+					<w:rsid w:val="00CD7289"/>
+					<w:rsid w:val="00CE494A"/>
+					<w:rsid w:val="00CE4A1E"/>
+					<w:rsid w:val="00CE4A67"/>
+					<w:rsid w:val="00CE7DFC"/>
+					<w:rsid w:val="00CF27B9"/>
+					<w:rsid w:val="00CF70CE"/>
+					<w:rsid w:val="00D0048B"/>
+					<w:rsid w:val="00D011C1"/>
+					<w:rsid w:val="00D0285B"/>
+					<w:rsid w:val="00D02CBC"/>
+					<w:rsid w:val="00D11E60"/>
+					<w:rsid w:val="00D1237C"/>
+					<w:rsid w:val="00D16FA1"/>
+					<w:rsid w:val="00D178CC"/>
+					<w:rsid w:val="00D17BB4"/>
+					<w:rsid w:val="00D36900"/>
+					<w:rsid w:val="00D36C3B"/>
+					<w:rsid w:val="00D4224F"/>
+					<w:rsid w:val="00D42C9E"/>
+					<w:rsid w:val="00D45F01"/>
+					<w:rsid w:val="00D54065"/>
+					<w:rsid w:val="00D553C5"/>
+					<w:rsid w:val="00D5675C"/>
+					<w:rsid w:val="00D577C3"/>
+					<w:rsid w:val="00D579F9"/>
+					<w:rsid w:val="00D57A03"/>
+					<w:rsid w:val="00D641B9"/>
+					<w:rsid w:val="00D64684"/>
+					<w:rsid w:val="00D666D2"/>
+					<w:rsid w:val="00D7161E"/>
+					<w:rsid w:val="00D722EC"/>
+					<w:rsid w:val="00D74865"/>
+					<w:rsid w:val="00D808D6"/>
+					<w:rsid w:val="00D80918"/>
+					<w:rsid w:val="00D86FBF"/>
+					<w:rsid w:val="00D90C82"/>
+					<w:rsid w:val="00D925C3"/>
+					<w:rsid w:val="00D97B98"/>
+					<w:rsid w:val="00DA7DDC"/>
+					<w:rsid w:val="00DB130F"/>
+					<w:rsid w:val="00DB39EB"/>
+					<w:rsid w:val="00DB450E"/>
+					<w:rsid w:val="00DC1639"/>
+					<w:rsid w:val="00DD073D"/>
+					<w:rsid w:val="00DE030C"/>
+					<w:rsid w:val="00DE3C36"/>
+					<w:rsid w:val="00DE45D6"/>
+					<w:rsid w:val="00DF49B5"/>
+					<w:rsid w:val="00E009C1"/>
+					<w:rsid w:val="00E0510F"/>
+					<w:rsid w:val="00E05C7B"/>
+					<w:rsid w:val="00E0613B"/>
+					<w:rsid w:val="00E10F3A"/>
+					<w:rsid w:val="00E12C56"/>
+					<w:rsid w:val="00E14977"/>
+					<w:rsid w:val="00E1651D"/>
+					<w:rsid w:val="00E16FDA"/>
+					<w:rsid w:val="00E2239C"/>
+					<w:rsid w:val="00E25A3E"/>
+					<w:rsid w:val="00E26CE7"/>
+					<w:rsid w:val="00E32595"/>
+					<w:rsid w:val="00E32962"/>
+					<w:rsid w:val="00E32DCA"/>
+					<w:rsid w:val="00E33932"/>
+					<w:rsid w:val="00E3416F"/>
+					<w:rsid w:val="00E34465"/>
+					<w:rsid w:val="00E356AB"/>
+					<w:rsid w:val="00E366F4"/>
+					<w:rsid w:val="00E37701"/>
+					<w:rsid w:val="00E41E8D"/>
+					<w:rsid w:val="00E4318A"/>
+					<w:rsid w:val="00E44639"/>
+					<w:rsid w:val="00E45766"/>
+					<w:rsid w:val="00E5694A"/>
+					<w:rsid w:val="00E571A1"/>
+					<w:rsid w:val="00E57218"/>
+					<w:rsid w:val="00E61647"/>
+					<w:rsid w:val="00E63907"/>
+					<w:rsid w:val="00E66ABA"/>
+					<w:rsid w:val="00E67F3B"/>
+					<w:rsid w:val="00E70262"/>
+					<w:rsid w:val="00E74A56"/>
+					<w:rsid w:val="00E772AF"/>
+					<w:rsid w:val="00E77AAC"/>
+					<w:rsid w:val="00E84545"/>
+					<w:rsid w:val="00E87B23"/>
+					<w:rsid w:val="00E87D98"/>
+					<w:rsid w:val="00E87E61"/>
+					<w:rsid w:val="00E91603"/>
+					<w:rsid w:val="00E91DF8"/>
+					<w:rsid w:val="00E91E0C"/>
+					<w:rsid w:val="00E94E79"/>
+					<w:rsid w:val="00E9529C"/>
+					<w:rsid w:val="00E95350"/>
+					<w:rsid w:val="00E95782"/>
+					<w:rsid w:val="00EA070F"/>
+					<w:rsid w:val="00EA22DB"/>
+					<w:rsid w:val="00EA3BA9"/>
+					<w:rsid w:val="00EA5C89"/>
+					<w:rsid w:val="00EA66CF"/>
+					<w:rsid w:val="00EA6C39"/>
+					<w:rsid w:val="00EB05C9"/>
+					<w:rsid w:val="00EB28EC"/>
+					<w:rsid w:val="00EB4F57"/>
+					<w:rsid w:val="00EB5CF4"/>
+					<w:rsid w:val="00EB63B2"/>
+					<w:rsid w:val="00EC0AFD"/>
+					<w:rsid w:val="00EC1384"/>
+					<w:rsid w:val="00EC4BC4"/>
+					<w:rsid w:val="00ED2FB0"/>
+					<w:rsid w:val="00ED681A"/>
+					<w:rsid w:val="00ED6CAB"/>
+					<w:rsid w:val="00EE33D5"/>
+					<w:rsid w:val="00EE7A00"/>
+					<w:rsid w:val="00EF125A"/>
+					<w:rsid w:val="00EF5885"/>
+					<w:rsid w:val="00EF768C"/>
+					<w:rsid w:val="00F0003E"/>
+					<w:rsid w:val="00F0742F"/>
+					<w:rsid w:val="00F1004C"/>
+					<w:rsid w:val="00F1212B"/>
+					<w:rsid w:val="00F12B2A"/>
+					<w:rsid w:val="00F140BC"/>
+					<w:rsid w:val="00F14B16"/>
+					<w:rsid w:val="00F15EF3"/>
+					<w:rsid w:val="00F17169"/>
+					<w:rsid w:val="00F21404"/>
+					<w:rsid w:val="00F253ED"/>
+					<w:rsid w:val="00F2629D"/>
+					<w:rsid w:val="00F26872"/>
+					<w:rsid w:val="00F3030F"/>
+					<w:rsid w:val="00F31176"/>
+					<w:rsid w:val="00F3275A"/>
+					<w:rsid w:val="00F33209"/>
+					<w:rsid w:val="00F33FF0"/>
+					<w:rsid w:val="00F4068A"/>
+					<w:rsid w:val="00F40AAA"/>
+					<w:rsid w:val="00F419FF"/>
+					<w:rsid w:val="00F42A99"/>
+					<w:rsid w:val="00F472C3"/>
+					<w:rsid w:val="00F4742B"/>
+					<w:rsid w:val="00F50C07"/>
+					<w:rsid w:val="00F5776B"/>
+					<w:rsid w:val="00F57E23"/>
+					<w:rsid w:val="00F61DE3"/>
+					<w:rsid w:val="00F625C2"/>
+					<w:rsid w:val="00F67C12"/>
+					<w:rsid w:val="00F70CA0"/>
+					<w:rsid w:val="00F74574"/>
+					<w:rsid w:val="00F75D8C"/>
+					<w:rsid w:val="00F75E0C"/>
+					<w:rsid w:val="00F760D2"/>
+					<w:rsid w:val="00F764D2"/>
+					<w:rsid w:val="00F77B6F"/>
+					<w:rsid w:val="00F77F2D"/>
+					<w:rsid w:val="00F804C6"/>
+					<w:rsid w:val="00F81838"/>
+					<w:rsid w:val="00F845C1"/>
+					<w:rsid w:val="00F85067"/>
+					<w:rsid w:val="00F92978"/>
+					<w:rsid w:val="00F94B6B"/>
+					<w:rsid w:val="00F96898"/>
+					<w:rsid w:val="00FA129C"/>
+					<w:rsid w:val="00FA1E3D"/>
+					<w:rsid w:val="00FA39C6"/>
+					<w:rsid w:val="00FB402B"/>
+					<w:rsid w:val="00FB5BC8"/>
+					<w:rsid w:val="00FC2B9B"/>
+					<w:rsid w:val="00FC2F8C"/>
+					<w:rsid w:val="00FC2FCD"/>
+					<w:rsid w:val="00FC3868"/>
+					<w:rsid w:val="00FD08BA"/>
+					<w:rsid w:val="00FD6BC9"/>
+					<w:rsid w:val="00FD70C5"/>
+					<w:rsid w:val="00FD70E5"/>
+					<w:rsid w:val="00FD7DA2"/>
+					<w:rsid w:val="00FE1080"/>
+					<w:rsid w:val="00FE21C7"/>
+					<w:rsid w:val="00FE489E"/>
+					<w:rsid w:val="00FE4A26"/>
+					<w:rsid w:val="00FE5D86"/>
+					<w:rsid w:val="00FF4AC9"/>
+					<w:rsid w:val="00FF515C"/>
+					<w:rsid w:val="00FF7310"/>
+					<w:rsid w:val="00FF7FFB"/>
+					<w:rsid w:val="04B862AB"/>
+					<w:rsid w:val="05476E96"/>
+					<w:rsid w:val="06812FB0"/>
+					<w:rsid w:val="0F666E4C"/>
+					<w:rsid w:val="1036367E"/>
+					<w:rsid w:val="1E151B01"/>
+					<w:rsid w:val="2B2816BE"/>
+					<w:rsid w:val="2D303EDC"/>
+					<w:rsid w:val="2EA24388"/>
+					<w:rsid w:val="327A688C"/>
+					<w:rsid w:val="3AE616C9"/>
+					<w:rsid w:val="3FC2719D"/>
+					<w:rsid w:val="41505B63"/>
+					<w:rsid w:val="45ED587F"/>
+					<w:rsid w:val="4F6B3657"/>
+					<w:rsid w:val="54C508B2"/>
+					<w:rsid w:val="573D5A19"/>
+					<w:rsid w:val="6417295C"/>
+					<w:rsid w:val="744B77EC"/>
+					<w:rsid w:val="75BC5758"/>
+					<w:rsid w:val="78B7737B"/>
+					<w:rsid w:val="78DF7BB6"/>
+					<w:rsid w:val="7E7608E8"/>
+				</w:rsids>
+				<m:mathPr>
+					<m:mathFont m:val="Cambria Math"/>
+					<m:brkBin m:val="before"/>
+					<m:brkBinSub m:val="--"/>
+					<m:smallFrac m:val="1"/>
+					<m:dispDef/>
+					<m:lMargin m:val="0"/>
+					<m:rMargin m:val="0"/>
+					<m:defJc m:val="centerGroup"/>
+					<m:wrapIndent m:val="1440"/>
+					<m:intLim m:val="subSup"/>
+					<m:naryLim m:val="undOvr"/>
+				</m:mathPr>
+				<w:themeFontLang w:val="en-US" w:eastAsia="zh-CN"/>
+				<w:clrSchemeMapping w:bg1="light1" w:t1="dark1" w:bg2="light2" w:t2="dark2" w:accent1="accent1" w:accent2="accent2" w:accent3="accent3" w:accent4="accent4" w:accent5="accent5" w:accent6="accent6" w:hyperlink="hyperlink" w:followedHyperlink="followedHyperlink"/>
+				<w:doNotIncludeSubdocsInStats/>
+			</w:settings>
+		</pkg:xmlData>
+	</pkg:part>
+	<pkg:part pkg:name="/word/styles.xml" pkg:contentType="application/vnd.openxmlformats-officedocument.wordprocessingml.styles+xml">
+		<pkg:xmlData>
+			<w:styles xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main" xmlns:w14="http://schemas.microsoft.com/office/word/2010/wordml" xmlns:w10="urn:schemas-microsoft-com:office:word" xmlns:sl="http://schemas.openxmlformats.org/schemaLibrary/2006/main" xmlns:wpsCustomData="http://www.wps.cn/officeDocument/2013/wpsCustomData" mc:Ignorable="w14">
+				<w:docDefaults>
+					<w:rPrDefault>
+						<w:rPr>
+							<w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:eastAsia="宋体" w:cs="Times New Roman"/>
+						</w:rPr>
+					</w:rPrDefault>
+					<w:pPrDefault/>
+				</w:docDefaults>
+				<w:latentStyles w:count="260" w:defQFormat="0" w:defUnhideWhenUsed="1" w:defSemiHidden="1" w:defUIPriority="99" w:defLockedState="0">
+					<w:lsdException w:qFormat="1" w:unhideWhenUsed="0" w:uiPriority="0" w:semiHidden="0" w:name="Normal"/>
+					<w:lsdException w:qFormat="1" w:unhideWhenUsed="0" w:uiPriority="9" w:semiHidden="0" w:name="heading 1"/>
+					<w:lsdException w:qFormat="1" w:uiPriority="0" w:semiHidden="0" w:name="heading 2"/>
+					<w:lsdException w:qFormat="1" w:uiPriority="0" w:semiHidden="0" w:name="heading 3"/>
+					<w:lsdException w:qFormat="1" w:uiPriority="0" w:name="heading 4"/>
+					<w:lsdException w:qFormat="1" w:uiPriority="0" w:name="heading 5"/>
+					<w:lsdException w:qFormat="1" w:uiPriority="0" w:name="heading 6"/>
+					<w:lsdException w:qFormat="1" w:uiPriority="0" w:name="heading 7"/>
+					<w:lsdException w:qFormat="1" w:uiPriority="0" w:name="heading 8"/>
+					<w:lsdException w:qFormat="1" w:uiPriority="0" w:name="heading 9"/>
+					<w:lsdException w:uiPriority="0" w:name="index 1"/>
+					<w:lsdException w:uiPriority="0" w:name="index 2"/>
+					<w:lsdException w:uiPriority="0" w:name="index 3"/>
+					<w:lsdException w:uiPriority="0" w:name="index 4"/>
+					<w:lsdException w:uiPriority="0" w:name="index 5"/>
+					<w:lsdException w:uiPriority="0" w:name="index 6"/>
+					<w:lsdException w:uiPriority="0" w:name="index 7"/>
+					<w:lsdException w:uiPriority="0" w:name="index 8"/>
+					<w:lsdException w:uiPriority="0" w:name="index 9"/>
+					<w:lsdException w:qFormat="1" w:unhideWhenUsed="0" w:uiPriority="39" w:semiHidden="0" w:name="toc 1"/>
+					<w:lsdException w:qFormat="1" w:uiPriority="39" w:semiHidden="0" w:name="toc 2"/>
+					<w:lsdException w:qFormat="1" w:uiPriority="39" w:semiHidden="0" w:name="toc 3"/>
+					<w:lsdException w:qFormat="1" w:uiPriority="0" w:semiHidden="0" w:name="toc 4"/>
+					<w:lsdException w:qFormat="1" w:uiPriority="0" w:semiHidden="0" w:name="toc 5"/>
+					<w:lsdException w:qFormat="1" w:uiPriority="0" w:semiHidden="0" w:name="toc 6"/>
+					<w:lsdException w:qFormat="1" w:uiPriority="0" w:semiHidden="0" w:name="toc 7"/>
+					<w:lsdException w:qFormat="1" w:uiPriority="0" w:semiHidden="0" w:name="toc 8"/>
+					<w:lsdException w:qFormat="1" w:uiPriority="0" w:semiHidden="0" w:name="toc 9"/>
+					<w:lsdException w:uiPriority="0" w:name="Normal Indent"/>
+					<w:lsdException w:uiPriority="0" w:name="footnote text"/>
+					<w:lsdException w:unhideWhenUsed="0" w:uiPriority="0" w:semiHidden="0" w:name="annotation text"/>
+					<w:lsdException w:qFormat="1" w:unhideWhenUsed="0" w:uiPriority="99" w:semiHidden="0" w:name="header"/>
+					<w:lsdException w:unhideWhenUsed="0" w:uiPriority="99" w:semiHidden="0" w:name="footer"/>
+					<w:lsdException w:uiPriority="0" w:name="index heading"/>
+					<w:lsdException w:qFormat="1" w:uiPriority="0" w:name="caption"/>
+					<w:lsdException w:uiPriority="0" w:name="table of figures"/>
+					<w:lsdException w:uiPriority="0" w:name="envelope address"/>
+					<w:lsdException w:uiPriority="0" w:name="envelope return"/>
+					<w:lsdException w:uiPriority="0" w:name="footnote reference"/>
+					<w:lsdException w:unhideWhenUsed="0" w:uiPriority="0" w:semiHidden="0" w:name="annotation reference"/>
+					<w:lsdException w:uiPriority="0" w:name="line number"/>
+					<w:lsdException w:uiPriority="0" w:name="page number"/>
+					<w:lsdException w:uiPriority="0" w:name="endnote reference"/>
+					<w:lsdException w:uiPriority="0" w:name="endnote text"/>
+					<w:lsdException w:uiPriority="0" w:name="table of authorities"/>
+					<w:lsdException w:uiPriority="0" w:name="macro"/>
+					<w:lsdException w:uiPriority="0" w:name="toa heading"/>
+					<w:lsdException w:uiPriority="0" w:name="List"/>
+					<w:lsdException w:uiPriority="0" w:name="List Bullet"/>
+					<w:lsdException w:unhideWhenUsed="0" w:uiPriority="0" w:semiHidden="0" w:name="List Number"/>
+					<w:lsdException w:uiPriority="0" w:name="List 2"/>
+					<w:lsdException w:uiPriority="0" w:name="List 3"/>
+					<w:lsdException w:unhideWhenUsed="0" w:uiPriority="0" w:semiHidden="0" w:name="List 4"/>
+					<w:lsdException w:unhideWhenUsed="0" w:uiPriority="0" w:semiHidden="0" w:name="List 5"/>
+					<w:lsdException w:uiPriority="0" w:name="List Bullet 2"/>
+					<w:lsdException w:uiPriority="0" w:name="List Bullet 3"/>
+					<w:lsdException w:uiPriority="0" w:name="List Bullet 4"/>
+					<w:lsdException w:uiPriority="0" w:name="List Bullet 5"/>
+					<w:lsdException w:uiPriority="0" w:name="List Number 2"/>
+					<w:lsdException w:uiPriority="0" w:name="List Number 3"/>
+					<w:lsdException w:uiPriority="0" w:name="List Number 4"/>
+					<w:lsdException w:uiPriority="0" w:name="List Number 5"/>
+					<w:lsdException w:qFormat="1" w:unhideWhenUsed="0" w:uiPriority="0" w:semiHidden="0" w:name="Title"/>
+					<w:lsdException w:uiPriority="0" w:name="Closing"/>
+					<w:lsdException w:uiPriority="0" w:name="Signature"/>
+					<w:lsdException w:uiPriority="1" w:name="Default Paragraph Font"/>
+					<w:lsdException w:uiPriority="0" w:name="Body Text"/>
+					<w:lsdException w:uiPriority="0" w:name="Body Text Indent"/>
+					<w:lsdException w:uiPriority="0" w:name="List Continue"/>
+					<w:lsdException w:uiPriority="0" w:name="List Continue 2"/>
+					<w:lsdException w:uiPriority="0" w:name="List Continue 3"/>
+					<w:lsdException w:uiPriority="0" w:name="List Continue 4"/>
+					<w:lsdException w:uiPriority="0" w:name="List Continue 5"/>
+					<w:lsdException w:uiPriority="0" w:name="Message Header"/>
+					<w:lsdException w:qFormat="1" w:unhideWhenUsed="0" w:uiPriority="0" w:semiHidden="0" w:name="Subtitle"/>
+					<w:lsdException w:unhideWhenUsed="0" w:uiPriority="0" w:semiHidden="0" w:name="Salutation"/>
+					<w:lsdException w:unhideWhenUsed="0" w:uiPriority="0" w:semiHidden="0" w:name="Date"/>
+					<w:lsdException w:unhideWhenUsed="0" w:uiPriority="0" w:semiHidden="0" w:name="Body Text First Indent"/>
+					<w:lsdException w:uiPriority="0" w:name="Body Text First Indent 2"/>
+					<w:lsdException w:uiPriority="0" w:name="Note Heading"/>
+					<w:lsdException w:uiPriority="0" w:name="Body Text 2"/>
+					<w:lsdException w:uiPriority="0" w:name="Body Text 3"/>
+					<w:lsdException w:uiPriority="0" w:name="Body Text Indent 2"/>
+					<w:lsdException w:uiPriority="0" w:name="Body Text Indent 3"/>
+					<w:lsdException w:uiPriority="0" w:name="Block Text"/>
+					<w:lsdException w:unhideWhenUsed="0" w:uiPriority="99" w:semiHidden="0" w:name="Hyperlink"/>
+					<w:lsdException w:qFormat="1" w:uiPriority="0" w:name="FollowedHyperlink"/>
+					<w:lsdException w:qFormat="1" w:unhideWhenUsed="0" w:uiPriority="0" w:semiHidden="0" w:name="Strong"/>
+					<w:lsdException w:qFormat="1" w:unhideWhenUsed="0" w:uiPriority="0" w:semiHidden="0" w:name="Emphasis"/>
+					<w:lsdException w:uiPriority="0" w:name="Document Map"/>
+					<w:lsdException w:uiPriority="0" w:name="Plain Text"/>
+					<w:lsdException w:uiPriority="0" w:name="E-mail Signature"/>
+					<w:lsdException w:uiPriority="0" w:name="Normal (Web)"/>
+					<w:lsdException w:uiPriority="0" w:name="HTML Acronym"/>
+					<w:lsdException w:uiPriority="0" w:name="HTML Address"/>
+					<w:lsdException w:uiPriority="0" w:name="HTML Cite"/>
+					<w:lsdException w:uiPriority="0" w:name="HTML Code"/>
+					<w:lsdException w:uiPriority="0" w:name="HTML Definition"/>
+					<w:lsdException w:uiPriority="0" w:name="HTML Keyboard"/>
+					<w:lsdException w:uiPriority="0" w:name="HTML Preformatted"/>
+					<w:lsdException w:uiPriority="0" w:name="HTML Sample"/>
+					<w:lsdException w:uiPriority="0" w:name="HTML Typewriter"/>
+					<w:lsdException w:uiPriority="0" w:name="HTML Variable"/>
+					<w:lsdException w:qFormat="1" w:uiPriority="99" w:name="Normal Table"/>
+					<w:lsdException w:unhideWhenUsed="0" w:uiPriority="0" w:semiHidden="0" w:name="annotation subject"/>
+					<w:lsdException w:uiPriority="0" w:name="Table Simple 1"/>
+					<w:lsdException w:uiPriority="0" w:name="Table Simple 2"/>
+					<w:lsdException w:uiPriority="0" w:name="Table Simple 3"/>
+					<w:lsdException w:uiPriority="0" w:name="Table Classic 1"/>
+					<w:lsdException w:uiPriority="0" w:name="Table Classic 2"/>
+					<w:lsdException w:uiPriority="0" w:name="Table Classic 3"/>
+					<w:lsdException w:uiPriority="0" w:name="Table Classic 4"/>
+					<w:lsdException w:uiPriority="0" w:name="Table Colorful 1"/>
+					<w:lsdException w:uiPriority="0" w:name="Table Colorful 2"/>
+					<w:lsdException w:uiPriority="0" w:name="Table Colorful 3"/>
+					<w:lsdException w:uiPriority="0" w:name="Table Columns 1"/>
+					<w:lsdException w:uiPriority="0" w:name="Table Columns 2"/>
+					<w:lsdException w:uiPriority="0" w:name="Table Columns 3"/>
+					<w:lsdException w:uiPriority="0" w:name="Table Columns 4"/>
+					<w:lsdException w:uiPriority="0" w:name="Table Columns 5"/>
+					<w:lsdException w:uiPriority="0" w:name="Table Grid 1"/>
+					<w:lsdException w:uiPriority="0" w:name="Table Grid 2"/>
+					<w:lsdException w:uiPriority="0" w:name="Table Grid 3"/>
+					<w:lsdException w:uiPriority="0" w:name="Table Grid 4"/>
+					<w:lsdException w:uiPriority="0" w:name="Table Grid 5"/>
+					<w:lsdException w:uiPriority="0" w:name="Table Grid 6"/>
+					<w:lsdException w:uiPriority="0" w:name="Table Grid 7"/>
+					<w:lsdException w:uiPriority="0" w:name="Table Grid 8"/>
+					<w:lsdException w:uiPriority="0" w:name="Table List 1"/>
+					<w:lsdException w:uiPriority="0" w:name="Table List 2"/>
+					<w:lsdException w:uiPriority="0" w:name="Table List 3"/>
+					<w:lsdException w:uiPriority="0" w:name="Table List 4"/>
+					<w:lsdException w:uiPriority="0" w:name="Table List 5"/>
+					<w:lsdException w:uiPriority="0" w:name="Table List 6"/>
+					<w:lsdException w:uiPriority="0" w:name="Table List 7"/>
+					<w:lsdException w:uiPriority="0" w:name="Table List 8"/>
+					<w:lsdException w:uiPriority="0" w:name="Table 3D effects 1"/>
+					<w:lsdException w:uiPriority="0" w:name="Table 3D effects 2"/>
+					<w:lsdException w:uiPriority="0" w:name="Table 3D effects 3"/>
+					<w:lsdException w:uiPriority="0" w:name="Table Contemporary"/>
+					<w:lsdException w:uiPriority="0" w:name="Table Elegant"/>
+					<w:lsdException w:uiPriority="0" w:name="Table Professional"/>
+					<w:lsdException w:uiPriority="0" w:name="Table Subtle 1"/>
+					<w:lsdException w:uiPriority="0" w:name="Table Subtle 2"/>
+					<w:lsdException w:uiPriority="0" w:name="Table Web 1"/>
+					<w:lsdException w:uiPriority="0" w:name="Table Web 2"/>
+					<w:lsdException w:uiPriority="0" w:name="Table Web 3"/>
+					<w:lsdException w:unhideWhenUsed="0" w:uiPriority="0" w:semiHidden="0" w:name="Balloon Text"/>
+					<w:lsdException w:qFormat="1" w:unhideWhenUsed="0" w:uiPriority="0" w:semiHidden="0" w:name="Table Grid"/>
+					<w:lsdException w:uiPriority="0" w:name="Table Theme"/>
+					<w:lsdException w:unhideWhenUsed="0" w:uiPriority="60" w:semiHidden="0" w:name="Light Shading"/>
+					<w:lsdException w:unhideWhenUsed="0" w:uiPriority="61" w:semiHidden="0" w:name="Light List"/>
+					<w:lsdException w:unhideWhenUsed="0" w:uiPriority="62" w:semiHidden="0" w:name="Light Grid"/>
+					<w:lsdException w:unhideWhenUsed="0" w:uiPriority="63" w:semiHidden="0" w:name="Medium Shading 1"/>
+					<w:lsdException w:unhideWhenUsed="0" w:uiPriority="64" w:semiHidden="0" w:name="Medium Shading 2"/>
+					<w:lsdException w:unhideWhenUsed="0" w:uiPriority="65" w:semiHidden="0" w:name="Medium List 1"/>
+					<w:lsdException w:unhideWhenUsed="0" w:uiPriority="66" w:semiHidden="0" w:name="Medium List 2"/>
+					<w:lsdException w:unhideWhenUsed="0" w:uiPriority="67" w:semiHidden="0" w:name="Medium Grid 1"/>
+					<w:lsdException w:unhideWhenUsed="0" w:uiPriority="68" w:semiHidden="0" w:name="Medium Grid 2"/>
+					<w:lsdException w:unhideWhenUsed="0" w:uiPriority="69" w:semiHidden="0" w:name="Medium Grid 3"/>
+					<w:lsdException w:unhideWhenUsed="0" w:uiPriority="70" w:semiHidden="0" w:name="Dark List"/>
+					<w:lsdException w:unhideWhenUsed="0" w:uiPriority="71" w:semiHidden="0" w:name="Colorful Shading"/>
+					<w:lsdException w:unhideWhenUsed="0" w:uiPriority="72" w:semiHidden="0" w:name="Colorful List"/>
+					<w:lsdException w:unhideWhenUsed="0" w:uiPriority="73" w:semiHidden="0" w:name="Colorful Grid"/>
+					<w:lsdException w:unhideWhenUsed="0" w:uiPriority="60" w:semiHidden="0" w:name="Light Shading Accent 1"/>
+					<w:lsdException w:unhideWhenUsed="0" w:uiPriority="61" w:semiHidden="0" w:name="Light List Accent 1"/>
+					<w:lsdException w:unhideWhenUsed="0" w:uiPriority="62" w:semiHidden="0" w:name="Light Grid Accent 1"/>
+					<w:lsdException w:unhideWhenUsed="0" w:uiPriority="63" w:semiHidden="0" w:name="Medium Shading 1 Accent 1"/>
+					<w:lsdException w:unhideWhenUsed="0" w:uiPriority="64" w:semiHidden="0" w:name="Medium Shading 2 Accent 1"/>
+					<w:lsdException w:unhideWhenUsed="0" w:uiPriority="65" w:semiHidden="0" w:name="Medium List 1 Accent 1"/>
+					<w:lsdException w:qFormat="1" w:unhideWhenUsed="0" w:uiPriority="34" w:semiHidden="0" w:name="List Paragraph"/>
+					<w:lsdException w:unhideWhenUsed="0" w:uiPriority="66" w:semiHidden="0" w:name="Medium List 2 Accent 1"/>
+					<w:lsdException w:unhideWhenUsed="0" w:uiPriority="67" w:semiHidden="0" w:name="Medium Grid 1 Accent 1"/>
+					<w:lsdException w:unhideWhenUsed="0" w:uiPriority="68" w:semiHidden="0" w:name="Medium Grid 2 Accent 1"/>
+					<w:lsdException w:unhideWhenUsed="0" w:uiPriority="69" w:semiHidden="0" w:name="Medium Grid 3 Accent 1"/>
+					<w:lsdException w:unhideWhenUsed="0" w:uiPriority="70" w:semiHidden="0" w:name="Dark List Accent 1"/>
+					<w:lsdException w:unhideWhenUsed="0" w:uiPriority="71" w:semiHidden="0" w:name="Colorful Shading Accent 1"/>
+					<w:lsdException w:unhideWhenUsed="0" w:uiPriority="72" w:semiHidden="0" w:name="Colorful List Accent 1"/>
+					<w:lsdException w:unhideWhenUsed="0" w:uiPriority="73" w:semiHidden="0" w:name="Colorful Grid Accent 1"/>
+					<w:lsdException w:unhideWhenUsed="0" w:uiPriority="60" w:semiHidden="0" w:name="Light Shading Accent 2"/>
+					<w:lsdException w:unhideWhenUsed="0" w:uiPriority="61" w:semiHidden="0" w:name="Light List Accent 2"/>
+					<w:lsdException w:unhideWhenUsed="0" w:uiPriority="62" w:semiHidden="0" w:name="Light Grid Accent 2"/>
+					<w:lsdException w:unhideWhenUsed="0" w:uiPriority="63" w:semiHidden="0" w:name="Medium Shading 1 Accent 2"/>
+					<w:lsdException w:unhideWhenUsed="0" w:uiPriority="64" w:semiHidden="0" w:name="Medium Shading 2 Accent 2"/>
+					<w:lsdException w:unhideWhenUsed="0" w:uiPriority="65" w:semiHidden="0" w:name="Medium List 1 Accent 2"/>
+					<w:lsdException w:unhideWhenUsed="0" w:uiPriority="66" w:semiHidden="0" w:name="Medium List 2 Accent 2"/>
+					<w:lsdException w:unhideWhenUsed="0" w:uiPriority="67" w:semiHidden="0" w:name="Medium Grid 1 Accent 2"/>
+					<w:lsdException w:unhideWhenUsed="0" w:uiPriority="68" w:semiHidden="0" w:name="Medium Grid 2 Accent 2"/>
+					<w:lsdException w:unhideWhenUsed="0" w:uiPriority="69" w:semiHidden="0" w:name="Medium Grid 3 Accent 2"/>
+					<w:lsdException w:unhideWhenUsed="0" w:uiPriority="70" w:semiHidden="0" w:name="Dark List Accent 2"/>
+					<w:lsdException w:unhideWhenUsed="0" w:uiPriority="71" w:semiHidden="0" w:name="Colorful Shading Accent 2"/>
+					<w:lsdException w:unhideWhenUsed="0" w:uiPriority="72" w:semiHidden="0" w:name="Colorful List Accent 2"/>
+					<w:lsdException w:unhideWhenUsed="0" w:uiPriority="73" w:semiHidden="0" w:name="Colorful Grid Accent 2"/>
+					<w:lsdException w:unhideWhenUsed="0" w:uiPriority="60" w:semiHidden="0" w:name="Light Shading Accent 3"/>
+					<w:lsdException w:unhideWhenUsed="0" w:uiPriority="61" w:semiHidden="0" w:name="Light List Accent 3"/>
+					<w:lsdException w:unhideWhenUsed="0" w:uiPriority="62" w:semiHidden="0" w:name="Light Grid Accent 3"/>
+					<w:lsdException w:unhideWhenUsed="0" w:uiPriority="63" w:semiHidden="0" w:name="Medium Shading 1 Accent 3"/>
+					<w:lsdException w:unhideWhenUsed="0" w:uiPriority="64" w:semiHidden="0" w:name="Medium Shading 2 Accent 3"/>
+					<w:lsdException w:unhideWhenUsed="0" w:uiPriority="65" w:semiHidden="0" w:name="Medium List 1 Accent 3"/>
+					<w:lsdException w:unhideWhenUsed="0" w:uiPriority="66" w:semiHidden="0" w:name="Medium List 2 Accent 3"/>
+					<w:lsdException w:unhideWhenUsed="0" w:uiPriority="67" w:semiHidden="0" w:name="Medium Grid 1 Accent 3"/>
+					<w:lsdException w:unhideWhenUsed="0" w:uiPriority="68" w:semiHidden="0" w:name="Medium Grid 2 Accent 3"/>
+					<w:lsdException w:unhideWhenUsed="0" w:uiPriority="69" w:semiHidden="0" w:name="Medium Grid 3 Accent 3"/>
+					<w:lsdException w:unhideWhenUsed="0" w:uiPriority="70" w:semiHidden="0" w:name="Dark List Accent 3"/>
+					<w:lsdException w:unhideWhenUsed="0" w:uiPriority="71" w:semiHidden="0" w:name="Colorful Shading Accent 3"/>
+					<w:lsdException w:unhideWhenUsed="0" w:uiPriority="72" w:semiHidden="0" w:name="Colorful List Accent 3"/>
+					<w:lsdException w:unhideWhenUsed="0" w:uiPriority="73" w:semiHidden="0" w:name="Colorful Grid Accent 3"/>
+					<w:lsdException w:unhideWhenUsed="0" w:uiPriority="60" w:semiHidden="0" w:name="Light Shading Accent 4"/>
+					<w:lsdException w:unhideWhenUsed="0" w:uiPriority="61" w:semiHidden="0" w:name="Light List Accent 4"/>
+					<w:lsdException w:unhideWhenUsed="0" w:uiPriority="62" w:semiHidden="0" w:name="Light Grid Accent 4"/>
+					<w:lsdException w:unhideWhenUsed="0" w:uiPriority="63" w:semiHidden="0" w:name="Medium Shading 1 Accent 4"/>
+					<w:lsdException w:unhideWhenUsed="0" w:uiPriority="64" w:semiHidden="0" w:name="Medium Shading 2 Accent 4"/>
+					<w:lsdException w:unhideWhenUsed="0" w:uiPriority="65" w:semiHidden="0" w:name="Medium List 1 Accent 4"/>
+					<w:lsdException w:unhideWhenUsed="0" w:uiPriority="66" w:semiHidden="0" w:name="Medium List 2 Accent 4"/>
+					<w:lsdException w:unhideWhenUsed="0" w:uiPriority="67" w:semiHidden="0" w:name="Medium Grid 1 Accent 4"/>
+					<w:lsdException w:unhideWhenUsed="0" w:uiPriority="68" w:semiHidden="0" w:name="Medium Grid 2 Accent 4"/>
+					<w:lsdException w:unhideWhenUsed="0" w:uiPriority="69" w:semiHidden="0" w:name="Medium Grid 3 Accent 4"/>
+					<w:lsdException w:unhideWhenUsed="0" w:uiPriority="70" w:semiHidden="0" w:name="Dark List Accent 4"/>
+					<w:lsdException w:unhideWhenUsed="0" w:uiPriority="71" w:semiHidden="0" w:name="Colorful Shading Accent 4"/>
+					<w:lsdException w:unhideWhenUsed="0" w:uiPriority="72" w:semiHidden="0" w:name="Colorful List Accent 4"/>
+					<w:lsdException w:unhideWhenUsed="0" w:uiPriority="73" w:semiHidden="0" w:name="Colorful Grid Accent 4"/>
+					<w:lsdException w:unhideWhenUsed="0" w:uiPriority="60" w:semiHidden="0" w:name="Light Shading Accent 5"/>
+					<w:lsdException w:unhideWhenUsed="0" w:uiPriority="61" w:semiHidden="0" w:name="Light List Accent 5"/>
+					<w:lsdException w:unhideWhenUsed="0" w:uiPriority="62" w:semiHidden="0" w:name="Light Grid Accent 5"/>
+					<w:lsdException w:unhideWhenUsed="0" w:uiPriority="63" w:semiHidden="0" w:name="Medium Shading 1 Accent 5"/>
+					<w:lsdException w:unhideWhenUsed="0" w:uiPriority="64" w:semiHidden="0" w:name="Medium Shading 2 Accent 5"/>
+					<w:lsdException w:unhideWhenUsed="0" w:uiPriority="65" w:semiHidden="0" w:name="Medium List 1 Accent 5"/>
+					<w:lsdException w:unhideWhenUsed="0" w:uiPriority="66" w:semiHidden="0" w:name="Medium List 2 Accent 5"/>
+					<w:lsdException w:unhideWhenUsed="0" w:uiPriority="67" w:semiHidden="0" w:name="Medium Grid 1 Accent 5"/>
+					<w:lsdException w:unhideWhenUsed="0" w:uiPriority="68" w:semiHidden="0" w:name="Medium Grid 2 Accent 5"/>
+					<w:lsdException w:unhideWhenUsed="0" w:uiPriority="69" w:semiHidden="0" w:name="Medium Grid 3 Accent 5"/>
+					<w:lsdException w:unhideWhenUsed="0" w:uiPriority="70" w:semiHidden="0" w:name="Dark List Accent 5"/>
+					<w:lsdException w:unhideWhenUsed="0" w:uiPriority="71" w:semiHidden="0" w:name="Colorful Shading Accent 5"/>
+					<w:lsdException w:unhideWhenUsed="0" w:uiPriority="72" w:semiHidden="0" w:name="Colorful List Accent 5"/>
+					<w:lsdException w:unhideWhenUsed="0" w:uiPriority="73" w:semiHidden="0" w:name="Colorful Grid Accent 5"/>
+					<w:lsdException w:unhideWhenUsed="0" w:uiPriority="60" w:semiHidden="0" w:name="Light Shading Accent 6"/>
+					<w:lsdException w:unhideWhenUsed="0" w:uiPriority="61" w:semiHidden="0" w:name="Light List Accent 6"/>
+					<w:lsdException w:unhideWhenUsed="0" w:uiPriority="62" w:semiHidden="0" w:name="Light Grid Accent 6"/>
+					<w:lsdException w:unhideWhenUsed="0" w:uiPriority="63" w:semiHidden="0" w:name="Medium Shading 1 Accent 6"/>
+					<w:lsdException w:unhideWhenUsed="0" w:uiPriority="64" w:semiHidden="0" w:name="Medium Shading 2 Accent 6"/>
+					<w:lsdException w:unhideWhenUsed="0" w:uiPriority="65" w:semiHidden="0" w:name="Medium List 1 Accent 6"/>
+					<w:lsdException w:unhideWhenUsed="0" w:uiPriority="66" w:semiHidden="0" w:name="Medium List 2 Accent 6"/>
+					<w:lsdException w:unhideWhenUsed="0" w:uiPriority="67" w:semiHidden="0" w:name="Medium Grid 1 Accent 6"/>
+					<w:lsdException w:unhideWhenUsed="0" w:uiPriority="68" w:semiHidden="0" w:name="Medium Grid 2 Accent 6"/>
+					<w:lsdException w:unhideWhenUsed="0" w:uiPriority="69" w:semiHidden="0" w:name="Medium Grid 3 Accent 6"/>
+					<w:lsdException w:unhideWhenUsed="0" w:uiPriority="70" w:semiHidden="0" w:name="Dark List Accent 6"/>
+					<w:lsdException w:unhideWhenUsed="0" w:uiPriority="71" w:semiHidden="0" w:name="Colorful Shading Accent 6"/>
+					<w:lsdException w:unhideWhenUsed="0" w:uiPriority="72" w:semiHidden="0" w:name="Colorful List Accent 6"/>
+					<w:lsdException w:unhideWhenUsed="0" w:uiPriority="73" w:semiHidden="0" w:name="Colorful Grid Accent 6"/>
+				</w:latentStyles>
+				<w:style w:type="paragraph" w:default="1" w:styleId="1">
+					<w:name w:val="Normal"/>
+					<w:qFormat/>
+					<w:uiPriority w:val="0"/>
+					<w:pPr>
+						<w:widowControl w:val="0"/>
+						<w:spacing w:line="360" w:lineRule="auto"/>
+						<w:jc w:val="both"/>
+					</w:pPr>
+					<w:rPr>
+						<w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:eastAsia="宋体" w:cs="Times New Roman"/>
+						<w:kern w:val="2"/>
+						<w:sz w:val="21"/>
+						<w:szCs w:val="24"/>
+						<w:lang w:val="en-US" w:eastAsia="zh-CN" w:bidi="ar-SA"/>
+					</w:rPr>
+				</w:style>
+				<w:style w:type="paragraph" w:styleId="2">
+					<w:name w:val="heading 1"/>
+					<w:basedOn w:val="1"/>
+					<w:next w:val="1"/>
+					<w:link w:val="57"/>
+					<w:qFormat/>
+					<w:uiPriority w:val="9"/>
+					<w:pPr>
+						<w:keepNext/>
+						<w:keepLines/>
+						<w:numPr>
+							<w:ilvl w:val="0"/>
+							<w:numId w:val="1"/>
+						</w:numPr>
+						<w:spacing w:beforeLines="50" w:afterLines="50" w:line="240" w:lineRule="auto"/>
+						<w:jc w:val="left"/>
+						<w:outlineLvl w:val="0"/>
+					</w:pPr>
+					<w:rPr>
+						<w:rFonts w:ascii="仿宋" w:hAnsi="仿宋" w:eastAsia="仿宋"/>
+						<w:b/>
+						<w:bCs/>
+						<w:kern w:val="44"/>
+						<w:sz w:val="32"/>
+						<w:szCs w:val="32"/>
+					</w:rPr>
+				</w:style>
+				<w:style w:type="paragraph" w:styleId="3">
+					<w:name w:val="heading 2"/>
+					<w:basedOn w:val="1"/>
+					<w:next w:val="1"/>
+					<w:link w:val="58"/>
+					<w:unhideWhenUsed/>
+					<w:qFormat/>
+					<w:uiPriority w:val="0"/>
+					<w:pPr>
+						<w:keepNext/>
+						<w:keepLines/>
+						<w:numPr>
+							<w:ilvl w:val="1"/>
+							<w:numId w:val="1"/>
+						</w:numPr>
+						<w:spacing w:before="120" w:after="120" w:line="240" w:lineRule="auto"/>
+						<w:outlineLvl w:val="1"/>
+					</w:pPr>
+					<w:rPr>
+						<w:rFonts w:eastAsia="仿宋" w:cstheme="majorBidi"/>
+						<w:b/>
+						<w:bCs/>
+						<w:sz w:val="30"/>
+						<w:szCs w:val="32"/>
+					</w:rPr>
+				</w:style>
+				<w:style w:type="paragraph" w:styleId="4">
+					<w:name w:val="heading 3"/>
+					<w:basedOn w:val="1"/>
+					<w:next w:val="1"/>
+					<w:link w:val="59"/>
+					<w:unhideWhenUsed/>
+					<w:qFormat/>
+					<w:uiPriority w:val="0"/>
+					<w:pPr>
+						<w:keepNext/>
+						<w:keepLines/>
+						<w:spacing w:before="120" w:after="120" w:line="240" w:lineRule="auto"/>
+						<w:ind w:left="720" w:hanging="720"/>
+						<w:outlineLvl w:val="2"/>
+					</w:pPr>
+					<w:rPr>
+						<w:rFonts w:eastAsia="仿宋"/>
+						<w:b/>
+						<w:bCs/>
+						<w:sz w:val="28"/>
+						<w:szCs w:val="32"/>
+					</w:rPr>
+				</w:style>
+				<w:style w:type="paragraph" w:styleId="5">
+					<w:name w:val="heading 4"/>
+					<w:basedOn w:val="1"/>
+					<w:next w:val="1"/>
+					<w:link w:val="60"/>
+					<w:semiHidden/>
+					<w:unhideWhenUsed/>
+					<w:qFormat/>
+					<w:uiPriority w:val="0"/>
+					<w:pPr>
+						<w:keepNext/>
+						<w:keepLines/>
+						<w:numPr>
+							<w:ilvl w:val="3"/>
+							<w:numId w:val="1"/>
+						</w:numPr>
+						<w:spacing w:before="280" w:after="290" w:line="376" w:lineRule="auto"/>
+						<w:outlineLvl w:val="3"/>
+					</w:pPr>
+					<w:rPr>
+						<w:rFonts w:asciiTheme="majorHAnsi" w:hAnsiTheme="majorHAnsi" w:eastAsiaTheme="majorEastAsia" w:cstheme="majorBidi"/>
+						<w:b/>
+						<w:bCs/>
+						<w:sz w:val="28"/>
+						<w:szCs w:val="28"/>
+					</w:rPr>
+				</w:style>
+				<w:style w:type="paragraph" w:styleId="6">
+					<w:name w:val="heading 5"/>
+					<w:basedOn w:val="1"/>
+					<w:next w:val="1"/>
+					<w:link w:val="61"/>
+					<w:semiHidden/>
+					<w:unhideWhenUsed/>
+					<w:qFormat/>
+					<w:uiPriority w:val="0"/>
+					<w:pPr>
+						<w:keepNext/>
+						<w:keepLines/>
+						<w:numPr>
+							<w:ilvl w:val="4"/>
+							<w:numId w:val="1"/>
+						</w:numPr>
+						<w:spacing w:before="280" w:after="290" w:line="376" w:lineRule="auto"/>
+						<w:outlineLvl w:val="4"/>
+					</w:pPr>
+					<w:rPr>
+						<w:b/>
+						<w:bCs/>
+						<w:sz w:val="28"/>
+						<w:szCs w:val="28"/>
+					</w:rPr>
+				</w:style>
+				<w:style w:type="paragraph" w:styleId="7">
+					<w:name w:val="heading 6"/>
+					<w:basedOn w:val="1"/>
+					<w:next w:val="1"/>
+					<w:link w:val="62"/>
+					<w:semiHidden/>
+					<w:unhideWhenUsed/>
+					<w:qFormat/>
+					<w:uiPriority w:val="0"/>
+					<w:pPr>
+						<w:keepNext/>
+						<w:keepLines/>
+						<w:numPr>
+							<w:ilvl w:val="5"/>
+							<w:numId w:val="1"/>
+						</w:numPr>
+						<w:spacing w:before="240" w:after="64" w:line="320" w:lineRule="auto"/>
+						<w:outlineLvl w:val="5"/>
+					</w:pPr>
+					<w:rPr>
+						<w:rFonts w:asciiTheme="majorHAnsi" w:hAnsiTheme="majorHAnsi" w:eastAsiaTheme="majorEastAsia" w:cstheme="majorBidi"/>
+						<w:b/>
+						<w:bCs/>
+						<w:sz w:val="24"/>
+					</w:rPr>
+				</w:style>
+				<w:style w:type="paragraph" w:styleId="8">
+					<w:name w:val="heading 7"/>
+					<w:basedOn w:val="1"/>
+					<w:next w:val="1"/>
+					<w:link w:val="63"/>
+					<w:semiHidden/>
+					<w:unhideWhenUsed/>
+					<w:qFormat/>
+					<w:uiPriority w:val="0"/>
+					<w:pPr>
+						<w:keepNext/>
+						<w:keepLines/>
+						<w:numPr>
+							<w:ilvl w:val="6"/>
+							<w:numId w:val="1"/>
+						</w:numPr>
+						<w:spacing w:before="240" w:after="64" w:line="320" w:lineRule="auto"/>
+						<w:outlineLvl w:val="6"/>
+					</w:pPr>
+					<w:rPr>
+						<w:b/>
+						<w:bCs/>
+						<w:sz w:val="24"/>
+					</w:rPr>
+				</w:style>
+				<w:style w:type="paragraph" w:styleId="9">
+					<w:name w:val="heading 8"/>
+					<w:basedOn w:val="1"/>
+					<w:next w:val="1"/>
+					<w:link w:val="64"/>
+					<w:semiHidden/>
+					<w:unhideWhenUsed/>
+					<w:qFormat/>
+					<w:uiPriority w:val="0"/>
+					<w:pPr>
+						<w:keepNext/>
+						<w:keepLines/>
+						<w:numPr>
+							<w:ilvl w:val="7"/>
+							<w:numId w:val="1"/>
+						</w:numPr>
+						<w:spacing w:before="240" w:after="64" w:line="320" w:lineRule="auto"/>
+						<w:outlineLvl w:val="7"/>
+					</w:pPr>
+					<w:rPr>
+						<w:rFonts w:asciiTheme="majorHAnsi" w:hAnsiTheme="majorHAnsi" w:eastAsiaTheme="majorEastAsia" w:cstheme="majorBidi"/>
+						<w:sz w:val="24"/>
+					</w:rPr>
+				</w:style>
+				<w:style w:type="paragraph" w:styleId="10">
+					<w:name w:val="heading 9"/>
+					<w:basedOn w:val="1"/>
+					<w:next w:val="1"/>
+					<w:link w:val="65"/>
+					<w:semiHidden/>
+					<w:unhideWhenUsed/>
+					<w:qFormat/>
+					<w:uiPriority w:val="0"/>
+					<w:pPr>
+						<w:keepNext/>
+						<w:keepLines/>
+						<w:numPr>
+							<w:ilvl w:val="8"/>
+							<w:numId w:val="1"/>
+						</w:numPr>
+						<w:spacing w:before="240" w:after="64" w:line="320" w:lineRule="auto"/>
+						<w:outlineLvl w:val="8"/>
+					</w:pPr>
+					<w:rPr>
+						<w:rFonts w:asciiTheme="majorHAnsi" w:hAnsiTheme="majorHAnsi" w:eastAsiaTheme="majorEastAsia" w:cstheme="majorBidi"/>
+						<w:szCs w:val="21"/>
+					</w:rPr>
+				</w:style>
+				<w:style w:type="character" w:default="1" w:styleId="28">
+					<w:name w:val="Default Paragraph Font"/>
+					<w:semiHidden/>
+					<w:unhideWhenUsed/>
+					<w:uiPriority w:val="1"/>
+				</w:style>
+				<w:style w:type="table" w:default="1" w:styleId="26">
+					<w:name w:val="Normal Table"/>
+					<w:semiHidden/>
+					<w:unhideWhenUsed/>
+					<w:qFormat/>
+					<w:uiPriority w:val="99"/>
+					<w:tblPr>
+						<w:tblCellMar>
+							<w:top w:w="0" w:type="dxa"/>
+							<w:left w:w="108" w:type="dxa"/>
+							<w:bottom w:w="0" w:type="dxa"/>
+							<w:right w:w="108" w:type="dxa"/>
+						</w:tblCellMar>
+					</w:tblPr>
+				</w:style>
+				<w:style w:type="paragraph" w:styleId="11">
+					<w:name w:val="toc 7"/>
+					<w:basedOn w:val="1"/>
+					<w:next w:val="1"/>
+					<w:unhideWhenUsed/>
+					<w:qFormat/>
+					<w:uiPriority w:val="0"/>
+					<w:pPr>
+						<w:ind w:left="1260"/>
+						<w:jc w:val="left"/>
+					</w:pPr>
+					<w:rPr>
+						<w:rFonts w:asciiTheme="minorHAnsi" w:hAnsiTheme="minorHAnsi" w:cstheme="minorHAnsi"/>
+						<w:sz w:val="18"/>
+						<w:szCs w:val="18"/>
+					</w:rPr>
+				</w:style>
+				<w:style w:type="paragraph" w:styleId="12">
+					<w:name w:val="annotation text"/>
+					<w:basedOn w:val="1"/>
+					<w:link w:val="54"/>
+					<w:uiPriority w:val="0"/>
+					<w:pPr>
+						<w:jc w:val="left"/>
+					</w:pPr>
+				</w:style>
+				<w:style w:type="paragraph" w:styleId="13">
+					<w:name w:val="toc 5"/>
+					<w:basedOn w:val="1"/>
+					<w:next w:val="1"/>
+					<w:unhideWhenUsed/>
+					<w:qFormat/>
+					<w:uiPriority w:val="0"/>
+					<w:pPr>
+						<w:ind w:left="840"/>
+						<w:jc w:val="left"/>
+					</w:pPr>
+					<w:rPr>
+						<w:rFonts w:asciiTheme="minorHAnsi" w:hAnsiTheme="minorHAnsi" w:cstheme="minorHAnsi"/>
+						<w:sz w:val="18"/>
+						<w:szCs w:val="18"/>
+					</w:rPr>
+				</w:style>
+				<w:style w:type="paragraph" w:styleId="14">
+					<w:name w:val="toc 3"/>
+					<w:basedOn w:val="1"/>
+					<w:next w:val="1"/>
+					<w:unhideWhenUsed/>
+					<w:qFormat/>
+					<w:uiPriority w:val="39"/>
+					<w:pPr>
+						<w:ind w:left="420"/>
+						<w:jc w:val="left"/>
+					</w:pPr>
+					<w:rPr>
+						<w:rFonts w:asciiTheme="minorHAnsi" w:hAnsiTheme="minorHAnsi" w:cstheme="minorHAnsi"/>
+						<w:i/>
+						<w:iCs/>
+						<w:sz w:val="20"/>
+						<w:szCs w:val="20"/>
+					</w:rPr>
+				</w:style>
+				<w:style w:type="paragraph" w:styleId="15">
+					<w:name w:val="toc 8"/>
+					<w:basedOn w:val="1"/>
+					<w:next w:val="1"/>
+					<w:unhideWhenUsed/>
+					<w:qFormat/>
+					<w:uiPriority w:val="0"/>
+					<w:pPr>
+						<w:ind w:left="1470"/>
+						<w:jc w:val="left"/>
+					</w:pPr>
+					<w:rPr>
+						<w:rFonts w:asciiTheme="minorHAnsi" w:hAnsiTheme="minorHAnsi" w:cstheme="minorHAnsi"/>
+						<w:sz w:val="18"/>
+						<w:szCs w:val="18"/>
+					</w:rPr>
+				</w:style>
+				<w:style w:type="paragraph" w:styleId="16">
+					<w:name w:val="endnote text"/>
+					<w:basedOn w:val="1"/>
+					<w:link w:val="56"/>
+					<w:semiHidden/>
+					<w:unhideWhenUsed/>
+					<w:uiPriority w:val="0"/>
+					<w:pPr>
+						<w:snapToGrid w:val="0"/>
+						<w:jc w:val="left"/>
+					</w:pPr>
+				</w:style>
+				<w:style w:type="paragraph" w:styleId="17">
+					<w:name w:val="Balloon Text"/>
+					<w:basedOn w:val="1"/>
+					<w:link w:val="53"/>
+					<w:uiPriority w:val="0"/>
+					<w:rPr>
+						<w:sz w:val="18"/>
+						<w:szCs w:val="18"/>
+					</w:rPr>
+				</w:style>
+				<w:style w:type="paragraph" w:styleId="18">
+					<w:name w:val="footer"/>
+					<w:basedOn w:val="1"/>
+					<w:link w:val="52"/>
+					<w:uiPriority w:val="99"/>
+					<w:pPr>
+						<w:tabs>
+							<w:tab w:val="center" w:pos="4153"/>
+							<w:tab w:val="right" w:pos="8306"/>
+						</w:tabs>
+						<w:snapToGrid w:val="0"/>
+						<w:jc w:val="left"/>
+					</w:pPr>
+					<w:rPr>
+						<w:sz w:val="18"/>
+						<w:szCs w:val="18"/>
+					</w:rPr>
+				</w:style>
+				<w:style w:type="paragraph" w:styleId="19">
+					<w:name w:val="header"/>
+					<w:basedOn w:val="1"/>
+					<w:link w:val="51"/>
+					<w:qFormat/>
+					<w:uiPriority w:val="99"/>
+					<w:pPr>
+						<w:pBdr>
+							<w:bottom w:val="single" w:color="auto" w:sz="6" w:space="1"/>
+						</w:pBdr>
+						<w:tabs>
+							<w:tab w:val="center" w:pos="4153"/>
+							<w:tab w:val="right" w:pos="8306"/>
+						</w:tabs>
+						<w:snapToGrid w:val="0"/>
+						<w:jc w:val="center"/>
+					</w:pPr>
+					<w:rPr>
+						<w:sz w:val="18"/>
+						<w:szCs w:val="18"/>
+					</w:rPr>
+				</w:style>
+				<w:style w:type="paragraph" w:styleId="20">
+					<w:name w:val="toc 1"/>
+					<w:next w:val="1"/>
+					<w:qFormat/>
+					<w:uiPriority w:val="39"/>
+					<w:pPr>
+						<w:widowControl w:val="0"/>
+						<w:tabs>
+							<w:tab w:val="left" w:pos="420"/>
+							<w:tab w:val="right" w:leader="dot" w:pos="8296"/>
+						</w:tabs>
+						<w:spacing w:line="360" w:lineRule="auto"/>
+					</w:pPr>
+					<w:rPr>
+						<w:rFonts w:eastAsia="宋体" w:asciiTheme="minorHAnsi" w:hAnsiTheme="minorHAnsi" w:cstheme="minorHAnsi"/>
+						<w:b/>
+						<w:bCs/>
+						<w:caps/>
+						<w:kern w:val="2"/>
+						<w:lang w:val="en-US" w:eastAsia="zh-CN" w:bidi="ar-SA"/>
+					</w:rPr>
+				</w:style>
+				<w:style w:type="paragraph" w:styleId="21">
+					<w:name w:val="toc 4"/>
+					<w:basedOn w:val="1"/>
+					<w:next w:val="1"/>
+					<w:unhideWhenUsed/>
+					<w:qFormat/>
+					<w:uiPriority w:val="0"/>
+					<w:pPr>
+						<w:ind w:left="630"/>
+						<w:jc w:val="left"/>
+					</w:pPr>
+					<w:rPr>
+						<w:rFonts w:asciiTheme="minorHAnsi" w:hAnsiTheme="minorHAnsi" w:cstheme="minorHAnsi"/>
+						<w:sz w:val="18"/>
+						<w:szCs w:val="18"/>
+					</w:rPr>
+				</w:style>
+				<w:style w:type="paragraph" w:styleId="22">
+					<w:name w:val="toc 6"/>
+					<w:basedOn w:val="1"/>
+					<w:next w:val="1"/>
+					<w:unhideWhenUsed/>
+					<w:qFormat/>
+					<w:uiPriority w:val="0"/>
+					<w:pPr>
+						<w:ind w:left="1050"/>
+						<w:jc w:val="left"/>
+					</w:pPr>
+					<w:rPr>
+						<w:rFonts w:asciiTheme="minorHAnsi" w:hAnsiTheme="minorHAnsi" w:cstheme="minorHAnsi"/>
+						<w:sz w:val="18"/>
+						<w:szCs w:val="18"/>
+					</w:rPr>
+				</w:style>
+				<w:style w:type="paragraph" w:styleId="23">
+					<w:name w:val="toc 2"/>
+					<w:basedOn w:val="1"/>
+					<w:next w:val="1"/>
+					<w:unhideWhenUsed/>
+					<w:qFormat/>
+					<w:uiPriority w:val="39"/>
+					<w:pPr>
+						<w:ind w:left="210"/>
+						<w:jc w:val="left"/>
+					</w:pPr>
+					<w:rPr>
+						<w:rFonts w:asciiTheme="minorHAnsi" w:hAnsiTheme="minorHAnsi" w:cstheme="minorHAnsi"/>
+						<w:smallCaps/>
+						<w:sz w:val="20"/>
+						<w:szCs w:val="20"/>
+					</w:rPr>
+				</w:style>
+				<w:style w:type="paragraph" w:styleId="24">
+					<w:name w:val="toc 9"/>
+					<w:basedOn w:val="1"/>
+					<w:next w:val="1"/>
+					<w:unhideWhenUsed/>
+					<w:qFormat/>
+					<w:uiPriority w:val="0"/>
+					<w:pPr>
+						<w:ind w:left="1680"/>
+						<w:jc w:val="left"/>
+					</w:pPr>
+					<w:rPr>
+						<w:rFonts w:asciiTheme="minorHAnsi" w:hAnsiTheme="minorHAnsi" w:cstheme="minorHAnsi"/>
+						<w:sz w:val="18"/>
+						<w:szCs w:val="18"/>
+					</w:rPr>
+				</w:style>
+				<w:style w:type="paragraph" w:styleId="25">
+					<w:name w:val="annotation subject"/>
+					<w:basedOn w:val="12"/>
+					<w:next w:val="12"/>
+					<w:link w:val="55"/>
+					<w:uiPriority w:val="0"/>
+					<w:rPr>
+						<w:b/>
+						<w:bCs/>
+					</w:rPr>
+				</w:style>
+				<w:style w:type="table" w:styleId="27">
+					<w:name w:val="Table Grid"/>
+					<w:basedOn w:val="26"/>
+					<w:qFormat/>
+					<w:uiPriority w:val="0"/>
+					<w:pPr>
+						<w:widowControl w:val="0"/>
+						<w:jc w:val="both"/>
+					</w:pPr>
+					<w:tblPr>
+						<w:tblBorders>
+							<w:top w:val="single" w:color="auto" w:sz="4" w:space="0"/>
+							<w:left w:val="single" w:color="auto" w:sz="4" w:space="0"/>
+							<w:bottom w:val="single" w:color="auto" w:sz="4" w:space="0"/>
+							<w:right w:val="single" w:color="auto" w:sz="4" w:space="0"/>
+							<w:insideH w:val="single" w:color="auto" w:sz="4" w:space="0"/>
+							<w:insideV w:val="single" w:color="auto" w:sz="4" w:space="0"/>
+						</w:tblBorders>
+						<w:tblCellMar>
+							<w:top w:w="0" w:type="dxa"/>
+							<w:left w:w="108" w:type="dxa"/>
+							<w:bottom w:w="0" w:type="dxa"/>
+							<w:right w:w="108" w:type="dxa"/>
+						</w:tblCellMar>
+					</w:tblPr>
+				</w:style>
+				<w:style w:type="character" w:styleId="29">
+					<w:name w:val="endnote reference"/>
+					<w:semiHidden/>
+					<w:unhideWhenUsed/>
+					<w:uiPriority w:val="0"/>
+					<w:rPr>
+						<w:vertAlign w:val="superscript"/>
+					</w:rPr>
+				</w:style>
+				<w:style w:type="character" w:styleId="30">
+					<w:name w:val="FollowedHyperlink"/>
+					<w:semiHidden/>
+					<w:unhideWhenUsed/>
+					<w:qFormat/>
+					<w:uiPriority w:val="0"/>
+					<w:rPr>
+						<w:color w:val="800080"/>
+						<w:u w:val="single"/>
+					</w:rPr>
+				</w:style>
+				<w:style w:type="character" w:styleId="31">
+					<w:name w:val="Hyperlink"/>
+					<w:uiPriority w:val="99"/>
+					<w:rPr>
+						<w:color w:val="0000FF"/>
+						<w:u w:val="single"/>
+					</w:rPr>
+				</w:style>
+				<w:style w:type="character" w:styleId="32">
+					<w:name w:val="annotation reference"/>
+					<w:uiPriority w:val="0"/>
+					<w:rPr>
+						<w:sz w:val="21"/>
+						<w:szCs w:val="21"/>
+					</w:rPr>
+				</w:style>
+				<w:style w:type="paragraph" w:customStyle="1" w:styleId="33">
+					<w:name w:val="前言、引言标题"/>
+					<w:next w:val="1"/>
+					<w:uiPriority w:val="0"/>
+					<w:pPr>
+						<w:numPr>
+							<w:ilvl w:val="0"/>
+							<w:numId w:val="2"/>
+						</w:numPr>
+						<w:shd w:val="clear" w:color="FFFFFF" w:fill="FFFFFF"/>
+						<w:spacing w:before="640" w:after="560" w:line="360" w:lineRule="auto"/>
+						<w:jc w:val="center"/>
+						<w:outlineLvl w:val="0"/>
+					</w:pPr>
+					<w:rPr>
+						<w:rFonts w:ascii="黑体" w:hAnsi="Times New Roman" w:eastAsia="黑体" w:cs="Times New Roman"/>
+						<w:sz w:val="32"/>
+						<w:lang w:val="en-US" w:eastAsia="zh-CN" w:bidi="ar-SA"/>
+					</w:rPr>
+				</w:style>
+				<w:style w:type="paragraph" w:customStyle="1" w:styleId="34">
+					<w:name w:val="章标题"/>
+					<w:next w:val="35"/>
+					<w:uiPriority w:val="0"/>
+					<w:pPr>
+						<w:spacing w:beforeLines="50" w:afterLines="50" w:line="360" w:lineRule="auto"/>
+						<w:jc w:val="both"/>
+						<w:outlineLvl w:val="1"/>
+					</w:pPr>
+					<w:rPr>
+						<w:rFonts w:ascii="黑体" w:hAnsi="Times New Roman" w:eastAsia="黑体" w:cs="Times New Roman"/>
+						<w:sz w:val="21"/>
+						<w:lang w:val="en-US" w:eastAsia="zh-CN" w:bidi="ar-SA"/>
+					</w:rPr>
+				</w:style>
+				<w:style w:type="paragraph" w:customStyle="1" w:styleId="35">
+					<w:name w:val="段"/>
+					<w:uiPriority w:val="0"/>
+					<w:pPr>
+						<w:autoSpaceDE w:val="0"/>
+						<w:autoSpaceDN w:val="0"/>
+						<w:spacing w:line="360" w:lineRule="auto"/>
+						<w:ind w:firstLine="200" w:firstLineChars="200"/>
+						<w:jc w:val="both"/>
+					</w:pPr>
+					<w:rPr>
+						<w:rFonts w:ascii="宋体" w:hAnsi="Times New Roman" w:eastAsia="宋体" w:cs="Times New Roman"/>
+						<w:sz w:val="21"/>
+						<w:lang w:val="en-US" w:eastAsia="zh-CN" w:bidi="ar-SA"/>
+					</w:rPr>
+				</w:style>
+				<w:style w:type="paragraph" w:customStyle="1" w:styleId="36">
+					<w:name w:val="一级条标题"/>
+					<w:next w:val="35"/>
+					<w:uiPriority w:val="0"/>
+					<w:pPr>
+						<w:spacing w:line="360" w:lineRule="auto"/>
+						<w:jc w:val="both"/>
+						<w:outlineLvl w:val="2"/>
+					</w:pPr>
+					<w:rPr>
+						<w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:eastAsia="黑体" w:cs="Times New Roman"/>
+						<w:sz w:val="21"/>
+						<w:lang w:val="en-US" w:eastAsia="zh-CN" w:bidi="ar-SA"/>
+					</w:rPr>
+				</w:style>
+				<w:style w:type="paragraph" w:customStyle="1" w:styleId="37">
+					<w:name w:val="二级条标题"/>
+					<w:basedOn w:val="36"/>
+					<w:next w:val="35"/>
+					<w:uiPriority w:val="0"/>
+					<w:pPr>
+						<w:outlineLvl w:val="3"/>
+					</w:pPr>
+				</w:style>
+				<w:style w:type="paragraph" w:customStyle="1" w:styleId="38">
+					<w:name w:val="三级条标题"/>
+					<w:basedOn w:val="37"/>
+					<w:next w:val="35"/>
+					<w:uiPriority w:val="0"/>
+					<w:pPr>
+						<w:outlineLvl w:val="4"/>
+					</w:pPr>
+				</w:style>
+				<w:style w:type="paragraph" w:customStyle="1" w:styleId="39">
+					<w:name w:val="四级条标题"/>
+					<w:basedOn w:val="38"/>
+					<w:next w:val="35"/>
+					<w:qFormat/>
+					<w:uiPriority w:val="0"/>
+					<w:pPr>
+						<w:outlineLvl w:val="5"/>
+					</w:pPr>
+				</w:style>
+				<w:style w:type="paragraph" w:customStyle="1" w:styleId="40">
+					<w:name w:val="五级条标题"/>
+					<w:basedOn w:val="39"/>
+					<w:next w:val="35"/>
+					<w:qFormat/>
+					<w:uiPriority w:val="0"/>
+					<w:pPr>
+						<w:outlineLvl w:val="6"/>
+					</w:pPr>
+				</w:style>
+				<w:style w:type="paragraph" w:customStyle="1" w:styleId="41">
+					<w:name w:val="示例"/>
+					<w:next w:val="35"/>
+					<w:qFormat/>
+					<w:uiPriority w:val="0"/>
+					<w:pPr>
+						<w:numPr>
+							<w:ilvl w:val="0"/>
+							<w:numId w:val="3"/>
+						</w:numPr>
+						<w:tabs>
+							<w:tab w:val="left" w:pos="816"/>
+							<w:tab w:val="clear" w:pos="1120"/>
+						</w:tabs>
+						<w:spacing w:line="360" w:lineRule="auto"/>
+						<w:ind w:firstLine="419" w:firstLineChars="233"/>
+						<w:jc w:val="both"/>
+					</w:pPr>
+					<w:rPr>
+						<w:rFonts w:ascii="宋体" w:hAnsi="Times New Roman" w:eastAsia="宋体" w:cs="Times New Roman"/>
+						<w:sz w:val="18"/>
+						<w:lang w:val="en-US" w:eastAsia="zh-CN" w:bidi="ar-SA"/>
+					</w:rPr>
+				</w:style>
+				<w:style w:type="paragraph" w:customStyle="1" w:styleId="42">
+					<w:name w:val="列项——（一级）"/>
+					<w:qFormat/>
+					<w:uiPriority w:val="0"/>
+					<w:pPr>
+						<w:widowControl w:val="0"/>
+						<w:numPr>
+							<w:ilvl w:val="0"/>
+							<w:numId w:val="4"/>
+						</w:numPr>
+						<w:tabs>
+							<w:tab w:val="left" w:pos="854"/>
+							<w:tab w:val="clear" w:pos="1140"/>
+						</w:tabs>
+						<w:spacing w:line="360" w:lineRule="auto"/>
+						<w:ind w:left="200" w:leftChars="200" w:hanging="200" w:hangingChars="200"/>
+						<w:jc w:val="both"/>
+					</w:pPr>
+					<w:rPr>
+						<w:rFonts w:ascii="宋体" w:hAnsi="Times New Roman" w:eastAsia="宋体" w:cs="Times New Roman"/>
+						<w:sz w:val="21"/>
+						<w:lang w:val="en-US" w:eastAsia="zh-CN" w:bidi="ar-SA"/>
+					</w:rPr>
+				</w:style>
+				<w:style w:type="paragraph" w:customStyle="1" w:styleId="43">
+					<w:name w:val="附录标识"/>
+					<w:basedOn w:val="33"/>
+					<w:qFormat/>
+					<w:uiPriority w:val="0"/>
+					<w:pPr>
+						<w:numPr>
+							<w:numId w:val="0"/>
+						</w:numPr>
+						<w:tabs>
+							<w:tab w:val="left" w:pos="6405"/>
+						</w:tabs>
+						<w:spacing w:after="200"/>
+						<w:ind w:left="4320"/>
+					</w:pPr>
+					<w:rPr>
+						<w:sz w:val="21"/>
+					</w:rPr>
+				</w:style>
+				<w:style w:type="paragraph" w:customStyle="1" w:styleId="44">
+					<w:name w:val="附录章标题"/>
+					<w:next w:val="35"/>
+					<w:qFormat/>
+					<w:uiPriority w:val="0"/>
+					<w:pPr>
+						<w:wordWrap w:val="0"/>
+						<w:overflowPunct w:val="0"/>
+						<w:autoSpaceDE w:val="0"/>
+						<w:spacing w:beforeLines="50" w:afterLines="50" w:line="360" w:lineRule="auto"/>
+						<w:ind w:left="4320"/>
+						<w:jc w:val="both"/>
+						<w:textAlignment w:val="baseline"/>
+						<w:outlineLvl w:val="1"/>
+					</w:pPr>
+					<w:rPr>
+						<w:rFonts w:ascii="黑体" w:hAnsi="Times New Roman" w:eastAsia="黑体" w:cs="Times New Roman"/>
+						<w:kern w:val="21"/>
+						<w:sz w:val="21"/>
+						<w:lang w:val="en-US" w:eastAsia="zh-CN" w:bidi="ar-SA"/>
+					</w:rPr>
+				</w:style>
+				<w:style w:type="paragraph" w:customStyle="1" w:styleId="45">
+					<w:name w:val="附录一级条标题"/>
+					<w:basedOn w:val="44"/>
+					<w:next w:val="35"/>
+					<w:qFormat/>
+					<w:uiPriority w:val="0"/>
+					<w:pPr>
+						<w:autoSpaceDN w:val="0"/>
+						<w:spacing w:beforeLines="0" w:afterLines="0"/>
+						<w:ind w:left="4320"/>
+						<w:outlineLvl w:val="2"/>
+					</w:pPr>
+				</w:style>
+				<w:style w:type="paragraph" w:customStyle="1" w:styleId="46">
+					<w:name w:val="附录二级条标题"/>
+					<w:basedOn w:val="45"/>
+					<w:next w:val="35"/>
+					<w:qFormat/>
+					<w:uiPriority w:val="0"/>
+					<w:pPr>
+						<w:ind w:left="4320"/>
+						<w:outlineLvl w:val="3"/>
+					</w:pPr>
+				</w:style>
+				<w:style w:type="paragraph" w:customStyle="1" w:styleId="47">
+					<w:name w:val="附录三级条标题"/>
+					<w:basedOn w:val="46"/>
+					<w:next w:val="35"/>
+					<w:qFormat/>
+					<w:uiPriority w:val="0"/>
+					<w:pPr>
+						<w:ind w:left="4320"/>
+						<w:outlineLvl w:val="4"/>
+					</w:pPr>
+				</w:style>
+				<w:style w:type="paragraph" w:customStyle="1" w:styleId="48">
+					<w:name w:val="附录四级条标题"/>
+					<w:basedOn w:val="47"/>
+					<w:next w:val="35"/>
+					<w:qFormat/>
+					<w:uiPriority w:val="0"/>
+					<w:pPr>
+						<w:ind w:left="4320"/>
+						<w:outlineLvl w:val="5"/>
+					</w:pPr>
+				</w:style>
+				<w:style w:type="paragraph" w:customStyle="1" w:styleId="49">
+					<w:name w:val="附录五级条标题"/>
+					<w:basedOn w:val="48"/>
+					<w:next w:val="35"/>
+					<w:qFormat/>
+					<w:uiPriority w:val="0"/>
+					<w:pPr>
+						<w:ind w:left="4320"/>
+						<w:outlineLvl w:val="6"/>
+					</w:pPr>
+				</w:style>
+				<w:style w:type="paragraph" w:customStyle="1" w:styleId="50">
+					<w:name w:val="列项——"/>
+					<w:qFormat/>
+					<w:uiPriority w:val="0"/>
+					<w:pPr>
+						<w:widowControl w:val="0"/>
+						<w:tabs>
+							<w:tab w:val="left" w:pos="854"/>
+						</w:tabs>
+						<w:spacing w:line="360" w:lineRule="auto"/>
+						<w:ind w:left="200" w:leftChars="200" w:hanging="200" w:hangingChars="200"/>
+						<w:jc w:val="both"/>
+					</w:pPr>
+					<w:rPr>
+						<w:rFonts w:ascii="宋体" w:hAnsi="Times New Roman" w:eastAsia="宋体" w:cs="Times New Roman"/>
+						<w:sz w:val="21"/>
+						<w:lang w:val="en-US" w:eastAsia="zh-CN" w:bidi="ar-SA"/>
+					</w:rPr>
+				</w:style>
+				<w:style w:type="character" w:customStyle="1" w:styleId="51">
+					<w:name w:val="页眉 Char"/>
+					<w:link w:val="19"/>
+					<w:qFormat/>
+					<w:uiPriority w:val="99"/>
+					<w:rPr>
+						<w:kern w:val="2"/>
+						<w:sz w:val="18"/>
+						<w:szCs w:val="18"/>
+					</w:rPr>
+				</w:style>
+				<w:style w:type="character" w:customStyle="1" w:styleId="52">
+					<w:name w:val="页脚 Char"/>
+					<w:link w:val="18"/>
+					<w:qFormat/>
+					<w:uiPriority w:val="99"/>
+					<w:rPr>
+						<w:kern w:val="2"/>
+						<w:sz w:val="18"/>
+						<w:szCs w:val="18"/>
+					</w:rPr>
+				</w:style>
+				<w:style w:type="character" w:customStyle="1" w:styleId="53">
+					<w:name w:val="批注框文本 Char"/>
+					<w:link w:val="17"/>
+					<w:qFormat/>
+					<w:uiPriority w:val="0"/>
+					<w:rPr>
+						<w:kern w:val="2"/>
+						<w:sz w:val="18"/>
+						<w:szCs w:val="18"/>
+					</w:rPr>
+				</w:style>
+				<w:style w:type="character" w:customStyle="1" w:styleId="54">
+					<w:name w:val="批注文字 Char"/>
+					<w:link w:val="12"/>
+					<w:qFormat/>
+					<w:uiPriority w:val="0"/>
+					<w:rPr>
+						<w:kern w:val="2"/>
+						<w:sz w:val="21"/>
+						<w:szCs w:val="24"/>
+					</w:rPr>
+				</w:style>
+				<w:style w:type="character" w:customStyle="1" w:styleId="55">
+					<w:name w:val="批注主题 Char"/>
+					<w:link w:val="25"/>
+					<w:qFormat/>
+					<w:uiPriority w:val="0"/>
+					<w:rPr>
+						<w:b/>
+						<w:bCs/>
+						<w:kern w:val="2"/>
+						<w:sz w:val="21"/>
+						<w:szCs w:val="24"/>
+					</w:rPr>
+				</w:style>
+				<w:style w:type="character" w:customStyle="1" w:styleId="56">
+					<w:name w:val="尾注文本 Char"/>
+					<w:link w:val="16"/>
+					<w:semiHidden/>
+					<w:qFormat/>
+					<w:uiPriority w:val="0"/>
+					<w:rPr>
+						<w:kern w:val="2"/>
+						<w:sz w:val="21"/>
+						<w:szCs w:val="24"/>
+					</w:rPr>
+				</w:style>
+				<w:style w:type="character" w:customStyle="1" w:styleId="57">
+					<w:name w:val="标题 1 Char"/>
+					<w:link w:val="2"/>
+					<w:qFormat/>
+					<w:uiPriority w:val="9"/>
+					<w:rPr>
+						<w:rFonts w:ascii="仿宋" w:hAnsi="仿宋" w:eastAsia="仿宋"/>
+						<w:b/>
+						<w:bCs/>
+						<w:kern w:val="44"/>
+						<w:sz w:val="32"/>
+						<w:szCs w:val="32"/>
+					</w:rPr>
+				</w:style>
+				<w:style w:type="character" w:customStyle="1" w:styleId="58">
+					<w:name w:val="标题 2 Char"/>
+					<w:basedOn w:val="28"/>
+					<w:link w:val="3"/>
+					<w:qFormat/>
+					<w:uiPriority w:val="0"/>
+					<w:rPr>
+						<w:rFonts w:eastAsia="仿宋" w:cstheme="majorBidi"/>
+						<w:b/>
+						<w:bCs/>
+						<w:kern w:val="2"/>
+						<w:sz w:val="30"/>
+						<w:szCs w:val="32"/>
+					</w:rPr>
+				</w:style>
+				<w:style w:type="character" w:customStyle="1" w:styleId="59">
+					<w:name w:val="标题 3 Char"/>
+					<w:basedOn w:val="28"/>
+					<w:link w:val="4"/>
+					<w:qFormat/>
+					<w:uiPriority w:val="0"/>
+					<w:rPr>
+						<w:rFonts w:eastAsia="仿宋"/>
+						<w:b/>
+						<w:bCs/>
+						<w:kern w:val="2"/>
+						<w:sz w:val="28"/>
+						<w:szCs w:val="32"/>
+					</w:rPr>
+				</w:style>
+				<w:style w:type="character" w:customStyle="1" w:styleId="60">
+					<w:name w:val="标题 4 Char"/>
+					<w:basedOn w:val="28"/>
+					<w:link w:val="5"/>
+					<w:semiHidden/>
+					<w:qFormat/>
+					<w:uiPriority w:val="0"/>
+					<w:rPr>
+						<w:rFonts w:asciiTheme="majorHAnsi" w:hAnsiTheme="majorHAnsi" w:eastAsiaTheme="majorEastAsia" w:cstheme="majorBidi"/>
+						<w:b/>
+						<w:bCs/>
+						<w:kern w:val="2"/>
+						<w:sz w:val="28"/>
+						<w:szCs w:val="28"/>
+					</w:rPr>
+				</w:style>
+				<w:style w:type="character" w:customStyle="1" w:styleId="61">
+					<w:name w:val="标题 5 Char"/>
+					<w:basedOn w:val="28"/>
+					<w:link w:val="6"/>
+					<w:semiHidden/>
+					<w:qFormat/>
+					<w:uiPriority w:val="0"/>
+					<w:rPr>
+						<w:b/>
+						<w:bCs/>
+						<w:kern w:val="2"/>
+						<w:sz w:val="28"/>
+						<w:szCs w:val="28"/>
+					</w:rPr>
+				</w:style>
+				<w:style w:type="character" w:customStyle="1" w:styleId="62">
+					<w:name w:val="标题 6 Char"/>
+					<w:basedOn w:val="28"/>
+					<w:link w:val="7"/>
+					<w:semiHidden/>
+					<w:qFormat/>
+					<w:uiPriority w:val="0"/>
+					<w:rPr>
+						<w:rFonts w:asciiTheme="majorHAnsi" w:hAnsiTheme="majorHAnsi" w:eastAsiaTheme="majorEastAsia" w:cstheme="majorBidi"/>
+						<w:b/>
+						<w:bCs/>
+						<w:kern w:val="2"/>
+						<w:sz w:val="24"/>
+						<w:szCs w:val="24"/>
+					</w:rPr>
+				</w:style>
+				<w:style w:type="character" w:customStyle="1" w:styleId="63">
+					<w:name w:val="标题 7 Char"/>
+					<w:basedOn w:val="28"/>
+					<w:link w:val="8"/>
+					<w:semiHidden/>
+					<w:qFormat/>
+					<w:uiPriority w:val="0"/>
+					<w:rPr>
+						<w:b/>
+						<w:bCs/>
+						<w:kern w:val="2"/>
+						<w:sz w:val="24"/>
+						<w:szCs w:val="24"/>
+					</w:rPr>
+				</w:style>
+				<w:style w:type="character" w:customStyle="1" w:styleId="64">
+					<w:name w:val="标题 8 Char"/>
+					<w:basedOn w:val="28"/>
+					<w:link w:val="9"/>
+					<w:semiHidden/>
+					<w:qFormat/>
+					<w:uiPriority w:val="0"/>
+					<w:rPr>
+						<w:rFonts w:asciiTheme="majorHAnsi" w:hAnsiTheme="majorHAnsi" w:eastAsiaTheme="majorEastAsia" w:cstheme="majorBidi"/>
+						<w:kern w:val="2"/>
+						<w:sz w:val="24"/>
+						<w:szCs w:val="24"/>
+					</w:rPr>
+				</w:style>
+				<w:style w:type="character" w:customStyle="1" w:styleId="65">
+					<w:name w:val="标题 9 Char"/>
+					<w:basedOn w:val="28"/>
+					<w:link w:val="10"/>
+					<w:semiHidden/>
+					<w:qFormat/>
+					<w:uiPriority w:val="0"/>
+					<w:rPr>
+						<w:rFonts w:asciiTheme="majorHAnsi" w:hAnsiTheme="majorHAnsi" w:eastAsiaTheme="majorEastAsia" w:cstheme="majorBidi"/>
+						<w:kern w:val="2"/>
+						<w:sz w:val="21"/>
+						<w:szCs w:val="21"/>
+					</w:rPr>
+				</w:style>
+				<w:style w:type="paragraph" w:styleId="66">
+					<w:name w:val="List Paragraph"/>
+					<w:basedOn w:val="1"/>
+					<w:qFormat/>
+					<w:uiPriority w:val="34"/>
+					<w:pPr>
+						<w:ind w:firstLine="420" w:firstLineChars="200"/>
+					</w:pPr>
+				</w:style>
+				<w:style w:type="paragraph" w:customStyle="1" w:styleId="67">
+					<w:name w:val="TOC Heading"/>
+					<w:basedOn w:val="2"/>
+					<w:next w:val="1"/>
+					<w:semiHidden/>
+					<w:unhideWhenUsed/>
+					<w:qFormat/>
+					<w:uiPriority w:val="39"/>
+					<w:pPr>
+						<w:widowControl/>
+						<w:numPr>
+							<w:numId w:val="0"/>
+						</w:numPr>
+						<w:spacing w:beforeLines="0" w:afterLines="0" w:line="276" w:lineRule="auto"/>
+						<w:outlineLvl w:val="9"/>
+					</w:pPr>
+					<w:rPr>
+						<w:rFonts w:asciiTheme="majorHAnsi" w:hAnsiTheme="majorHAnsi" w:eastAsiaTheme="majorEastAsia" w:cstheme="majorBidi"/>
+						<w:color w:val="376092" w:themeColor="accent1" w:themeShade="BF"/>
+						<w:kern w:val="0"/>
+						<w:sz w:val="28"/>
+						<w:szCs w:val="28"/>
+					</w:rPr>
+				</w:style>
+			</w:styles>
+		</pkg:xmlData>
+	</pkg:part>
+	<pkg:part pkg:name="/word/theme/theme1.xml" pkg:contentType="application/vnd.openxmlformats-officedocument.theme+xml">
+		<pkg:xmlData>
+			<a:theme xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main" name="Office 主题">
+				<a:themeElements>
+					<a:clrScheme name="Office">
+						<a:dk1>
+							<a:sysClr val="windowText" lastClr="000000"/>
+						</a:dk1>
+						<a:lt1>
+							<a:sysClr val="window" lastClr="CAEACE"/>
+						</a:lt1>
+						<a:dk2>
+							<a:srgbClr val="1F497D"/>
+						</a:dk2>
+						<a:lt2>
+							<a:srgbClr val="EEECE1"/>
+						</a:lt2>
+						<a:accent1>
+							<a:srgbClr val="4F81BD"/>
+						</a:accent1>
+						<a:accent2>
+							<a:srgbClr val="C0504D"/>
+						</a:accent2>
+						<a:accent3>
+							<a:srgbClr val="9BBB59"/>
+						</a:accent3>
+						<a:accent4>
+							<a:srgbClr val="8064A2"/>
+						</a:accent4>
+						<a:accent5>
+							<a:srgbClr val="4BACC6"/>
+						</a:accent5>
+						<a:accent6>
+							<a:srgbClr val="F79646"/>
+						</a:accent6>
+						<a:hlink>
+							<a:srgbClr val="0000FF"/>
+						</a:hlink>
+						<a:folHlink>
+							<a:srgbClr val="800080"/>
+						</a:folHlink>
+					</a:clrScheme>
+					<a:fontScheme name="Office">
+						<a:majorFont>
+							<a:latin typeface="Cambria"/>
+							<a:ea typeface=""/>
+							<a:cs typeface=""/>
+							<a:font script="Jpan" typeface="ＭＳ ゴシック"/>
+							<a:font script="Hang" typeface="맑은 고딕"/>
+							<a:font script="Hans" typeface="宋体"/>
+							<a:font script="Hant" typeface="新細明體"/>
+							<a:font script="Arab" typeface="Times New Roman"/>
+							<a:font script="Hebr" typeface="Times New Roman"/>
+							<a:font script="Thai" typeface="Angsana New"/>
+							<a:font script="Ethi" typeface="Nyala"/>
+							<a:font script="Beng" typeface="Vrinda"/>
+							<a:font script="Gujr" typeface="Shruti"/>
+							<a:font script="Khmr" typeface="MoolBoran"/>
+							<a:font script="Knda" typeface="Tunga"/>
+							<a:font script="Guru" typeface="Raavi"/>
+							<a:font script="Cans" typeface="Euphemia"/>
+							<a:font script="Cher" typeface="Plantagenet Cherokee"/>
+							<a:font script="Yiii" typeface="Microsoft Yi Baiti"/>
+							<a:font script="Tibt" typeface="Microsoft Himalaya"/>
+							<a:font script="Thaa" typeface="MV Boli"/>
+							<a:font script="Deva" typeface="Mangal"/>
+							<a:font script="Telu" typeface="Gautami"/>
+							<a:font script="Taml" typeface="Latha"/>
+							<a:font script="Syrc" typeface="Estrangelo Edessa"/>
+							<a:font script="Orya" typeface="Kalinga"/>
+							<a:font script="Mlym" typeface="Kartika"/>
+							<a:font script="Laoo" typeface="DokChampa"/>
+							<a:font script="Sinh" typeface="Iskoola Pota"/>
+							<a:font script="Mong" typeface="Mongolian Baiti"/>
+							<a:font script="Viet" typeface="Times New Roman"/>
+							<a:font script="Uigh" typeface="Microsoft Uighur"/>
+						</a:majorFont>
+						<a:minorFont>
+							<a:latin typeface="Calibri"/>
+							<a:ea typeface=""/>
+							<a:cs typeface=""/>
+							<a:font script="Jpan" typeface="ＭＳ 明朝"/>
+							<a:font script="Hang" typeface="맑은 고딕"/>
+							<a:font script="Hans" typeface="宋体"/>
+							<a:font script="Hant" typeface="新細明體"/>
+							<a:font script="Arab" typeface="Arial"/>
+							<a:font script="Hebr" typeface="Arial"/>
+							<a:font script="Thai" typeface="Cordia New"/>
+							<a:font script="Ethi" typeface="Nyala"/>
+							<a:font script="Beng" typeface="Vrinda"/>
+							<a:font script="Gujr" typeface="Shruti"/>
+							<a:font script="Khmr" typeface="DaunPenh"/>
+							<a:font script="Knda" typeface="Tunga"/>
+							<a:font script="Guru" typeface="Raavi"/>
+							<a:font script="Cans" typeface="Euphemia"/>
+							<a:font script="Cher" typeface="Plantagenet Cherokee"/>
+							<a:font script="Yiii" typeface="Microsoft Yi Baiti"/>
+							<a:font script="Tibt" typeface="Microsoft Himalaya"/>
+							<a:font script="Thaa" typeface="MV Boli"/>
+							<a:font script="Deva" typeface="Mangal"/>
+							<a:font script="Telu" typeface="Gautami"/>
+							<a:font script="Taml" typeface="Latha"/>
+							<a:font script="Syrc" typeface="Estrangelo Edessa"/>
+							<a:font script="Orya" typeface="Kalinga"/>
+							<a:font script="Mlym" typeface="Kartika"/>
+							<a:font script="Laoo" typeface="DokChampa"/>
+							<a:font script="Sinh" typeface="Iskoola Pota"/>
+							<a:font script="Mong" typeface="Mongolian Baiti"/>
+							<a:font script="Viet" typeface="Arial"/>
+							<a:font script="Uigh" typeface="Microsoft Uighur"/>
+						</a:minorFont>
+					</a:fontScheme>
+					<a:fmtScheme name="Office">
+						<a:fillStyleLst>
+							<a:solidFill>
+								<a:schemeClr val="phClr"/>
+							</a:solidFill>
+							<a:gradFill rotWithShape="1">
+								<a:gsLst>
+									<a:gs pos="0">
+										<a:schemeClr val="phClr">
+											<a:tint val="50000"/>
+											<a:satMod val="300000"/>
+										</a:schemeClr>
+									</a:gs>
+									<a:gs pos="35000">
+										<a:schemeClr val="phClr">
+											<a:tint val="37000"/>
+											<a:satMod val="300000"/>
+										</a:schemeClr>
+									</a:gs>
+									<a:gs pos="100000">
+										<a:schemeClr val="phClr">
+											<a:tint val="15000"/>
+											<a:satMod val="350000"/>
+										</a:schemeClr>
+									</a:gs>
+								</a:gsLst>
+								<a:lin ang="16200000" scaled="1"/>
+							</a:gradFill>
+							<a:gradFill rotWithShape="1">
+								<a:gsLst>
+									<a:gs pos="0">
+										<a:schemeClr val="phClr">
+											<a:shade val="51000"/>
+											<a:satMod val="130000"/>
+										</a:schemeClr>
+									</a:gs>
+									<a:gs pos="80000">
+										<a:schemeClr val="phClr">
+											<a:shade val="93000"/>
+											<a:satMod val="130000"/>
+										</a:schemeClr>
+									</a:gs>
+									<a:gs pos="100000">
+										<a:schemeClr val="phClr">
+											<a:shade val="94000"/>
+											<a:satMod val="135000"/>
+										</a:schemeClr>
+									</a:gs>
+								</a:gsLst>
+								<a:lin ang="16200000" scaled="0"/>
+							</a:gradFill>
+						</a:fillStyleLst>
+						<a:lnStyleLst>
+							<a:ln w="9525" cap="flat" cmpd="sng" algn="ctr">
+								<a:solidFill>
+									<a:schemeClr val="phClr">
+										<a:shade val="95000"/>
+										<a:satMod val="105000"/>
+									</a:schemeClr>
+								</a:solidFill>
+								<a:prstDash val="solid"/>
+							</a:ln>
+							<a:ln w="25400" cap="flat" cmpd="sng" algn="ctr">
+								<a:solidFill>
+									<a:schemeClr val="phClr"/>
+								</a:solidFill>
+								<a:prstDash val="solid"/>
+							</a:ln>
+							<a:ln w="38100" cap="flat" cmpd="sng" algn="ctr">
+								<a:solidFill>
+									<a:schemeClr val="phClr"/>
+								</a:solidFill>
+								<a:prstDash val="solid"/>
+							</a:ln>
+						</a:lnStyleLst>
+						<a:effectStyleLst>
+							<a:effectStyle>
+								<a:effectLst>
+									<a:outerShdw blurRad="40000" dist="20000" dir="5400000" rotWithShape="0">
+										<a:srgbClr val="000000">
+											<a:alpha val="38000"/>
+										</a:srgbClr>
+									</a:outerShdw>
+								</a:effectLst>
+							</a:effectStyle>
+							<a:effectStyle>
+								<a:effectLst>
+									<a:outerShdw blurRad="40000" dist="23000" dir="5400000" rotWithShape="0">
+										<a:srgbClr val="000000">
+											<a:alpha val="35000"/>
+										</a:srgbClr>
+									</a:outerShdw>
+								</a:effectLst>
+							</a:effectStyle>
+							<a:effectStyle>
+								<a:effectLst>
+									<a:outerShdw blurRad="40000" dist="23000" dir="5400000" rotWithShape="0">
+										<a:srgbClr val="000000">
+											<a:alpha val="35000"/>
+										</a:srgbClr>
+									</a:outerShdw>
+								</a:effectLst>
+								<a:scene3d>
+									<a:camera prst="orthographicFront">
+										<a:rot lat="0" lon="0" rev="0"/>
+									</a:camera>
+									<a:lightRig rig="threePt" dir="t">
+										<a:rot lat="0" lon="0" rev="1200000"/>
+									</a:lightRig>
+								</a:scene3d>
+								<a:sp3d>
+									<a:bevelT w="63500" h="25400"/>
+								</a:sp3d>
+							</a:effectStyle>
+						</a:effectStyleLst>
+						<a:bgFillStyleLst>
+							<a:solidFill>
+								<a:schemeClr val="phClr"/>
+							</a:solidFill>
+							<a:gradFill rotWithShape="1">
+								<a:gsLst>
+									<a:gs pos="0">
+										<a:schemeClr val="phClr">
+											<a:tint val="40000"/>
+											<a:satMod val="350000"/>
+										</a:schemeClr>
+									</a:gs>
+									<a:gs pos="40000">
+										<a:schemeClr val="phClr">
+											<a:tint val="45000"/>
+											<a:shade val="99000"/>
+											<a:satMod val="350000"/>
+										</a:schemeClr>
+									</a:gs>
+									<a:gs pos="100000">
+										<a:schemeClr val="phClr">
+											<a:shade val="20000"/>
+											<a:satMod val="255000"/>
+										</a:schemeClr>
+									</a:gs>
+								</a:gsLst>
+								<a:path path="circle">
+									<a:fillToRect l="50000" t="-80000" r="50000" b="180000"/>
+								</a:path>
+							</a:gradFill>
+							<a:gradFill rotWithShape="1">
+								<a:gsLst>
+									<a:gs pos="0">
+										<a:schemeClr val="phClr">
+											<a:tint val="80000"/>
+											<a:satMod val="300000"/>
+										</a:schemeClr>
+									</a:gs>
+									<a:gs pos="100000">
+										<a:schemeClr val="phClr">
+											<a:shade val="30000"/>
+											<a:satMod val="200000"/>
+										</a:schemeClr>
+									</a:gs>
+								</a:gsLst>
+								<a:path path="circle">
+									<a:fillToRect l="50000" t="50000" r="50000" b="50000"/>
+								</a:path>
+							</a:gradFill>
+						</a:bgFillStyleLst>
+					</a:fmtScheme>
+				</a:themeElements>
+				<a:objectDefaults/>
+			</a:theme>
+		</pkg:xmlData>
+	</pkg:part>
+</pkg:package>
