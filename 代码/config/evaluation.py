@@ -1,9 +1,5 @@
 """
 CSA 区间覆盖率与宽度评估
-- evaluate_interval_coverage_traditional        : 传统 CSA（单侧）
-- evaluate_interval_coverage_two_sided          : 双侧 CSA 分发器（按 data_type 路由）
-- evaluate_interval_coverage_two_sided_synthetic: 合成数据专用（真实 T 已知）
-- evaluate_interval_coverage_two_sided_real     : 真实数据专用（覆盖率上下界估计）
 """
 import numpy as np
 
@@ -14,7 +10,6 @@ def evaluate_interval_coverage_traditional(lower, upper, time, event):
 
     传统CSA所有样本都是 [L, ∞)，所以：
     - 覆盖标准：未删失 T ∈ [L, U]，删失 T ≥ L
-    - 宽度：所有区间都是"无穷"，不计算有限宽度
 
     参数:
         lower: 下界，shape=(n,)
@@ -34,24 +29,33 @@ def evaluate_interval_coverage_traditional(lower, upper, time, event):
     time = np.asarray(time)
     event = np.asarray(event)
 
-    covered = np.zeros_like(time, dtype=bool)
     uncensored = event == 1
     censored = event == 0
 
-    # 覆盖标准：对于[L, ∞)区间
-    covered[uncensored] = (lower[uncensored] <= time[uncensored])
-    covered[censored] = (lower[censored] <= time[censored])
+    # β_lo = P(T̃ ≥ L̂(X))（覆盖率下界）
+    # 对所有样本：未删失时 T̃=T（精确），删失时 T̃=C<T（保守下界）
+    covered_lo = (lower <= time)
+    beta_lo = covered_lo.mean()
+    cov_uncensored = covered_lo[uncensored].mean() if np.any(uncensored) else np.nan
+    cov_censored = covered_lo[censored].mean() if np.any(censored) else np.nan
 
-    cov_uncensored = covered[uncensored].mean() if np.any(uncensored) else np.nan
-    cov_censored = covered[censored].mean() if np.any(censored) else np.nan
+    # β_hi = 1 - P(T̃ < L̂(X), T≤C)（覆盖率上界）
+    # 仅未删失样本（Δ=1, T=T̃）中 T<L 才是确定未覆盖的
+    definitely_not_covered = uncensored & (time < lower)
+    beta_hi = 1.0 - definitely_not_covered.mean()
 
     return {
-        'coverage': covered.mean(),
+        'coverage': beta_lo,           # = β_lo，真实覆盖率下界
+        'beta_lo': beta_lo,            
+        'beta_hi': beta_hi,            # 真实覆盖率上界
         'coverage_uncensored': cov_uncensored,
         'coverage_censored': cov_censored,
-        'num_uncensored': np.sum(uncensored),
-        'num_censored': np.sum(censored),
-        'coverage_detail': f'Overall: {covered.mean():.4f} | Uncensored: {cov_uncensored:.4f} | Censored: {cov_censored:.4f}'
+        'num_uncensored': int(np.sum(uncensored)),
+        'num_censored': int(np.sum(censored)),
+        'coverage_detail': (
+            f'β_lo: {beta_lo:.4f} | β_hi: {beta_hi:.4f} | '
+            f'Uncensored: {cov_uncensored:.4f} | Censored: {cov_censored:.4f}'
+        )
     }
 
 

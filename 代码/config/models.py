@@ -105,3 +105,65 @@ def predict_median_survival(model, X, model_type='cox'):
         return np.asarray(medians, dtype=float)
 
     raise ValueError(f'未知 model_type: {model_type}')
+
+
+# ── 截断条件均值预测（论文CMR分数用） ────────────────────────────────────────────
+
+def _integrate_survival(times, surv_vals, c0):
+    """梯形法计算 ∫_0^{c0} S(t) dt"""
+    mask = times <= c0
+    t_trunc = times[mask]
+    s_trunc = surv_vals[mask]
+    # 从 t=0（S(0)=1）开始构造积分区间
+    t_full = np.concatenate([[0.0], t_trunc])
+    s_full = np.concatenate([[1.0], s_trunc])
+    # 若最后一个观测时间 < c0，用阶跃函数延伸至 c0
+    if t_full[-1] < c0:
+        t_full = np.append(t_full, c0)
+        s_full = np.append(s_full, s_full[-1])
+    return float(np.trapz(s_full, t_full))
+
+
+def predict_mean_survival_truncated(model, X, c0, model_type='cox'):
+    """预测每个样本的截断条件均值 E[T∧c0 | X=x] = ∫_0^{c0} S(t|x) dt
+
+    对应论文 Candes et al. (2023) CMR 分数中的 m̂(x)，
+    即给定协变量 X=x 时，截断生存时间 T∧c0 的条件均值。
+
+    参数:
+        model: 已拟合的生存模型
+        X: 协变量矩阵，shape=(n_samples, n_features)
+        c0: float, 截断阈值
+        model_type: 模型类型 ('km', 'cox', 'weibull', 'rsf')
+
+    返回:
+        每个样本的截断均值预测值，shape=(n_samples,)
+    """
+    c0 = float(c0)
+
+    if model_type == 'km':
+        times = model.survival_function_.index.values.astype(float)
+        surv_vals = model.survival_function_['KM_estimate'].values.astype(float)
+        mean_val = _integrate_survival(times, surv_vals, c0)
+        return np.full(X.shape[0], mean_val, dtype=float)
+
+    if model_type in ['cox', 'weibull']:
+        df = pd.DataFrame(X, columns=[f'X{i}' for i in range(X.shape[1])])
+        surv_df = model.predict_survival_function(df)
+        times = surv_df.index.values.astype(float)
+        means = []
+        for col in surv_df.columns:
+            s = surv_df[col].values.astype(float)
+            means.append(_integrate_survival(times, s, c0))
+        return np.array(means, dtype=float)
+
+    if model_type == 'rsf':
+        surv_funcs = model.predict_survival_function(X)
+        times = np.asarray(model.unique_times_, dtype=float)
+        means = []
+        for fn in surv_funcs:
+            s = np.asarray(fn(times), dtype=float)
+            means.append(_integrate_survival(times, s, c0))
+        return np.array(means, dtype=float)
+
+    raise ValueError(f'未知 model_type: {model_type}')
