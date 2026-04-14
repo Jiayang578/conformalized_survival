@@ -55,7 +55,7 @@ def evaluate_model(model, X, time, event, model_type='cox'):
 
     if model_type == 'cox':
         df = pd.DataFrame(X, columns=[f'X{i}' for i in range(X.shape[1])])
-        risk_scores = -model.predict_partial_hazard(df).values
+        risk_scores = model.predict_partial_hazard(df).values  # 高风险 = 更早死亡，与 concordance_index_censored 方向一致
     elif model_type == 'weibull':
         df = pd.DataFrame(X, columns=[f'X{i}' for i in range(X.shape[1])])
         risk_scores = -model.predict_median(df).values
@@ -107,8 +107,6 @@ def predict_median_survival(model, X, model_type='cox'):
     raise ValueError(f'未知 model_type: {model_type}')
 
 
-# ── 截断条件均值预测（论文CMR分数用） ────────────────────────────────────────────
-
 def _integrate_survival(times, surv_vals, c0):
     """梯形法计算 ∫_0^{c0} S(t) dt"""
     mask = times <= c0
@@ -127,8 +125,7 @@ def _integrate_survival(times, surv_vals, c0):
 def predict_mean_survival_truncated(model, X, c0, model_type='cox'):
     """预测每个样本的截断条件均值 E[T∧c0 | X=x] = ∫_0^{c0} S(t|x) dt
 
-    对应论文 Candes et al. (2023) CMR 分数中的 m̂(x)，
-    即给定协变量 X=x 时，截断生存时间 T∧c0 的条件均值。
+    给定协变量 X=x 时，截断生存时间 T∧c0 的条件均值。
 
     参数:
         model: 已拟合的生存模型

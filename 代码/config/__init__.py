@@ -49,6 +49,7 @@ from .csa_two_sided import (
 
 from .evaluation import (
     evaluate_interval_coverage_traditional,
+    evaluate_interval_coverage_traditional_synthetic,
     evaluate_interval_coverage_two_sided,
     evaluate_interval_coverage_two_sided_synthetic,
     evaluate_interval_coverage_two_sided_real,

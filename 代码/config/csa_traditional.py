@@ -15,6 +15,7 @@ from .models import predict_mean_survival_truncated
 def fit_csa_intervals_traditional(model, X_train, time_train, event_train,
                                    X_cal, time_cal, event_cal, X_test,
                                    alpha=0.1, model_type='cox', use_weights=True,
+                                   cens_time_train=None, cens_time_cal=None,
                                    verbose=True):
     """
     生成单侧区间 [L, ∞)。
@@ -30,6 +31,8 @@ def fit_csa_intervals_traditional(model, X_train, time_train, event_train,
         alpha: float, 显著性水平，目标覆盖率 = 1-alpha
         model_type: str, 模型类型 ('km', 'cox', 'weibull', 'rsf')
         use_weights: bool, 是否使用加权conformal推断（推荐True）
+        cens_time_train: numpy.ndarray or None, 训练集删失时间 C（论文 Type I：完全可观测）
+        cens_time_cal:   numpy.ndarray or None, 校准集删失时间 C（论文 Type I：完全可观测）
         verbose: bool, 是否打印诊断信息
 
     返回:
@@ -38,43 +41,66 @@ def fit_csa_intervals_traditional(model, X_train, time_train, event_train,
         q_value: float, 校准的平均分位数值
         weight_info: dict, 诊断信息字典
     """
-    
-    # Step 1: c0 自适应选择
 
+    # Step 1: c0 自适应选择
     if use_weights:
-        c0, c0_scores = estimate_c0_on_train(
-            X_train, time_train, event_train, model, 
-            model_type=model_type, verbose=verbose
-        )
+        if cens_time_train is not None:
+            # 合成数据：C 对所有样本完全可观测（论文 Type I），使用论文网格搜索（Section 3.4）
+            c0, c0_scores = estimate_c0_on_train(
+                X_train, time_train, event_train, model,
+                model_type=model_type, cens_time_train=cens_time_train, verbose=verbose
+            )
+        else:
+            # 实际数据：WHAS500 等含随访脱失删失，C 对未删失样本不可观测，
+            # 网格搜索需要观测 C 才能构造 I'_ca，故目标函数退化。
+            # 退而用训练集中位数 median(T̃) 作为简单数据驱动的 c₀，
+            # 平衡校准集大小与截断效果，并在论文中注明此为近似处理。
+            c0 = float(np.median(time_train))
+            c0_scores = None
+            if verbose:
+                print(f"  实际数据模式（C不完全可观测）：c0 = median(T̃_train) = {c0:.4f}")
     else:
         c0 = float(np.median(time_train))
         c0_scores = None
         if verbose:
-            print(f"⚠️  无权重模式：c0 = 训练集中位数 {c0:.4f}")
-    
+            print(f"  无权重模式：c0 = 训练集中位数 {c0:.4f}")
+
     # Step 2: 从训练集估计边际概率 P(C≥c0)
-    censor_indicator_train = (time_train >= c0).astype(int)
-    p_c0_marginal = float(np.mean(censor_indicator_train))
-    
+    if cens_time_train is not None:
+        # 精确 C：直接用真实删失时间（论文 Type I 设置）
+        p_c0_marginal = float(np.mean(cens_time_train >= c0))
+    else:
+        # 近似：用观测时间代理（未删失 T≥c0 保证 C>T≥c0，删失 C=T̃）
+        p_c0_marginal = float(np.mean(time_train >= c0))
+
     if verbose:
-        print(f"\n✓ 边际概率 P(C≥c0) = {p_c0_marginal:.4f}（来自训练集）")
-    
-    # Step 3: 在校准集上估计删失概率模型 P(C≥c0|X)，得到权重
+        print(f"\n  边际概率 P(C≥c0) = {p_c0_marginal:.4f}（来自训练集）")
+
+    # Step 3: 估计删失概率模型 P(C≥c0|X)，得到权重
     if use_weights:
         weights, censoring_probs, censor_model = estimate_censoring_weights(
-            X_train, time_train, event_train,  
-            X_cal,                             # 校准集仅用于预测权重
+            X_train, time_train, event_train,
+            X_cal,
             c0_threshold=c0,
             p_c0_marginal=p_c0_marginal,
+            cens_time_train=cens_time_train,
             verbose=verbose
         )
     else:
         weights = None
         censoring_probs = None
         censor_model = None
-    
-    # Step 4: 筛选校准子集 I'_ca
-    cal_mask = time_cal >= c0
+
+    # Step 4: 筛选校准子集 I'_ca（论文 Algorithm 1 Step 2: I'_ca = {i : C_i ≥ c0}）
+    if cens_time_cal is not None:
+        # 精确 C：直接用真实删失时间（合成数据/论文 Type I 设置）
+        cal_mask = cens_time_cal >= c0
+    else:
+        # 实际数据近似：由于 C 对未删失样本不可观测，采用激进 mask 作为近似：
+        #   未删失（event=1）：C > T，理论上大概率满足 C ≥ c0（c0 = median 附近时尤其如此）
+        #   删失且 T̃ ≥ c0：C = T̃ ≥ c0 ✓（严格成立）
+        # 这与论文 UK Biobank 中近似处理 I'_ca 的做法一致，保留更多校准样本。
+        cal_mask = (event_cal == 1) | (time_cal >= c0)
     
     X_cal_prime     = X_cal[cal_mask]
     time_cal_prime  = time_cal[cal_mask]
@@ -82,13 +108,13 @@ def fit_csa_intervals_traditional(model, X_train, time_train, event_train,
     weights_prime   = weights[cal_mask] if weights is not None else None
     
     if verbose:
-        n_unc = int(np.sum(event_cal == 1))
-        n_cens = int(np.sum((event_cal == 0) & (time_cal >= c0)))
-        print(f"\n✓ I'_ca 筛选：{cal_mask.sum()}/{len(time_cal)} 个样本"
-              f"（未删失 {n_unc} + 删失且C≥c0 {n_cens}）")
+        n_in_unc  = int(np.sum((event_cal == 1) & cal_mask))
+        n_in_cens = int(np.sum((event_cal == 0) & cal_mask))
+        mode_str  = "精确C" if cens_time_cal is not None else "近似"
+        print(f"\n  I'_ca 筛选（{mode_str}）：{cal_mask.sum()}/{len(time_cal)} 个样本"
+              f"（未删失 {n_in_unc} + 删失且C≥c0 {n_in_cens}）")
     
     # Step 5: 计算校准集非一致性分数 V = ŷ - min(T̃, c0)
-    # 论文 CMR 分数：V = m̂(x) - (T̃ ∧ c0)，其中 m̂(x) = E[T∧c0 | X=x]（条件均值）
     pred_cal_prime = predict_mean_survival_truncated(model, X_cal_prime, c0=c0, model_type=model_type)
     scores = csa_nonconformity_scores(pred_cal_prime, time_cal_prime, c0=c0)
     
@@ -98,7 +124,12 @@ def fit_csa_intervals_traditional(model, X_train, time_train, event_train,
     if use_weights:
         # 测试点权重：ŵ(x) = P(C≥c0) / P(C≥c0|X=x)
         epsilon = 0.01
-        test_censor_probs = censor_model.predict_proba(X_test)[:, 1]
+        _tp = censor_model.predict_proba(X_test)
+        if _tp.shape[1] == 1:
+            _only = int(censor_model.classes_[0])
+            test_censor_probs = np.full(len(X_test), float(_only))
+        else:
+            test_censor_probs = _tp[:, 1]
         test_censor_probs = np.clip(test_censor_probs, epsilon, 1.0 - epsilon)
         test_weights = p_c0_marginal / test_censor_probs  # shape=(n_test,)
         

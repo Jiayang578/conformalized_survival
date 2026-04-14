@@ -94,17 +94,21 @@ def generate_weibull_data(n, p=1, hetero=False, cens_rate=0.4):
     # 构造观测数据
     # time_obs：观测时间 min(T,C)，用于模型拟合与CSA校准
     # time_true：真实事件时间 T，仅用于合成数据的覆盖率评估
-    event    = (T <= C).astype(int)
+    # cens_time：删失时间 C，论文 Type I censoring 假设 C 完全可观测，
+    #            用于精确计算 I'_ca = {i : C_i ≥ c₀}
+    event     = (T <= C).astype(int)
     time_obs  = np.clip(np.minimum(T, C), 1e-8, None)
     time_true = np.clip(T, 1e-8, None)
+    cens_time = np.clip(C, 1e-8, None)  # 论文 Type I 设置：C_i 完全可观测
 
     # 封装生存数据（使用正确的观测时间）
     surv = Surv.from_arrays(event=event, time=time_obs)
 
-    return X, surv, time_obs, event, np.mean(1 - event), time_true
+    return X, surv, time_obs, event, np.mean(1 - event), time_true, cens_time
 
 
-def split_survival_data(X, time, event, time_true=None, test_size=0.2, cal_size=0.25, random_state=None):
+def split_survival_data(X, time, event, time_true=None, cens_time=None,
+                        test_size=0.2, cal_size=0.25, random_state=None):
     """按比例拆分生存数据为训练、校准和测试集。
 
     参数:
@@ -113,46 +117,40 @@ def split_survival_data(X, time, event, time_true=None, test_size=0.2, cal_size=
         event: numpy.ndarray, 事件指示。
         time_true: numpy.ndarray or None, 真实事件时间 T（仅合成数据可用），
                    用于覆盖率评估。若提供，返回值额外包含 ttrue_train/cal/test。
+        cens_time: numpy.ndarray or None, 删失时间 C（论文 Type I 假设完全可观测），
+                   若提供，返回值额外包含 cens_train/cal/test。
         test_size: float, 测试集比例。
         cal_size: float, 校准集占剩余训练集的比例。
         random_state: int or None。
 
-    返回:
-        若 time_true is None（默认）:
-            X_train, time_train, event_train,
-            X_cal, time_cal, event_cal,
-            X_test, time_test, event_test          (9 values)
-        若 time_true is not None:
-            X_train, time_train, event_train,
-            X_cal, time_cal, event_cal,
-            X_test, time_test, event_test,
-            ttrue_train, ttrue_cal, ttrue_test      (12 values)
+    返回（按是否提供可选数组顺序追加）:
+        基础（9个值）: X_train, time_train, event_train,
+                        X_cal, time_cal, event_cal,
+                        X_test, time_test, event_test
+        + time_true（3个）: ttrue_train, ttrue_cal, ttrue_test
+        + cens_time（3个）: cens_train, cens_cal, cens_test
     """
+    # 用索引分割，便于同时处理多个可选数组
+    n = len(time)
+    idx = np.arange(n)
+
+    idx_temp, idx_test = train_test_split(
+        idx, test_size=test_size, random_state=random_state, stratify=event
+    )
+    idx_train, idx_cal = train_test_split(
+        idx_temp, test_size=cal_size, random_state=random_state, stratify=event[idx_temp]
+    )
+
+    result = [
+        X[idx_train], time[idx_train], event[idx_train],
+        X[idx_cal],   time[idx_cal],   event[idx_cal],
+        X[idx_test],  time[idx_test],  event[idx_test],
+    ]
+
     if time_true is not None:
-        (X_temp, X_test,
-         time_temp, time_test,
-         event_temp, event_test,
-         ttrue_temp, ttrue_test) = train_test_split(
-            X, time, event, time_true,
-            test_size=test_size, random_state=random_state, stratify=event
-        )
-        (X_train, X_cal,
-         time_train, time_cal,
-         event_train, event_cal,
-         ttrue_train, ttrue_cal) = train_test_split(
-            X_temp, time_temp, event_temp, ttrue_temp,
-            test_size=cal_size, random_state=random_state, stratify=event_temp
-        )
-        return (X_train, time_train, event_train,
-                X_cal, time_cal, event_cal,
-                X_test, time_test, event_test,
-                ttrue_train, ttrue_cal, ttrue_test)
-    else:
-        X_temp, X_test, time_temp, time_test, event_temp, event_test = train_test_split(
-            X, time, event, test_size=test_size, random_state=random_state, stratify=event
-        )
-        X_train, X_cal, time_train, time_cal, event_train, event_cal = train_test_split(
-            X_temp, time_temp, event_temp,
-            test_size=cal_size, random_state=random_state, stratify=event_temp
-        )
-        return X_train, time_train, event_train, X_cal, time_cal, event_cal, X_test, time_test, event_test
+        result += [time_true[idx_train], time_true[idx_cal], time_true[idx_test]]
+
+    if cens_time is not None:
+        result += [cens_time[idx_train], cens_time[idx_cal], cens_time[idx_test]]
+
+    return tuple(result)

@@ -59,6 +59,48 @@ def evaluate_interval_coverage_traditional(lower, upper, time, event):
     }
 
 
+def evaluate_interval_coverage_traditional_synthetic(lower, time_true, event=None):
+    """
+    【合成数据专用】传统CSA精确覆盖率评估
+
+    合成数据中所有样本（包括删失样本）的真实生存时间T已知，
+    直接计算精确覆盖率 P(T ≥ L̂(X))，无需保守的β_lo/β_hi估计。
+    传统CSA上界恒为np.inf，覆盖判断仅需下界，故不接收upper参数。
+
+    参数:
+        lower: 下界，shape=(n,)
+        time_true: 真实生存时间T（非观测时间T̃=min(T,C)），shape=(n,)
+        event: 事件指示（可选），0=删失，1=事件；用于分组统计
+
+    返回:
+        dict，包含：
+        - 'coverage': 精确覆盖率 P(T ≥ L̂(X))
+        - 'coverage_uncensored': 原本未删失样本的覆盖率（若传入event）
+        - 'coverage_censored': 原本删失样本的覆盖率（若传入event）
+    """
+    lower = np.asarray(lower)
+    time_true = np.asarray(time_true)
+
+    covered = (lower <= time_true)
+    coverage = float(covered.mean())
+
+    result = {
+        'coverage': coverage,
+        'coverage_detail': f'Exact P(T≥L): {coverage:.4f}'
+    }
+
+    if event is not None:
+        event = np.asarray(event)
+        uncensored = event == 1
+        censored = event == 0
+        result['coverage_uncensored'] = float(covered[uncensored].mean()) if np.any(uncensored) else np.nan
+        result['coverage_censored'] = float(covered[censored].mean()) if np.any(censored) else np.nan
+        result['num_uncensored'] = int(np.sum(uncensored))
+        result['num_censored'] = int(np.sum(censored))
+
+    return result
+
+
 def evaluate_interval_coverage_two_sided(lower, upper, time, event, classification=None, data_type='real'):
     """
     评估两侧CSA的覆盖率和宽度指标

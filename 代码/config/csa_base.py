@@ -7,17 +7,15 @@ CSA 共享核心组件（论文Candes et al. (2023) JRSSB Algorithm 1严格实�
 """
 import numpy as np
 from sklearn.ensemble import RandomForestClassifier
-from .models import predict_median_survival
+from .models import predict_median_survival, predict_mean_survival_truncated
 
 
 def estimate_c0_on_train(X_train, time_train, event_train, model, model_type='cox',
-                          c0_grid=None, holdout_ratio=0.25, verbose=False):
+                          c0_grid=None, holdout_ratio=0.25, cens_time_train=None,
+                          verbose=False):
     """
     论文要求的 c0 自适应选择：网格搜索 + 训练集holdout验证
-    
-    根据Candes et al. (2023)论文 Section 3，c0不应固定为中位数，
-    而应通过在训练集上网格搜索、最大化平均下界长度(LPB)来选择。
-    
+
     参数:
         X_train: numpy.ndarray, 训练集特征 (n_train, n_features)
         time_train: numpy.ndarray, 训练集观测时间
@@ -26,75 +24,88 @@ def estimate_c0_on_train(X_train, time_train, event_train, model, model_type='co
         model_type: str, 模型类型
         c0_grid: numpy.ndarray or None, c0类值网格；若None则自动生成（从10%到90%分位数）
         holdout_ratio: float, 用于验证的holdout集比例（默认25%）
+        cens_time_train: numpy.ndarray or None, 训练集删失时间 C（论文 Type I：完全可观测）
+                         提供时用精确 C 定义 I'_ca；否则用近似 time ≥ c0
         verbose: bool, 是否打印详细信息
-    
+
     返回:
         c0_best: float, 选定的最优c0值
         c0_scores: dict, 网格搜索各候选的评分结果
     """
     from sklearn.model_selection import train_test_split
-    
+
     # Step 1: 生成c0候选网格
     if c0_grid is None:
         percentiles = np.linspace(10, 90, 17)  # 10%, 15%, ..., 90%
         c0_grid = np.percentile(time_train, percentiles)
-    
+
     # Step 2: 分割训练集 → c0_fit + c0_holdout
-    (X_c0_fit, X_c0_holdout,
-     time_c0_fit, time_c0_holdout,
-     event_c0_fit, event_c0_holdout) = train_test_split(
-        X_train, time_train, event_train,
-        test_size=holdout_ratio, random_state=2026, stratify=event_train
-    )
-    
+    arrays = [X_train, time_train, event_train]
+    if cens_time_train is not None:
+        arrays.append(cens_time_train)
+
+    splits = train_test_split(*arrays, test_size=holdout_ratio, random_state=2026,
+                               stratify=event_train)
+
+    X_c0_fit,    X_c0_holdout    = splits[0],  splits[1]
+    time_c0_fit, time_c0_holdout = splits[2],  splits[3]
+    # splits[4]=event_c0_fit, splits[5]=event_c0_holdout（保守 mask 下不用 event）
+
+    if cens_time_train is not None:
+        cens_c0_fit = splits[6]  # train_test_split 返回 [train, test, ...] 交替
+
     c0_scores = {}
     best_score = -np.inf
     c0_best = None
-    
+
     # Step 3: 对每个c0候选值，计算holdout集上的平均下界LPB
     for c0_cand in c0_grid:
-        # 在c0_fit上计算校准集子集I'_ca（论文定义：{Ci ≥ c0}）
-        cal_mask = time_c0_fit >= c0_cand
-        if np.sum(cal_mask) < 2:  # 需要至少2个样本
+        # I'_ca 定义（与 fit_csa_intervals_traditional 保持一致）：
+        # 有精确 C：直接用 C_i ≥ c0（论文 Type I 设置）
+        # 无精确 C：未删失全部保留 + 删失且 T̃ ≥ c0
+        #   理由：未删失样本 C > T，论文中 C 已知时几乎全部满足 C ≥ c0；
+        #         此近似使分数含正值，目标函数可对 c0 做有意义的权衡
+        if cens_time_train is not None:
+            cal_mask = cens_c0_fit >= c0_cand
+        else:
+            # 合成数据但 C 未传入（不应发生）：保守近似
+            cal_mask = time_c0_fit >= c0_cand
+
+        if np.sum(cal_mask) < 2:
             c0_scores[float(c0_cand)] = np.nan
             continue
-        
-        # 计算非一致性分数
-        pred_fit = predict_median_survival(model, X_c0_fit[cal_mask], model_type=model_type)
+
+        # 计算非一致性分数（截断条件均值 E[T∧c0|X]）
+        pred_fit = predict_mean_survival_truncated(model, X_c0_fit[cal_mask], c0=c0_cand, model_type=model_type)
         time_fit_prime = time_c0_fit[cal_mask]
         scores = pred_fit - np.minimum(time_fit_prime, c0_cand)
-        
-        # 在holdout集上计算LPB = mean(ŷ - q) ∧ c0
-        pred_holdout = predict_median_survival(model, X_c0_holdout, model_type=model_type)
-        # 简单分位数估计（这里用90%分位数作为q的估计）
+
+        # 在holdout集上计算LPB = mean(clip(ŷ - q, 0, c0))
+        pred_holdout = predict_mean_survival_truncated(model, X_c0_holdout, c0=c0_cand, model_type=model_type)
         q_est = np.quantile(scores, 0.9)
-        lpb = np.mean(np.maximum(pred_holdout - q_est, 0.0)) 
-        # 约束在[0, c0]
         lpb_clipped = np.mean(np.clip(pred_holdout - q_est, 0.0, c0_cand))
-        
+
         c0_scores[float(c0_cand)] = lpb_clipped
-        
+
         if lpb_clipped > best_score:
             best_score = lpb_clipped
             c0_best = float(c0_cand)
-    
+
     if verbose:
-        print(f"\n🔍 c0 网格搜索完成 (论文要求方法)")
+        print(f"\n  c0 网格搜索完成 ")
         print(f"  搜索范围: [{c0_grid.min():.4f}, {c0_grid.max():.4f}]")
         print(f"  最优 c0: {c0_best:.4f} (平均LPB: {best_score:.4f})")
         print(f"  候选值数: {len(c0_grid)}")
-    
+
     return c0_best, c0_scores
 
 
 def estimate_censoring_weights(X_train, time_train, event_train,
                                X_cal, c0_threshold,
-                               p_c0_marginal=None, verbose=False):
+                               p_c0_marginal=None, cens_time_train=None,
+                               verbose=False):
     """
     估计删失机制权重：w(x) = P(C≥c₀) / P(C≥c₀|X=x)
-
-    论文要求（Candes Algorithm 1 Step 4）：权重函数 ŵ(·; Ztr) 必须在训练折上
-    拟合，再对校准集/测试集评估，以保证校准集的独立性（data independence）。
 
     参数:
         X_train: numpy.ndarray, 训练集特征 (n_train, n_features) — 用于拟合删失模型
@@ -103,6 +114,9 @@ def estimate_censoring_weights(X_train, time_train, event_train,
         X_cal: numpy.ndarray, 校准集特征 (n_cal, n_features) — 仅用于预测权重
         c0_threshold: float, 删失时间阈值（必须由调用方从训练集计算）
         p_c0_marginal: float, 边际概率 P(C≥c₀)（由训练集估计，必须提供）
+        cens_time_train: numpy.ndarray or None, 训练集真实删失时间 C（论文 Type I：完全可观测）
+                         提供时：用精确 C 对全部训练样本构造标签，分类器使用全量数据
+                         未提供时：仅对标签已知样本（可确认 C≥c0 或 C<c0）拟合分类器
         verbose: bool, 是否打印统计信息
 
     返回:
@@ -111,46 +125,48 @@ def estimate_censoring_weights(X_train, time_train, event_train,
         censoring_model: RandomForestClassifier, 删失状态分类器（在训练集上拟合）
     """
     if p_c0_marginal is None:
-        raise ValueError(
-            "❌ 必须显式传入 p_c0_marginal（从训练集估计）！"
-            "否则违反论文数据隔离原则。"
-        )
+        raise ValueError("必须显式传入 p_c0_marginal（从训练集估计）！")
 
     # Step 1: 在训练集上构造二元标签：1表示Ci≥c0，0表示Ci<c0
-    # 标签可直接确认的训练样本：
-    #   删失(Δ=0)：Ci = time_train，标签 = (time_train ≥ c0)，已知
-    #   未删失(Δ=1) 且 T ≥ c0：Ci > T ≥ c0，标签必为1，已知
-    #   未删失(Δ=1) 且 T < c0：Ci > T 但 Ci 未观测，标签未知 → 排除
-    censor_indicator_train = (time_train >= c0_threshold).astype(int)
-    known_mask_train = (event_train == 0) | (time_train >= c0_threshold)
+    if cens_time_train is not None:
+        #设置：C_i 完全可观测，所有训练样本标签已知
+        censor_indicator_train = (cens_time_train >= c0_threshold).astype(int)
+        fit_mask = np.ones(len(time_train), dtype=bool)  # 全量训练集
+    else:
+        # 实际数据近似：未删失(Δ=1) 且 T < c0 的样本 C 未观测，标签未知 → 排除
+        censor_indicator_train = (time_train >= c0_threshold).astype(int)
+        fit_mask = (event_train == 0) | (time_train >= c0_threshold)
 
-    # Step 2: 用训练集标签已知样本拟合分类器 P(C≥c0|X)（论文 ŵ(·; Ztr)）
+    # Step 2: 用训练集拟合分类器 P(C≥c0|X)（论文 ŵ(·; Ztr)）
     censoring_model = RandomForestClassifier(
         n_estimators=50,
         max_depth=5,
         random_state=2026
     )
-    censoring_model.fit(X_train[known_mask_train], censor_indicator_train[known_mask_train])
+    censoring_model.fit(X_train[fit_mask], censor_indicator_train[fit_mask])
 
-    # Step 3: 在校准集上预测条件概率 c(x;c0) = P(C≥c0|X)
-    censor_probs = censoring_model.predict_proba(X_cal)  # shape=(n_cal, 2)
-    censoring_probs = censor_probs[:, 1]  # P(C≥c0|X)
+    # Step 3: 在校准集上预测条件概率 P(C≥c0|X)
+    censor_probs = censoring_model.predict_proba(X_cal)
+    if censor_probs.shape[1] == 1:
+        # 训练标签只有一类（全为 0 或全为 1），此时分类器无判别力
+        only_class = int(censoring_model.classes_[0])
+        censoring_probs = np.full(len(X_cal), float(only_class))
+    else:
+        censoring_probs = censor_probs[:, 1]  # P(C≥c0|X)
 
     # Step 4: 计算权重 w(x) = P(C≥c0) / P(C≥c0|X=x)
-    # 分子来自训练集（已通过参数传入），分母用训练集模型对校准集评估
-    epsilon = 0.01  # 平滑常数
+    epsilon = 0.01  # 平滑常数，防止权重发散
     censoring_probs_smoothed = np.clip(censoring_probs, a_min=epsilon, a_max=1.0-epsilon)
     weights = p_c0_marginal / censoring_probs_smoothed
 
     if verbose:
-        print(f"\n📊 删失机制权重估计（论文 Algorithm 1 Step 4 严格实现）")
-        print(f"  删失阈值 c0: {c0_threshold:.4f} ✓（来自训练集）")
-        print(f"  边际 P(C≥c0): {p_c0_marginal:.4f} ✓（来自训练集）")
-        print(f"  训练集标签已知样本: {np.sum(known_mask_train)}/{len(time_train)}")
+        mode = "精确C（论文Type I）" if cens_time_train is not None else "近似（观测时间代理）"
+        print(f"\n  删失机制权重估计（{mode}）")
+        print(f"  删失阈值 c0: {c0_threshold:.4f}")
+        print(f"  边际 P(C≥c0): {p_c0_marginal:.4f}")
+        print(f"  分类器训练样本: {int(fit_mask.sum())}/{len(time_train)}")
         print(f"  P(C≥c0|X) 范围（校准集）: [{censoring_probs.min():.4f}, {censoring_probs.max():.4f}]")
         print(f"  权重 w(x) 范围: [{weights.min():.4f}, {weights.max():.4f}]")
-        print(f"  权重均值: {weights.mean():.4f} ± {weights.std():.4f}")
-        print(f"  平滑参数: ε={epsilon:.4f}")
 
     return weights, censoring_probs, censoring_model
 
