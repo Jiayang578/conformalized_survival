@@ -98,12 +98,12 @@ def generate_weibull_data(n, p=1, hetero=False, cens_rate=0.4):
     # 构造观测数据
     # time_obs：观测时间 min(T,C)，用于模型拟合与CSA校准
     # time_true：真实事件时间 T，仅用于合成数据的覆盖率评估
-    # cens_time：删失时间 C，论文 Type I censoring 假设 C 完全可观测，
+    # cens_time：删失时间 C，假设 C 完全可观测，
     #            用于精确计算 I'_ca = {i : C_i ≥ c₀}
     event     = (T <= C).astype(int)
     time_obs  = np.clip(np.minimum(T, C), 1e-8, None)
     time_true = np.clip(T, 1e-8, None)
-    cens_time = np.clip(C, 1e-8, None)  # 论文 Type I 设置：C_i 完全可观测
+    cens_time = np.clip(C, 1e-8, None) 
 
     # 封装生存数据（使用正确的观测时间）
     surv = Surv.from_arrays(event=event, time=time_obs)
@@ -121,7 +121,7 @@ def split_survival_data(X, time, event, time_true=None, cens_time=None,
         event: numpy.ndarray, 事件指示。
         time_true: numpy.ndarray or None, 真实事件时间 T（仅合成数据可用），
                    用于覆盖率评估。若提供，返回值额外包含 ttrue_train/cal/test。
-        cens_time: numpy.ndarray or None, 删失时间 C（论文 Type I 假设完全可观测），
+        cens_time: numpy.ndarray or None, 删失时间 C，
                    若提供，返回值额外包含 cens_train/cal/test。
         test_size: float, 测试集比例。
         cal_size: float, 校准集占剩余训练集的比例。

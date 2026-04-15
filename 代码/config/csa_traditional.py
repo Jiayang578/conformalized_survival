@@ -31,8 +31,8 @@ def fit_csa_intervals_traditional(model, X_train, time_train, event_train,
         alpha: float, 显著性水平，目标覆盖率 = 1-alpha
         model_type: str, 模型类型 ('km', 'cox', 'weibull', 'rsf')
         use_weights: bool, 是否使用加权conformal推断（推荐True）
-        cens_time_train: numpy.ndarray or None, 训练集删失时间 C（论文 Type I：完全可观测）
-        cens_time_cal:   numpy.ndarray or None, 校准集删失时间 C（论文 Type I：完全可观测）
+        cens_time_train: numpy.ndarray or None, 训练集删失时间 C
+        cens_time_cal:   numpy.ndarray or None, 校准集删失时间 C
         verbose: bool, 是否打印诊断信息
 
     返回:
@@ -45,7 +45,7 @@ def fit_csa_intervals_traditional(model, X_train, time_train, event_train,
     # Step 1: c0 自适应选择
     if use_weights:
         if cens_time_train is not None:
-            # 合成数据：C 对所有样本完全可观测（论文 Type I），使用论文网格搜索（Section 3.4）
+            # 合成数据：C 对所有样本完全可观测，网格搜索
             c0, c0_scores = estimate_c0_on_train(
                 X_train, time_train, event_train, model,
                 model_type=model_type, cens_time_train=cens_time_train, verbose=verbose
@@ -54,7 +54,6 @@ def fit_csa_intervals_traditional(model, X_train, time_train, event_train,
             # 实际数据：WHAS500 等含随访脱失删失，C 对未删失样本不可观测，
             # 网格搜索需要观测 C 才能构造 I'_ca，故目标函数退化。
             # 退而用训练集中位数 median(T̃) 作为简单数据驱动的 c₀，
-            # 平衡校准集大小与截断效果，并在论文中注明此为近似处理。
             c0 = float(np.median(time_train))
             c0_scores = None
             if verbose:
@@ -67,7 +66,7 @@ def fit_csa_intervals_traditional(model, X_train, time_train, event_train,
 
     # Step 2: 从训练集估计边际概率 P(C≥c0)
     if cens_time_train is not None:
-        # 精确 C：直接用真实删失时间（论文 Type I 设置）
+        # 精确 C：直接用真实删失时间
         p_c0_marginal = float(np.mean(cens_time_train >= c0))
     else:
         # 近似：用观测时间代理（未删失 T≥c0 保证 C>T≥c0，删失 C=T̃）
@@ -91,15 +90,14 @@ def fit_csa_intervals_traditional(model, X_train, time_train, event_train,
         censoring_probs = None
         censor_model = None
 
-    # Step 4: 筛选校准子集 I'_ca（论文 Algorithm 1 Step 2: I'_ca = {i : C_i ≥ c0}）
+    # Step 4: 筛选校准子集 I'_ca
     if cens_time_cal is not None:
-        # 精确 C：直接用真实删失时间（合成数据/论文 Type I 设置）
+        # 精确 C：直接用真实删失时间
         cal_mask = cens_time_cal >= c0
     else:
         # 实际数据近似：由于 C 对未删失样本不可观测，采用激进 mask 作为近似：
         #   未删失（event=1）：C > T，理论上大概率满足 C ≥ c0（c0 = median 附近时尤其如此）
         #   删失且 T̃ ≥ c0：C = T̃ ≥ c0 ✓（严格成立）
-        # 这与论文 UK Biobank 中近似处理 I'_ca 的做法一致，保留更多校准样本。
         cal_mask = (event_cal == 1) | (time_cal >= c0)
     
     X_cal_prime     = X_cal[cal_mask]

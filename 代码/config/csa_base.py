@@ -1,9 +1,5 @@
 """
-CSA 共享核心组件（论文Candes et al. (2023) JRSSB Algorithm 1严格实现）
-- estimate_c0_on_train          : c0 自适应选择（根据论文 Section 3）
-- estimate_censoring_weights    : 删失机制逆概率权重（权重分子来自训练集）
-- csa_nonconformity_scores      : 非一致性分数（CMR 单侧 / 旧双侧兼容）
-- calibrate_csa_quantile        : 加权分位数校准（论文定义 + 无权重∞-atom）
+CSA 共享核心组件
 """
 import numpy as np
 from sklearn.ensemble import RandomForestClassifier
@@ -14,7 +10,7 @@ def estimate_c0_on_train(X_train, time_train, event_train, model, model_type='co
                           c0_grid=None, holdout_ratio=0.25, cens_time_train=None,
                           verbose=False):
     """
-    论文要求的 c0 自适应选择：网格搜索 + 训练集holdout验证
+    c0 自适应选择：网格搜索 + 训练集holdout验证
 
     参数:
         X_train: numpy.ndarray, 训练集特征 (n_train, n_features)
@@ -24,7 +20,7 @@ def estimate_c0_on_train(X_train, time_train, event_train, model, model_type='co
         model_type: str, 模型类型
         c0_grid: numpy.ndarray or None, c0类值网格；若None则自动生成（从10%到90%分位数）
         holdout_ratio: float, 用于验证的holdout集比例（默认25%）
-        cens_time_train: numpy.ndarray or None, 训练集删失时间 C（论文 Type I：完全可观测）
+        cens_time_train: numpy.ndarray or None, 训练集删失时间C
                          提供时用精确 C 定义 I'_ca；否则用近似 time ≥ c0
         verbose: bool, 是否打印详细信息
 
@@ -61,14 +57,14 @@ def estimate_c0_on_train(X_train, time_train, event_train, model, model_type='co
     # Step 3: 对每个c0候选值，计算holdout集上的平均下界LPB
     for c0_cand in c0_grid:
         # I'_ca 定义（与 fit_csa_intervals_traditional 保持一致）：
-        # 有精确 C：直接用 C_i ≥ c0（论文 Type I 设置）
+        # 有精确 C：直接用 C_i ≥ c0
         # 无精确 C：未删失全部保留 + 删失且 T̃ ≥ c0
-        #   理由：未删失样本 C > T，论文中 C 已知时几乎全部满足 C ≥ c0；
+        #   理由：未删失样本 C > T，C 已知时几乎全部满足 C ≥ c0；
         #         此近似使分数含正值，目标函数可对 c0 做有意义的权衡
         if cens_time_train is not None:
             cal_mask = cens_c0_fit >= c0_cand
         else:
-            # 合成数据但 C 未传入（不应发生）：保守近似
+            # 合成数据但 C 未传入：保守近似
             cal_mask = time_c0_fit >= c0_cand
 
         if np.sum(cal_mask) < 2:
@@ -114,7 +110,7 @@ def estimate_censoring_weights(X_train, time_train, event_train,
         X_cal: numpy.ndarray, 校准集特征 (n_cal, n_features) — 仅用于预测权重
         c0_threshold: float, 删失时间阈值（必须由调用方从训练集计算）
         p_c0_marginal: float, 边际概率 P(C≥c₀)（由训练集估计，必须提供）
-        cens_time_train: numpy.ndarray or None, 训练集真实删失时间 C（论文 Type I：完全可观测）
+        cens_time_train: numpy.ndarray or None, 训练集真实删失时间 C
                          提供时：用精确 C 对全部训练样本构造标签，分类器使用全量数据
                          未提供时：仅对标签已知样本（可确认 C≥c0 或 C<c0）拟合分类器
         verbose: bool, 是否打印统计信息
@@ -137,7 +133,7 @@ def estimate_censoring_weights(X_train, time_train, event_train,
         censor_indicator_train = (time_train >= c0_threshold).astype(int)
         fit_mask = (event_train == 0) | (time_train >= c0_threshold)
 
-    # Step 2: 用训练集拟合分类器 P(C≥c0|X)（论文 ŵ(·; Ztr)）
+    # Step 2: 用训练集拟合分类器 P(C≥c0|X)）
     censoring_model = RandomForestClassifier(
         n_estimators=50,
         max_depth=5,
@@ -160,7 +156,7 @@ def estimate_censoring_weights(X_train, time_train, event_train,
     weights = p_c0_marginal / censoring_probs_smoothed
 
     if verbose:
-        mode = "精确C（论文Type I）" if cens_time_train is not None else "近似（观测时间代理）"
+        mode = "精确C" if cens_time_train is not None else "近似（观测时间代理）"
         print(f"\n  删失机制权重估计（{mode}）")
         print(f"  删失阈值 c0: {c0_threshold:.4f}")
         print(f"  边际 P(C≥c0): {p_c0_marginal:.4f}")
@@ -176,7 +172,7 @@ def csa_nonconformity_scores(pred_median, time, event=None, weights=None, c0=Non
     计算非一致性分数
 
     当 c0 不为 None 时（传统CSA调用）：
-        使用论文 CMR 分数 V = ŷ(x) - (T̃ ∧ c0)，其中 T̃ ∧ c0 = min(time, c0)
+        使用 CMR 分数 V = ŷ(x) - (T̃ ∧ c0)，其中 T̃ ∧ c0 = min(time, c0)
         对 I'_ca 中所有样本统一计算，无需区分是否删失。
 
     当 c0 为 None 时（两侧CSA调用，保持旧行为）：
@@ -194,7 +190,7 @@ def csa_nonconformity_scores(pred_median, time, event=None, weights=None, c0=Non
         score: numpy.ndarray, 非一致性分数
     """
     if c0 is not None:
-        # CMR 单侧分数：V = ŷ - min(T̃, c0)（论文 Section 3.1）
+        # CMR 单侧分数：V = ŷ - min(T̃, c0)
         Y = np.minimum(time, float(c0))
         return pred_median - Y
 
@@ -209,23 +205,17 @@ def csa_nonconformity_scores(pred_median, time, event=None, weights=None, c0=Non
 
 def calibrate_csa_quantile(scores, alpha=0.1, weights=None, test_weight=None):
     """
-    论文定义的CSA分位数校准（Candes et al. Algorithm 1 Step 5-6）
+    CSA分位数校准
     
-    分位数定义（论文式2）：
-    - 无权重: q = sup{ z : Q{V_i ≤ z} < 1-α }  （修正为论文的sup定义）
+    分位数定义：
+    - 无权重: q = sup{ z : Q{V_i ≤ z} < 1-α }
     - 有权重: q = sup{ z : Σ_i W_i · 1{V_i ≤ z} / Σ_j W_j ≥ 1-α }
-    
-    关键改动（严格遵循论文）：
-    1. 无权重模式现在也加∞-atom（关键差异#6的修正）
-    2. 使用论文的sup定义而非ceiling公式
-    3. 返回 np.inf 时代表∞-atom激活（下界 → -∞ → clip到0）
 
     参数:
         scores: 校准集的非一致性分数 V = ŷ - min(T̃, c₀)
         alpha: 显著性水平（目标覆盖率 = 1-α）
         weights: numpy.ndarray, 校准样本权重（可选），若None使用均匀权重
-        test_weight: float, 测试点权重ŵ(x) - 关键：无权重模式也要提供！
-                    对应论文∞-atom分母修正 (Σ_j W_j + ŵ(x))
+        test_weight: float, 测试点权重ŵ(x) 
 
     返回:
         q: float 或 np.ndarray, 置信区间半宽
@@ -260,7 +250,7 @@ def calibrate_csa_quantile(scores, alpha=0.1, weights=None, test_weight=None):
     cumsum_weights = np.cumsum(sorted_weights)
     sum_weights = cumsum_weights[-1]
     
-    # 论文分位数定义：sup{ z : Σ_{V_i ≤ z} W_i / (Σ_j W_j + ŵ) ≥ 1-α }
+    # 分位数定义：sup{ z : Σ_{V_i ≤ z} W_i / (Σ_j W_j + ŵ) ≥ 1-α }
     def find_quantile_for_test_weight(w_test):
         total_weight = sum_weights + w_test  # ∞-atom分母
         threshold = (1 - alpha) * total_weight
