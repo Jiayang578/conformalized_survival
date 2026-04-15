@@ -50,25 +50,29 @@ def generate_weibull_data(n, p=1, hetero=False, cens_rate=0.4):
     # 生成协变量X
     if p == 1:
         X = np.random.uniform(0, 4, size=(n, 1))
+        x = X[:, 0]
+        x_std = (x - 2.0) / (4.0 / np.sqrt(12))          # Uniform(0,4) 标准化，SD=1
     else:
         age = np.random.uniform(18, 80, size=n)
         gender = np.random.binomial(1, 0.5, size=n)
         other_X = np.random.uniform(-1, 1, size=(n, p-2))
         X = np.column_stack([age, gender, other_X])
+        age_std    = (age - 49.0) / (62.0 / np.sqrt(12))  # Uniform(18,80) 标准化，SD≈1
+        gender_std = (gender - 0.5) / 0.5                  # Bernoulli(0.5) 标准化，SD=1
 
-    # 生成均值μ(X)，单维度情况下仅与单协变量x相关，多维度情况下与年龄性别相关
+    # 生成均值μ(X)：对数线性模型，SD(log_μ) ≈ 0.8，两种维度信噪比可比
     if p == 1:
-        mu = 2 + 0.37 * np.sqrt(X[:, 0])
+        mu = np.exp(2.0 + 0.8 * x_std)
+        # SD(log_μ) = 0.8，μ 中心约 e²≈7.4
     else:
-        age = X[:, 0]
-        gender = X[:, 1]
-        mu = np.log(2) + 1 + 0.6 * (age**2 / 1000 - age * gender / 10)
+        mu = np.exp(2.0 + 0.75 * age_std - 0.25 * gender_std)
+        # Var(log_μ) = 0.75²+0.25² = 0.625，SD(log_μ) ≈ 0.79 ≈ 0.8
 
-    # 生成方差σ(X)，同方差时固定，异方差时与某些协变量相关
+    # 生成方差σ(X)，同方差时固定，异方差时与主协变量单调相关（两种维度范围一致）
     if p == 1:
-        sigma = 1.5 if not hetero else 1 + X[:, 0] / 5
+        sigma = 1.5 if not hetero else 0.5 + x / 4        # σ ∈ {1.5} 或 [0.5, 1.5]
     else:
-        sigma = 1.0 if not hetero else (np.abs(X[:, 9]) + 1) if X.shape[1] >= 10 else 1.0
+        sigma = 1.5 if not hetero else 0.5 + (age - 18) / 62  # σ ∈ {1.5} 或 [0.5, 1.5]
 
     # 生成真实生存时间
     T = weibull_from_mu_sigma(mu, sigma, size=n, random_state=2026)
