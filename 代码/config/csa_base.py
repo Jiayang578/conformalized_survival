@@ -64,8 +64,10 @@ def estimate_c0_on_train(X_train, time_train, event_train, model, model_type='co
         if cens_time_train is not None:
             cal_mask = cens_c0_fit >= c0_cand
         else:
-            # 合成数据但 C 未传入：保守近似
-            cal_mask = time_c0_fit >= c0_cand
+            # 实际数据 / 合成数据但 C 未传入：近似定义与 fit_csa_intervals_traditional 保持一致
+            # I'_ca = {所有未删失} ∪ {删失且 T̃ ≥ c0}
+            event_c0_fit = splits[4]
+            cal_mask = (event_c0_fit == 1) | (time_c0_fit >= c0_cand)
 
         if np.sum(cal_mask) < 2:
             c0_scores[float(c0_cand)] = np.nan

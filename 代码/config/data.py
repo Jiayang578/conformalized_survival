@@ -68,11 +68,13 @@ def generate_weibull_data(n, p=1, hetero=False, cens_rate=0.4):
         mu = np.exp(2.0 + 0.75 * age_std - 0.25 * gender_std)
         # Var(log_μ) = 0.75²+0.25² = 0.625，SD(log_μ) ≈ 0.79 ≈ 0.8
 
-    # 生成方差σ(X)，同方差时固定，异方差时与主协变量单调相关（两种维度范围一致）
-    if p == 1:
-        sigma = 1.5 if not hetero else 0.5 + x / 4        # σ ∈ {1.5} 或 [0.5, 1.5]
+    # 生成方差σ(X)：两种情况均值相同（=1.5），仅"是否随个体变化"不同（唯一受控变量）
+    # hetero 用独立于任何风险协变量的 z_sigma，消除与 μ(X) 的相关性
+    if hetero:
+        z_sigma = np.random.uniform(0, 4, size=n)  # 独立于 x / age / gender
+        sigma = 0.5 + z_sigma / 2                  # σ ∈ [0.5, 2.5]，均值=1.5，与X无关
     else:
-        sigma = 1.5 if not hetero else 0.5 + (age - 18) / 62  # σ ∈ {1.5} 或 [0.5, 1.5]
+        sigma = 1.5                                # σ 固定=1.5，同方差
 
     # 生成真实生存时间
     T = weibull_from_mu_sigma(mu, sigma, size=n, random_state=2026)

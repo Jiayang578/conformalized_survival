@@ -51,13 +51,12 @@ def fit_csa_intervals_traditional(model, X_train, time_train, event_train,
                 model_type=model_type, cens_time_train=cens_time_train, verbose=verbose
             )
         else:
-            # 实际数据：WHAS500 等含随访脱失删失，C 对未删失样本不可观测，
-            # 网格搜索需要观测 C 才能构造 I'_ca，故目标函数退化。
-            # 退而用训练集中位数 median(T̃) 作为简单数据驱动的 c₀，
-            c0 = float(np.median(time_train))
-            c0_scores = None
-            if verbose:
-                print(f"  实际数据模式（C不完全可观测）：c0 = median(T̃_train) = {c0:.4f}")
+            # 实际数据：C 对未删失样本不可观测，但可用近似 I'_ca 进行网格搜索：
+            # I'_ca = {未删失样本} ∪ {删失且 T̃ ≥ c0 的样本}
+            c0, c0_scores = estimate_c0_on_train(
+                X_train, time_train, event_train, model,
+                model_type=model_type, cens_time_train=None, verbose=verbose
+            )
     else:
         c0 = float(np.median(time_train))
         c0_scores = None
