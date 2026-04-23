@@ -16,7 +16,7 @@ def fit_csa_intervals_traditional(model, X_train, time_train, event_train,
                                    X_cal, time_cal, event_cal, X_test,
                                    alpha=0.1, model_type='cox', use_weights=True,
                                    cens_time_train=None, cens_time_cal=None,
-                                   verbose=True):
+                                   min_p_c0=0.3, verbose=True):
     """
     生成单侧区间 [L, ∞)。
     参数:
@@ -33,6 +33,8 @@ def fit_csa_intervals_traditional(model, X_train, time_train, event_train,
         use_weights: bool, 是否使用加权conformal推断（推荐True）
         cens_time_train: numpy.ndarray or None, 训练集删失时间 C
         cens_time_cal:   numpy.ndarray or None, 校准集删失时间 C
+        min_p_c0: float, c0选择时要求的 P(C≥c₀) 最低阈值（默认0.3）；
+                  合成数据（cens_time_train不为None）路径下该约束也会生效
         verbose: bool, 是否打印诊断信息
 
     返回:
@@ -45,17 +47,18 @@ def fit_csa_intervals_traditional(model, X_train, time_train, event_train,
     # Step 1: c0 自适应选择
     if use_weights:
         if cens_time_train is not None:
-            # 合成数据：C 对所有样本完全可观测，网格搜索
+            # 合成数据：C 完全可观测，精确筛选
             c0, c0_scores = estimate_c0_on_train(
                 X_train, time_train, event_train, model,
-                model_type=model_type, cens_time_train=cens_time_train, verbose=verbose
+                model_type=model_type, cens_time_train=cens_time_train,
+                min_p_c0=min_p_c0, verbose=verbose
             )
         else:
-            # 实际数据：C 对未删失样本不可观测，但可用近似 I'_ca 进行网格搜索：
-            # I'_ca = {未删失样本} ∪ {删失且 T̃ ≥ c0 的样本}
+            # 实际数据：用观测时间代理 P(C≥c₀)，加 min_p_c0 约束
             c0, c0_scores = estimate_c0_on_train(
                 X_train, time_train, event_train, model,
-                model_type=model_type, cens_time_train=None, verbose=verbose
+                model_type=model_type, cens_time_train=None,
+                min_p_c0=min_p_c0, verbose=verbose
             )
     else:
         c0 = float(np.median(time_train))

@@ -8,7 +8,7 @@ from .models import predict_median_survival, predict_mean_survival_truncated
 
 def estimate_c0_on_train(X_train, time_train, event_train, model, model_type='cox',
                           c0_grid=None, holdout_ratio=0.25, cens_time_train=None,
-                          verbose=False):
+                          min_p_c0=0.3, verbose=False):
     """
     c0 自适应选择：网格搜索 + 训练集holdout验证
 
@@ -18,15 +18,17 @@ def estimate_c0_on_train(X_train, time_train, event_train, model, model_type='co
         event_train: numpy.ndarray, 训练集事件指示
         model: 已拟合的生存模型
         model_type: str, 模型类型
-        c0_grid: numpy.ndarray or None, c0类值网格；若None则自动生成（从10%到90%分位数）
-        holdout_ratio: float, 用于验证的holdout集比例（默认25%）
-        cens_time_train: numpy.ndarray or None, 训练集删失时间C
-                         提供时用精确 C 定义 I'_ca；否则用近似 time ≥ c0
+        c0_grid: numpy.ndarray or None, c0候选网格；若None则自动生成（10%到90%分位数）
+        holdout_ratio: float, holdout集比例（默认25%）
+        cens_time_train: numpy.ndarray or None, 训练集删失时间C；
+                         提供时用精确C定义I'_ca；否则用近似 time ≥ c0
+        min_p_c0: float, P(C≥c₀) 的最低要求（默认0.3）；
+                  低于此值的候选被跳过，防止权重极端化和校准集过小
         verbose: bool, 是否打印详细信息
 
     返回:
         c0_best: float, 选定的最优c0值
-        c0_scores: dict, 网格搜索各候选的评分结果
+        c0_scores: dict, 网格搜索各候选的评分结果（被约束跳过的值为np.nan）
     """
     from sklearn.model_selection import train_test_split
 
@@ -45,7 +47,7 @@ def estimate_c0_on_train(X_train, time_train, event_train, model, model_type='co
 
     X_c0_fit,    X_c0_holdout    = splits[0],  splits[1]
     time_c0_fit, time_c0_holdout = splits[2],  splits[3]
-    # splits[4]=event_c0_fit, splits[5]=event_c0_holdout（保守 mask 下不用 event）
+    # splits[4]=event_c0_fit, splits[5]=event_c0_holdout（mask下不用event）
 
     if cens_time_train is not None:
         cens_c0_fit = splits[6]  # train_test_split 返回 [train, test, ...] 交替
@@ -53,19 +55,28 @@ def estimate_c0_on_train(X_train, time_train, event_train, model, model_type='co
     c0_scores = {}
     best_score = -np.inf
     c0_best = None
+    n_skipped_constraint = 0
 
-    # Step 3: 对每个c0候选值，计算holdout集上的平均下界LPB
+    # Step 3: 对每个c0候选值，先检查约束，再计算holdout集上的平均下界LPB
     for c0_cand in c0_grid:
-        # I'_ca 定义（与 fit_csa_intervals_traditional 保持一致）：
-        # 有精确 C：直接用 C_i ≥ c0
-        # 无精确 C：未删失全部保留 + 删失且 T̃ ≥ c0
-        #   理由：未删失样本 C > T，C 已知时几乎全部满足 C ≥ c0；
-        #         此近似使分数含正值，目标函数可对 c0 做有意义的权衡
+        # 约束检查：估计 P(C≥c₀)，低于 min_p_c0 则跳过
+        # 理由：P(C≥c₀) 过小会导致 IPCW 权重极端化、有效校准样本数不足，
+        #       即使 LPB 数值更高也无法提供可靠的覆盖率保证
+        if cens_time_train is not None:
+            p_c0_est = float(np.mean(cens_c0_fit >= c0_cand))
+        else:
+            # 近似：未删失且T≥c0保证C>T≥c0；删失且T̃≥c0保证C=T̃≥c0
+            p_c0_est = float(np.mean(time_c0_fit >= c0_cand))
+
+        if p_c0_est < min_p_c0:
+            c0_scores[float(c0_cand)] = np.nan
+            n_skipped_constraint += 1
+            continue
+
+        # I'_ca 定义
         if cens_time_train is not None:
             cal_mask = cens_c0_fit >= c0_cand
         else:
-            # 实际数据 / 合成数据但 C 未传入：近似定义与 fit_csa_intervals_traditional 保持一致
-            # I'_ca = {所有未删失} ∪ {删失且 T̃ ≥ c0}
             event_c0_fit = splits[4]
             cal_mask = (event_c0_fit == 1) | (time_c0_fit >= c0_cand)
 
@@ -75,8 +86,7 @@ def estimate_c0_on_train(X_train, time_train, event_train, model, model_type='co
 
         # 计算非一致性分数（截断条件均值 E[T∧c0|X]）
         pred_fit = predict_mean_survival_truncated(model, X_c0_fit[cal_mask], c0=c0_cand, model_type=model_type)
-        time_fit_prime = time_c0_fit[cal_mask]
-        scores = pred_fit - np.minimum(time_fit_prime, c0_cand)
+        scores = pred_fit - np.minimum(time_c0_fit[cal_mask], c0_cand)
 
         # 在holdout集上计算LPB = mean(clip(ŷ - q, 0, c0))
         pred_holdout = predict_mean_survival_truncated(model, X_c0_holdout, c0=c0_cand, model_type=model_type)
@@ -92,6 +102,7 @@ def estimate_c0_on_train(X_train, time_train, event_train, model, model_type='co
     if verbose:
         print(f"\n  c0 网格搜索完成 ")
         print(f"  搜索范围: [{c0_grid.min():.4f}, {c0_grid.max():.4f}]")
+        print(f"  约束 P(C≥c₀) ≥ {min_p_c0}：跳过 {n_skipped_constraint}/{len(c0_grid)} 个候选")
         print(f"  最优 c0: {c0_best:.4f} (平均LPB: {best_score:.4f})")
         print(f"  候选值数: {len(c0_grid)}")
 
