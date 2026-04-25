@@ -6,105 +6,107 @@ from sklearn.ensemble import RandomForestClassifier
 from .models import predict_median_survival, predict_mean_survival_truncated
 
 
-def estimate_c0_on_train(X_train, time_train, event_train, model, model_type='cox',
-                          c0_grid=None, holdout_ratio=0.25, cens_time_train=None,
-                          min_p_c0=0.3, verbose=False):
+def estimate_c0_on_train(X_train, time_train, event_train, model,
+                          X_cal, time_cal, event_cal,
+                          model_type='cox', c0_grid=None,
+                          cens_time_train=None, cens_time_cal=None,
+                          min_p_c0=0.3, max_p_c0=0.85, alpha=0.1, verbose=False):
     """
-    c0 自适应选择：网格搜索 + 训练集holdout验证
+    c0 自适应选择：Candès et al. (2023) Section 3.4 替代方案
+
+        ĉ0 = argmax_{c0 ∈ C}  (1/|Z_ca|) Σ_{i∈Z_ca} L̂_{c0}(X_i)
+
+    对每个 c0 候选值，按照 Algorithm 1 步骤计算校准集 Z_ca 上的平均 LPB：
+      - Step 2: I'_ca = {i ∈ Z_ca : C_i ≥ c0}
+      - Step 3: V_i = ŷ(X_i) - min(T̃_i, c0)，i ∈ I'_ca
+      - Step 6: η = Quantile(1-α; ...) 带 ∞-atom 修正
+      - 输出: L̂_{c0}(X) = clip(ŷ(X) - η, 0, c0)，对所有 X ∈ Z_ca
+
+    P(C≥c0) 约束由训练集估计，防止权重极端化。
 
     参数:
-        X_train: numpy.ndarray, 训练集特征 (n_train, n_features)
-        time_train: numpy.ndarray, 训练集观测时间
-        event_train: numpy.ndarray, 训练集事件指示
+        X_train, time_train, event_train: 训练集（用于估计 P(C≥c0) 约束）
+        X_cal, time_cal, event_cal: 校准集 Z_ca（用于一致性分数和 LPB 评估）
         model: 已拟合的生存模型
         model_type: str, 模型类型
-        c0_grid: numpy.ndarray or None, c0候选网格；若None则自动生成（10%到90%分位数）
-        holdout_ratio: float, holdout集比例（默认25%）
-        cens_time_train: numpy.ndarray or None, 训练集删失时间C；
-                         提供时用精确C定义I'_ca；否则用近似 time ≥ c0
-        min_p_c0: float, P(C≥c₀) 的最低要求（默认0.3）；
-                  低于此值的候选被跳过，防止权重极端化和校准集过小
-        verbose: bool, 是否打印详细信息
+        c0_grid: c0 候选网格；None 则从 Z_ca 观测时间的分位数自动生成
+        cens_time_train: 训练集真实删失时间 C（合成数据可用，用于 P(C≥c0) 约束估计）
+        cens_time_cal: 校准集真实删失时间 C（合成数据可用，用于精确定义 I'_ca）
+        min_p_c0, max_p_c0: P(C≥c0) 的合法范围（从训练集估计）
+        alpha: 目标误覆盖率
+        verbose: 是否打印诊断信息
 
     返回:
-        c0_best: float, 选定的最优c0值
-        c0_scores: dict, 网格搜索各候选的评分结果（被约束跳过的值为np.nan）
+        c0_best: float, 选定的最优 c0
+        c0_scores: dict, 各候选的平均 LPB（被约束跳过的值为 np.nan）
     """
-    from sklearn.model_selection import train_test_split
+    time_train = np.asarray(time_train)
+    event_train = np.asarray(event_train)
+    time_cal   = np.asarray(time_cal)
+    event_cal  = np.asarray(event_cal)
 
-    # Step 1: 生成c0候选网格
+    # Step 1: 生成 c0 候选网格（基于校准集观测时间分位数，与最终校准数据一致）
     if c0_grid is None:
-        percentiles = np.linspace(10, 90, 17)  # 10%, 15%, ..., 90%
-        c0_grid = np.percentile(time_train, percentiles)
-
-    # Step 2: 分割训练集 → c0_fit + c0_holdout
-    arrays = [X_train, time_train, event_train]
-    if cens_time_train is not None:
-        arrays.append(cens_time_train)
-
-    splits = train_test_split(*arrays, test_size=holdout_ratio, random_state=2026,
-                               stratify=event_train)
-
-    X_c0_fit,    X_c0_holdout    = splits[0],  splits[1]
-    time_c0_fit, time_c0_holdout = splits[2],  splits[3]
-    # splits[4]=event_c0_fit, splits[5]=event_c0_holdout（mask下不用event）
-
-    if cens_time_train is not None:
-        cens_c0_fit = splits[6]  # train_test_split 返回 [train, test, ...] 交替
+        percentiles = np.linspace(10, 90, 17)
+        c0_grid = np.percentile(time_cal, percentiles)
 
     c0_scores = {}
     best_score = -np.inf
     c0_best = None
     n_skipped_constraint = 0
 
-    # Step 3: 对每个c0候选值，先检查约束，再计算holdout集上的平均下界LPB
     for c0_cand in c0_grid:
-        # 约束检查：估计 P(C≥c₀)，低于 min_p_c0 则跳过
-        # 理由：P(C≥c₀) 过小会导致 IPCW 权重极端化、有效校准样本数不足，
-        #       即使 LPB 数值更高也无法提供可靠的覆盖率保证
+        # 约束检查：从训练集估计 P(C≥c0) ∈ [min_p_c0, max_p_c0]
+        # 使用训练集（非校准集）估计，避免约束检查本身引入 double-dipping
         if cens_time_train is not None:
-            p_c0_est = float(np.mean(cens_c0_fit >= c0_cand))
+            p_c0_est = float(np.mean(cens_time_train >= c0_cand))
         else:
-            # 近似：未删失且T≥c0保证C>T≥c0；删失且T̃≥c0保证C=T̃≥c0
-            p_c0_est = float(np.mean(time_c0_fit >= c0_cand))
+            p_c0_est = float(np.mean(time_train >= c0_cand))
 
-        if p_c0_est < min_p_c0:
+        if p_c0_est < min_p_c0 or p_c0_est > max_p_c0:
             c0_scores[float(c0_cand)] = np.nan
             n_skipped_constraint += 1
             continue
 
-        # I'_ca 定义
-        if cens_time_train is not None:
-            cal_mask = cens_c0_fit >= c0_cand
+        # Algorithm 1 Step 2: I'_ca = {i ∈ Z_ca : C_i ≥ c0}
+        if cens_time_cal is not None:
+            cal_mask = cens_time_cal >= c0_cand
         else:
-            event_c0_fit = splits[4]
-            cal_mask = (event_c0_fit == 1) | (time_c0_fit >= c0_cand)
+            cal_mask = (event_cal == 1) | (time_cal >= c0_cand)
 
-        if np.sum(cal_mask) < 2:
+        if cal_mask.sum() < 2:
             c0_scores[float(c0_cand)] = np.nan
             continue
 
-        # 计算非一致性分数（截断条件均值 E[T∧c0|X]）
-        pred_fit = predict_mean_survival_truncated(model, X_c0_fit[cal_mask], c0=c0_cand, model_type=model_type)
-        scores = pred_fit - np.minimum(time_c0_fit[cal_mask], c0_cand)
+        # Algorithm 1 Step 3: V_i = ŷ(X_i) - min(T̃_i, c0)，i ∈ I'_ca
+        pred_cal_masked = predict_mean_survival_truncated(
+            model, X_cal[cal_mask], c0=c0_cand, model_type=model_type)
+        scores = pred_cal_masked - np.minimum(time_cal[cal_mask], c0_cand)
 
-        # 在holdout集上计算LPB = mean(clip(ŷ - q, 0, c0))
-        pred_holdout = predict_mean_survival_truncated(model, X_c0_holdout, c0=c0_cand, model_type=model_type)
-        q_est = np.quantile(scores, 0.9)
-        lpb_clipped = np.mean(np.clip(pred_holdout - q_est, 0.0, c0_cand))
+        # Algorithm 1 Step 6: η = Quantile(1-α; ...) with ∞-atom
+        # 均匀权重（边际 IPCW 近似），带有限样本修正 (1-α)(1+1/n)
+        n_scores = len(scores)
+        q_level = min(1.0, (1 - alpha) * (1 + 1.0 / n_scores))
+        q_est = np.quantile(scores, q_level)
 
-        c0_scores[float(c0_cand)] = lpb_clipped
+        # L̂_{c0}(X_i) = clip(ŷ(X_i) - η, 0, c0)，对所有 Z_ca 样本
+        pred_cal_all = predict_mean_survival_truncated(
+            model, X_cal, c0=c0_cand, model_type=model_type)
+        mean_lpb = float(np.mean(np.clip(pred_cal_all - q_est, 0.0, c0_cand)))
 
-        if lpb_clipped > best_score:
-            best_score = lpb_clipped
+        c0_scores[float(c0_cand)] = mean_lpb
+
+        if mean_lpb > best_score:
+            best_score = mean_lpb
             c0_best = float(c0_cand)
 
     if verbose:
-        print(f"\n  c0 网格搜索完成 ")
+        print(f"\n  c0 网格搜索完成")
         print(f"  搜索范围: [{c0_grid.min():.4f}, {c0_grid.max():.4f}]")
-        print(f"  约束 P(C≥c₀) ≥ {min_p_c0}：跳过 {n_skipped_constraint}/{len(c0_grid)} 个候选")
-        print(f"  最优 c0: {c0_best:.4f} (平均LPB: {best_score:.4f})")
-        print(f"  候选值数: {len(c0_grid)}")
+        print(f"  约束 P(C≥c₀) ∈ [{min_p_c0}, {max_p_c0}]（训练集估计）："
+              f"跳过 {n_skipped_constraint}/{len(c0_grid)} 个候选")
+        print(f"  最优 c0: {c0_best:.4f}（平均 LPB: {best_score:.4f}）")
+        print(f"  有效候选数: {len(c0_grid) - n_skipped_constraint}/{len(c0_grid)}")
 
     return c0_best, c0_scores
 

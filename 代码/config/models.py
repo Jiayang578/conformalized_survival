@@ -107,6 +107,59 @@ def predict_median_survival(model, X, model_type='cox'):
     raise ValueError(f'未知 model_type: {model_type}')
 
 
+def predict_quantile_survival(model, X, alpha, c0, model_type='cox'):
+    """预测每个样本的截断条件 α 分位数 q_α(x; c₀) = min(q_α(x), c₀)
+
+    CQR 非一致性分数所需的预测目标：
+        q_α(x) = inf{t ≥ 0 : S(t|x) ≤ 1 - α}
+    即生存概率首次降至 (1-α) 以下时对应的时间点，再与 c₀ 取最小值。
+
+    参数:
+        model: 已拟合的生存模型
+        X: 协变量矩阵，shape=(n_samples, n_features)
+        alpha: float, 目标分位水平（如 0.1 对应 10th percentile）
+        c0: float, 截断阈值
+        model_type: 模型类型 ('km', 'cox', 'weibull', 'rsf')
+
+    返回:
+        每个样本的 q_α(x; c₀)，shape=(n_samples,)
+    """
+    c0 = float(c0)
+    target_surv = 1.0 - alpha  # 如 alpha=0.1 → 寻找 S(t|x) ≤ 0.9 的最小 t
+
+    if model_type == 'km':
+        times = model.survival_function_.index.values.astype(float)
+        surv_vals = model.survival_function_['KM_estimate'].values.astype(float)
+        idx = np.where(surv_vals <= target_surv)[0]
+        q = float(times[idx[0]]) if len(idx) > 0 else float(times[-1])
+        return np.full(X.shape[0], min(q, c0), dtype=float)
+
+    if model_type in ['cox', 'weibull']:
+        df = pd.DataFrame(X, columns=[f'X{i}' for i in range(X.shape[1])])
+        surv_df = model.predict_survival_function(df)
+        times = surv_df.index.values.astype(float)
+        quantiles = []
+        for col in surv_df.columns:
+            s = surv_df[col].values.astype(float)
+            idx = np.where(s <= target_surv)[0]
+            q = float(times[idx[0]]) if len(idx) > 0 else float(times[-1])
+            quantiles.append(min(q, c0))
+        return np.array(quantiles, dtype=float)
+
+    if model_type == 'rsf':
+        surv_funcs = model.predict_survival_function(X)
+        times = np.asarray(model.unique_times_, dtype=float)
+        quantiles = []
+        for fn in surv_funcs:
+            s = np.asarray(fn(times), dtype=float)
+            idx = np.where(s <= target_surv)[0]
+            q = float(times[idx[0]]) if len(idx) > 0 else float(times[-1])
+            quantiles.append(min(q, c0))
+        return np.array(quantiles, dtype=float)
+
+    raise ValueError(f'未知 model_type: {model_type}')
+
+
 def _integrate_survival(times, surv_vals, c0):
     """梯形法计算 ∫_0^{c0} S(t) dt"""
     mask = times <= c0
