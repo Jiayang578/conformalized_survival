@@ -2,17 +2,33 @@
 CSA 共享核心组件
 """
 import numpy as np
+from sklearn.base import clone
 from sklearn.ensemble import RandomForestClassifier
 from .models import predict_median_survival, predict_mean_survival_truncated
+from .models import fit_kaplan_meier, fit_cox, fit_weibull, fit_rsf
+
+
+def _fit_model_by_type(X, time, event, model_type):
+    """按模型类型重新拟合生存模型。"""
+    if model_type == 'km':
+        return fit_kaplan_meier(time, event)
+    if model_type == 'cox':
+        return fit_cox(X, time, event)
+    if model_type == 'weibull':
+        return fit_weibull(X, time, event)
+    if model_type == 'rsf':
+        return fit_rsf(X, time, event)
+    raise ValueError(f'未知 model_type: {model_type}')
 
 
 def estimate_c0_on_train(X_train, time_train, event_train, model,
                           X_cal, time_cal, event_cal,
                           model_type='cox', c0_grid=None,
                           cens_time_train=None, cens_time_cal=None,
-                          min_p_c0=0.3, max_p_c0=0.85, alpha=0.1, verbose=False):
+                          min_p_c0=0.3, max_p_c0=0.85, alpha=0.1, verbose=False,
+                          holdout_frac=0.25, random_state=2026):
     """
-    c0 自适应选择：Candès et al. (2023) Section 3.4 替代方案
+    c0 自适应选择：只使用训练集内部数据，避免复用最终校准集。
 
         ĉ0 = argmax_{c0 ∈ C}  (1/|Z_ca|) Σ_{i∈Z_ca} L̂_{c0}(X_i)
 
@@ -42,13 +58,37 @@ def estimate_c0_on_train(X_train, time_train, event_train, model,
     """
     time_train = np.asarray(time_train)
     event_train = np.asarray(event_train)
-    time_cal   = np.asarray(time_cal)
-    event_cal  = np.asarray(event_cal)
 
-    # Step 1: 生成 c0 候选网格（基于校准集观测时间分位数，与最终校准数据一致）
+    n_train = len(time_train)
+    if n_train < 8:
+        raise ValueError('训练集过小，无法稳定选择 c0')
+
+    rng = np.random.default_rng(random_state)
+    idx_all = np.arange(n_train)
+    n_holdout = max(2, int(round(n_train * holdout_frac)))
+    n_holdout = min(n_holdout, n_train - 2)
+    holdout_idx = rng.choice(idx_all, size=n_holdout, replace=False)
+    inner_idx = np.setdiff1d(idx_all, holdout_idx, assume_unique=False)
+
+    X_inner = X_train[inner_idx]
+    time_inner = time_train[inner_idx]
+    event_inner = event_train[inner_idx]
+    X_holdout = X_train[holdout_idx]
+    time_holdout = time_train[holdout_idx]
+    event_holdout = event_train[holdout_idx]
+
+    if cens_time_train is not None:
+        cens_inner = np.asarray(cens_time_train)[inner_idx]
+        cens_holdout = np.asarray(cens_time_train)[holdout_idx]
+    else:
+        cens_inner = None
+        cens_holdout = None
+
+    # Step 1: 生成 c0 候选网格，仅基于训练集内部数据
     if c0_grid is None:
         percentiles = np.linspace(10, 90, 17)
-        c0_grid = np.percentile(time_cal, percentiles)
+        base_times = cens_inner if cens_inner is not None else time_inner
+        c0_grid = np.percentile(base_times, percentiles)
 
     c0_scores = {}
     best_score = -np.inf
@@ -68,11 +108,14 @@ def estimate_c0_on_train(X_train, time_train, event_train, model,
             n_skipped_constraint += 1
             continue
 
-        # Algorithm 1 Step 2: I'_ca = {i ∈ Z_ca : C_i ≥ c0}
-        if cens_time_cal is not None:
-            cal_mask = cens_time_cal >= c0_cand
+        # 用训练子集重新拟合模型，避免泄漏 holdout 信息
+        inner_model = _fit_model_by_type(X_inner, time_inner, event_inner, model_type)
+
+        # 用训练集内部 holdout 评估每个候选 c0 的效率
+        if cens_holdout is not None:
+            cal_mask = cens_holdout >= c0_cand
         else:
-            cal_mask = (event_cal == 1) | (time_cal >= c0_cand)
+            cal_mask = (event_holdout == 1) | (time_holdout >= c0_cand)
 
         if cal_mask.sum() < 2:
             c0_scores[float(c0_cand)] = np.nan
@@ -80,18 +123,17 @@ def estimate_c0_on_train(X_train, time_train, event_train, model,
 
         # Algorithm 1 Step 3: V_i = ŷ(X_i) - min(T̃_i, c0)，i ∈ I'_ca
         pred_cal_masked = predict_mean_survival_truncated(
-            model, X_cal[cal_mask], c0=c0_cand, model_type=model_type)
-        scores = pred_cal_masked - np.minimum(time_cal[cal_mask], c0_cand)
+            inner_model, X_holdout[cal_mask], c0=c0_cand, model_type=model_type)
+        scores = pred_cal_masked - np.minimum(time_holdout[cal_mask], c0_cand)
 
-        # Algorithm 1 Step 6: η = Quantile(1-α; ...) with ∞-atom
-        # 均匀权重（边际 IPCW 近似），带有限样本修正 (1-α)(1+1/n)
+        # 训练内的 c0 选择仅比较效率，使用无权重 split conformal 分位数。
         n_scores = len(scores)
         q_level = min(1.0, (1 - alpha) * (1 + 1.0 / n_scores))
         q_est = np.quantile(scores, q_level)
 
-        # L̂_{c0}(X_i) = clip(ŷ(X_i) - η, 0, c0)，对所有 Z_ca 样本
+        # L̂_{c0}(X_i) = clip(ŷ(X_i) - η, 0, c0)，对 holdout 样本求平均
         pred_cal_all = predict_mean_survival_truncated(
-            model, X_cal, c0=c0_cand, model_type=model_type)
+            inner_model, X_holdout, c0=c0_cand, model_type=model_type)
         mean_lpb = float(np.mean(np.clip(pred_cal_all - q_est, 0.0, c0_cand)))
 
         c0_scores[float(c0_cand)] = mean_lpb
@@ -103,6 +145,7 @@ def estimate_c0_on_train(X_train, time_train, event_train, model,
     if verbose:
         print(f"\n  c0 网格搜索完成")
         print(f"  搜索范围: [{c0_grid.min():.4f}, {c0_grid.max():.4f}]")
+        print(f"  训练内拆分: inner={len(inner_idx)} / holdout={len(holdout_idx)}")
         print(f"  约束 P(C≥c₀) ∈ [{min_p_c0}, {max_p_c0}]（训练集估计）："
               f"跳过 {n_skipped_constraint}/{len(c0_grid)} 个候选")
         print(f"  最优 c0: {c0_best:.4f}（平均 LPB: {best_score:.4f}）")
@@ -180,6 +223,39 @@ def estimate_censoring_weights(X_train, time_train, event_train,
         print(f"  权重 w(x) 范围: [{weights.min():.4f}, {weights.max():.4f}]")
 
     return weights, censoring_probs, censoring_model
+
+
+def should_fallback_to_unweighted(weights, censoring_probs, p_c0_marginal,
+                                  max_weight=10.0, min_prob_floor=0.05,
+                                  max_prob_spread=0.25):
+    """
+    为稳定性决定是否回退到无权重版本。
+
+    在独立删失或近独立删失下，理论上 w(x) 应接近常数 1。
+    若估计出的删失概率过小、离散过大或权重过于极端，则回退到无权重。
+    """
+    weights = np.asarray(weights, dtype=float)
+    censoring_probs = np.asarray(censoring_probs, dtype=float)
+
+    if len(weights) == 0:
+        return True
+
+    if not np.isfinite(weights).all():
+        return True
+
+    if np.max(weights) > max_weight:
+        return True
+
+    if np.min(censoring_probs) < min_prob_floor:
+        return True
+
+    if np.max(censoring_probs) - np.min(censoring_probs) > max_prob_spread:
+        return True
+
+    if p_c0_marginal <= 0 or p_c0_marginal >= 1:
+        return True
+
+    return False
 
 
 def csa_nonconformity_scores(pred_median, time, event=None, weights=None, c0=None):

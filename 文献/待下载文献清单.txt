@@ -1,0 +1,33 @@
+待下载文献清单
+（以下文献在论文中已引用，但本地文献目录中尚无对应PDF，请手动下载后加入文献目录）
+
+
+
+========================================
+[10] van der Laan & Robins (2003) — IPCW方法专著
+    题目：Unified Methods for Censored Longitudinal Data and Causality
+    出版社：Springer, New York
+    年份：2003
+    ISBN：978-0-387-95556-8
+    购买/预览：https://link.springer.com/book/9780387955568
+    说明：IPCW加权方法的权威参考书，Section 2.4.2 引用为[10]
+
+========================================
+[11] Hosmer, Lemeshow & May (2008) — WHAS500数据集来源书籍
+    题目：Applied Survival Analysis: Regression Modeling of Time-to-Event Data (2nd ed.)
+    出版社：John Wiley & Sons, Hoboken
+    年份：2008
+    ISBN：978-0-471-75499-2
+    购买/预览：https://onlinelibrary.wiley.com/doi/book/10.1002/9780470258019
+    说明：WHAS500数据集的原始来源，Section 3.2 引用为[11]
+
+========================================
+[14] Harrell, Lee & Mark (1996) — C-index方法原始论文
+    题目：Multivariable Prognostic Models: Issues in Developing Models, Evaluating Assumptions and Adequacy, and Measuring and Reducing Errors
+    期刊：Statistics in Medicine, 15(4): 361-387
+    年份：1996
+    DOI：https://doi.org/10.1002/(SICI)1097-0258(19960229)15:4<361::AID-SIM168>3.0.CO;2-4
+    说明：C-index（一致性指数）方法的原始论文，Section 3.4 引用为[14]
+
+========================================
+下载后请将PDF放入：/Users/edy/Desktop/毕设/文献/ 目录

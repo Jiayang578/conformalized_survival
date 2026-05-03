@@ -6,6 +6,7 @@ import numpy as np
 from .csa_base import (
     estimate_c0_on_train,
     estimate_censoring_weights,
+    should_fallback_to_unweighted,
     csa_nonconformity_scores,
     calibrate_csa_quantile
 )
@@ -75,6 +76,9 @@ def fit_csa_intervals_traditional(model, X_train, time_train, event_train,
         print(f"\n  边际概率 P(C≥c0) = {p_c0_marginal:.4f}（来自训练集）")
 
     # Step 3: 估计删失概率模型 P(C≥c0|X)，得到权重
+    weight_fallback = False
+    fallback_reason = None
+
     if use_weights:
         weights, censoring_probs, censor_model = estimate_censoring_weights(
             X_train, time_train, event_train,
@@ -84,6 +88,15 @@ def fit_csa_intervals_traditional(model, X_train, time_train, event_train,
             cens_time_train=cens_time_train,
             verbose=verbose
         )
+
+        if should_fallback_to_unweighted(weights, censoring_probs, p_c0_marginal):
+            weight_fallback = True
+            fallback_reason = 'extreme_or_unstable_weights'
+            weights = None
+            censoring_probs = None
+            censor_model = None
+            if verbose:
+                print("\n  权重估计不稳定，自动回退到无权重 conformal 校准")
     else:
         weights = None
         censoring_probs = None
@@ -117,7 +130,7 @@ def fit_csa_intervals_traditional(model, X_train, time_train, event_train,
     # Step 6: 计算测试集预测值和权重，校准分位数
     pred_test = predict_mean_survival_truncated(model, X_test, c0=c0, model_type=model_type)
 
-    if use_weights:
+    if use_weights and (weights is not None):
         # 测试点权重：ŵ(x) = P(C≥c0) / P(C≥c0|X=x)
         epsilon = 0.01
         _tp = censor_model.predict_proba(X_test)
@@ -172,6 +185,8 @@ def fit_csa_intervals_traditional(model, X_train, time_train, event_train,
         'weights': weights,
         'censoring_probs': censoring_probs,
         'censor_model': censor_model,
+        'weight_fallback': weight_fallback,
+        'fallback_reason': fallback_reason,
         'cal_mask': cal_mask,
         'test_weights': test_weights,
         'q_per_test': q_per_test,
