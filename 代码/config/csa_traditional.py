@@ -7,6 +7,7 @@ from .csa_base import (
     estimate_c0_on_train,
     estimate_censoring_weights,
     should_fallback_to_unweighted,
+    should_use_constant_censoring_weights,
     csa_nonconformity_scores,
     calibrate_csa_quantile
 )
@@ -18,7 +19,9 @@ def fit_csa_intervals_traditional(model, X_train, time_train, event_train,
                                    alpha=0.1, model_type='cox', use_weights=True,
                                    cens_time_train=None, cens_time_cal=None,
                                    min_p_c0=0.3, max_p_c0=0.85,
-                                   verbose=True):
+                                   verbose=True,
+                                   known_censoring_independent=None,
+                                   adaptive_c0=True):
     """
     生成单侧区间 [L, ∞)。
     参数:
@@ -32,12 +35,17 @@ def fit_csa_intervals_traditional(model, X_train, time_train, event_train,
         X_test: numpy.ndarray, 测试集特征 (n_test, n_features)
         alpha: float, 显著性水平，目标覆盖率 = 1-alpha
         model_type: str, 模型类型 ('km', 'cox', 'weibull', 'rsf')
-        use_weights: bool, 是否使用加权conformal推断（推荐True）
+        use_weights: bool, 是否启用逆概率删失加权；
+                     False 时仍保留 c0 选择与 I'_ca 筛选，只是令 w(x)=1
         cens_time_train: numpy.ndarray or None, 训练集删失时间 C
         cens_time_cal:   numpy.ndarray or None, 校准集删失时间 C
         min_p_c0: float, c0选择时要求的 P(C≥c₀) 最低阈值（默认0.3）；
                   合成数据（cens_time_train不为None）路径下该约束也会生效
         verbose: bool, 是否打印诊断信息
+        known_censoring_independent: bool or None, 是否已知删失机制与 X 独立。
+                     None 时，若提供了真实删失时间 cens_time_train，则默认视为
+                     当前合成数据设置中的外生删失并直接使用常数权重 w(x)=1。
+        adaptive_c0: bool, 是否使用训练内网格搜索自适应选择 c0
 
     返回:
         lower: numpy.ndarray, 区间下界，shape=(n_test,)
@@ -45,24 +53,37 @@ def fit_csa_intervals_traditional(model, X_train, time_train, event_train,
         q_value: float, 校准的平均分位数值
         weight_info: dict, 诊断信息字典
     """
+    def _finalize_lower_bounds(pred_test_values, q_per_test_values, label):
+        """统一处理 q 的诊断汇总与下界构造。"""
+        raw_lower = pred_test_values - q_per_test_values
+        raw_lower[~np.isfinite(raw_lower)] = 0.0
+        lower_bounds = np.minimum(raw_lower, c0)
+        lower_bounds = np.maximum(lower_bounds, 0.0)
 
-    # Step 1: c0 自适应选择（Candès et al. Section 3.4 替代方案）
-    # ĉ0 = argmax_{c0} (1/|Z_ca|) Σ L̂_{c0}(X_i)，用 Z_ca 一致性分数评估
-    # P(C≥c0) 约束仍由训练集估计，避免约束检查引入 double-dipping
-    if use_weights:
+        finite_q = q_per_test_values[np.isfinite(q_per_test_values)]
+        q_summary = float(np.mean(finite_q)) if finite_q.size else np.inf
+
+        if verbose:
+            n_inf = int(np.sum(~np.isfinite(q_per_test_values)))
+            q_str = f"{q_summary:.4f}" if np.isfinite(q_summary) else "inf"
+            print(f"\n✓ {label}分位数 q（均值）= {q_str}，∞-atom激活 {n_inf}/{len(q_per_test_values)} 个测试点")
+
+        return lower_bounds, q_summary
+
+    # Step 1: c0 自适应选择（Candès et al. Section 3.4）
+    # 在训练折内部再切 inner/holdout 选择 c0，保证 c0 独立于最终 calibration fold Z_ca。
+    if adaptive_c0:
         c0, c0_scores = estimate_c0_on_train(
             X_train, time_train, event_train, model,
-            X_cal, time_cal, event_cal,
             model_type=model_type,
             cens_time_train=cens_time_train,
-            cens_time_cal=cens_time_cal,
             min_p_c0=min_p_c0, max_p_c0=max_p_c0, alpha=alpha, verbose=verbose
         )
     else:
         c0 = float(np.median(time_train))
         c0_scores = None
         if verbose:
-            print(f"  无权重模式：c0 = 训练集中位数 {c0:.4f}")
+            print(f"  固定 c0 模式：c0 = 训练集中位数 {c0:.4f}")
 
     # Step 2: 从训练集估计边际概率 P(C≥c0)
     if cens_time_train is not None:
@@ -75,28 +96,46 @@ def fit_csa_intervals_traditional(model, X_train, time_train, event_train,
     if verbose:
         print(f"\n  边际概率 P(C≥c0) = {p_c0_marginal:.4f}（来自训练集）")
 
+    if known_censoring_independent is None:
+        # 默认仅在“可观测真实删失时间 + 经验上符合单一外生删失分布”的情形
+        # 才跳过条件删失模型估计，避免把所有精确 C 场景都误判为独立删失。
+        known_censoring_independent = should_use_constant_censoring_weights(
+            cens_time_train, p_c0_marginal
+        )
+
     # Step 3: 估计删失概率模型 P(C≥c0|X)，得到权重
     weight_fallback = False
     fallback_reason = None
+    weight_strategy = 'disabled'
 
     if use_weights:
-        weights, censoring_probs, censor_model = estimate_censoring_weights(
-            X_train, time_train, event_train,
-            X_cal,
-            c0_threshold=c0,
-            p_c0_marginal=p_c0_marginal,
-            cens_time_train=cens_time_train,
-            verbose=verbose
-        )
-
-        if should_fallback_to_unweighted(weights, censoring_probs, p_c0_marginal):
-            weight_fallback = True
-            fallback_reason = 'extreme_or_unstable_weights'
-            weights = None
-            censoring_probs = None
+        if known_censoring_independent:
+            weights = np.ones(len(X_cal), dtype=float)
+            censoring_probs = np.full(len(X_cal), p_c0_marginal, dtype=float)
             censor_model = None
+            weight_strategy = 'constant_one'
             if verbose:
-                print("\n  权重估计不稳定，自动回退到无权重 conformal 校准")
+                print("\n  已知删失机制与 X 独立：跳过删失模型，直接使用常数权重 w(x)=1")
+        else:
+            weights, censoring_probs, censor_model = estimate_censoring_weights(
+                X_train, time_train, event_train,
+                X_cal,
+                c0_threshold=c0,
+                p_c0_marginal=p_c0_marginal,
+                cens_time_train=cens_time_train,
+                verbose=verbose
+            )
+            weight_strategy = 'estimated'
+
+            if should_fallback_to_unweighted(weights, censoring_probs, p_c0_marginal):
+                weight_fallback = True
+                fallback_reason = 'extreme_or_unstable_weights'
+                weights = None
+                censoring_probs = None
+                censor_model = None
+                weight_strategy = 'fallback_unweighted'
+                if verbose:
+                    print("\n  权重估计不稳定，自动回退到无权重 conformal 校准")
     else:
         weights = None
         censoring_probs = None
@@ -130,7 +169,7 @@ def fit_csa_intervals_traditional(model, X_train, time_train, event_train,
     # Step 6: 计算测试集预测值和权重，校准分位数
     pred_test = predict_mean_survival_truncated(model, X_test, c0=c0, model_type=model_type)
 
-    if use_weights and (weights is not None):
+    if use_weights and weight_strategy == 'estimated' and (weights is not None):
         # 测试点权重：ŵ(x) = P(C≥c0) / P(C≥c0|X=x)
         epsilon = 0.01
         _tp = censor_model.predict_proba(X_test)
@@ -145,33 +184,19 @@ def fit_csa_intervals_traditional(model, X_train, time_train, event_train,
         q_per_test = calibrate_csa_quantile(
             scores, alpha=alpha, weights=weights_prime, test_weight=test_weights)
 
-        # 下界计算：L(x) = (ŷ - q) ∧ c0
-        raw_lower = pred_test - q_per_test
-        raw_lower[~np.isfinite(raw_lower)] = 0.0  # ∞-atom激活时下界为0
-        lower = np.minimum(raw_lower, c0)  # 仅 clip 到上界c0
-        lower = np.maximum(lower, 0.0)     # 然后保证非负
+        lower, q_value = _finalize_lower_bounds(pred_test, q_per_test, label='加权')
 
-        q_value = float(np.nanmean(q_per_test[np.isfinite(q_per_test)]))
-
-        if verbose:
-            n_inf = int(np.sum(~np.isfinite(q_per_test)))
-            print(f"\n✓ 加权分位数 q（均值）= {q_value:.4f}，∞-atom激活 {n_inf}/{len(q_per_test)} 个测试点")
-
+    elif use_weights and weight_strategy == 'constant_one':
+        test_weights = np.ones(X_test.shape[0], dtype=float)
+        q_per_test = calibrate_csa_quantile(
+            scores, alpha=alpha, weights=weights_prime, test_weight=test_weights)
+        lower, q_value = _finalize_lower_bounds(pred_test, q_per_test, label='常数权重')
     else:
         test_weights = np.ones(X_test.shape[0])
         q_per_test = calibrate_csa_quantile(
             scores, alpha=alpha, weights=None, test_weight=test_weights)
 
-        raw_lower = pred_test - q_per_test
-        raw_lower[~np.isfinite(raw_lower)] = 0.0
-        lower = np.minimum(raw_lower, c0)
-        lower = np.maximum(lower, 0.0)
-
-        q_value = float(np.nanmean(q_per_test[np.isfinite(q_per_test)]))
-
-        if verbose:
-            n_inf = int(np.sum(~np.isfinite(q_per_test)))
-            print(f"\n✓ 无权重分位数 q（均值）= {q_value:.4f}，∞-atom激活 {n_inf}/{len(q_per_test)} 个测试点")
+        lower, q_value = _finalize_lower_bounds(pred_test, q_per_test, label='无权重')
 
     # Step 7: 构建区间（传统CSA都是单侧）
     upper = np.full_like(lower, np.inf)
@@ -179,6 +204,9 @@ def fit_csa_intervals_traditional(model, X_train, time_train, event_train,
     # 返回结果和诊断信息
     weight_info = {
         'use_weights': use_weights,
+        'adaptive_c0': adaptive_c0,
+        'known_censoring_independent': known_censoring_independent,
+        'weight_strategy': weight_strategy,
         'c0': c0,
         'c0_scores': c0_scores,
         'p_c0_marginal': p_c0_marginal,

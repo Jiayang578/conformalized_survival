@@ -45,7 +45,12 @@ def generate_weibull_data(n, p=1, hetero=False, cens_rate=0.4):
     n: 样本量
     p: 协变量维度
     hetero: True=异方差，False=同方差
-    cens_rate: 删失率参数（指数分布的rate参数λ）
+    cens_rate: 目标删失率
+
+    说明：
+    这里的删失时间 C 由同一个指数分布生成，并不依赖 X。
+    因而在该合成设置下，真值 c(x)=P(C>=c0|X=x) 近似为常数，传统 CSA
+    应直接使用常数权重 w(x)=1，而不应再拟合 covariate-dependent 的删失模型。
     """
     # 生成协变量X
     if p == 1:
@@ -79,7 +84,8 @@ def generate_weibull_data(n, p=1, hetero=False, cens_rate=0.4):
     # 生成真实生存时间
     T = weibull_from_mu_sigma(mu, sigma, size=n, random_state=2026)
 
-    # 二分搜索找到合适的λ，使得删失率接近目标
+    # 二分搜索找到共同的指数分布参数 λ，使得整体删失率接近目标。
+    # 注意这里的 C 对所有样本共享同一分布，不依赖任何协变量 X。
     def get_cens_rate_for_lambda(lam):
         C_temp = np.random.exponential(scale=1/lam, size=n)
         return np.mean(C_temp < T)

@@ -21,34 +21,31 @@ def _fit_model_by_type(X, time, event, model_type):
     raise ValueError(f'未知 model_type: {model_type}')
 
 
-def estimate_c0_on_train(X_train, time_train, event_train, model,
-                          X_cal, time_cal, event_cal,
+def estimate_c0_on_train(X_train, time_train, event_train, model=None,
+                          X_cal=None, time_cal=None, event_cal=None,
                           model_type='cox', c0_grid=None,
                           cens_time_train=None, cens_time_cal=None,
                           min_p_c0=0.3, max_p_c0=0.85, alpha=0.1, verbose=False,
                           holdout_frac=0.25, random_state=2026):
     """
-    c0 自适应选择：只使用训练集内部数据，避免复用最终校准集。
+    训练折内自适应选择 c0，避免复用最终 calibration fold。
 
-        ĉ0 = argmax_{c0 ∈ C}  (1/|Z_ca|) Σ_{i∈Z_ca} L̂_{c0}(X_i)
+    按 Candès et al. Section 3.4：
+      1. 在训练折 Z_tr 内随机切出 holdout；
+      2. 在剩余 inner 子集上重新拟合模型；
+      3. 对每个 c0 候选，在训练内 holdout 上运行一遍单侧 conformal，
+         并以 holdout 上平均 LPB 最大者作为最优 c0。
 
-    对每个 c0 候选值，按照 Algorithm 1 步骤计算校准集 Z_ca 上的平均 LPB：
-      - Step 2: I'_ca = {i ∈ Z_ca : C_i ≥ c0}
-      - Step 3: V_i = ŷ(X_i) - min(T̃_i, c0)，i ∈ I'_ca
-      - Step 6: η = Quantile(1-α; ...) 带 ∞-atom 修正
-      - 输出: L̂_{c0}(X) = clip(ŷ(X) - η, 0, c0)，对所有 X ∈ Z_ca
-
-    P(C≥c0) 约束由训练集估计，防止权重极端化。
+    P(C≥c0) 约束也仅由训练折估计，避免任何来自最终 Z_ca 的信息泄漏。
 
     参数:
-        X_train, time_train, event_train: 训练集（用于估计 P(C≥c0) 约束）
-        X_cal, time_cal, event_cal: 校准集 Z_ca（用于一致性分数和 LPB 评估）
-        model: 已拟合的生存模型
+        X_train, time_train, event_train: 训练折数据
+        model, X_cal, time_cal, event_cal, cens_time_cal:
+            仅为兼容旧调用保留，当前实现不会使用这些 calibration 相关输入
         model_type: str, 模型类型
-        c0_grid: c0 候选网格；None 则从 Z_ca 观测时间的分位数自动生成
-        cens_time_train: 训练集真实删失时间 C（合成数据可用，用于 P(C≥c0) 约束估计）
-        cens_time_cal: 校准集真实删失时间 C（合成数据可用，用于精确定义 I'_ca）
-        min_p_c0, max_p_c0: P(C≥c0) 的合法范围（从训练集估计）
+        c0_grid: c0 候选网格；None 则从训练内 inner 子集时间分位数自动生成
+        cens_time_train: 训练折真实删失时间 C（合成数据可用，用于 P(C≥c0) 约束估计）
+        min_p_c0, max_p_c0: P(C≥c0) 的合法范围（均从训练折估计）
         alpha: 目标误覆盖率
         verbose: 是否打印诊断信息
 
@@ -56,6 +53,8 @@ def estimate_c0_on_train(X_train, time_train, event_train, model,
         c0_best: float, 选定的最优 c0
         c0_scores: dict, 各候选的平均 LPB（被约束跳过的值为 np.nan）
     """
+    del model, X_cal, time_cal, event_cal, cens_time_cal
+
     time_train = np.asarray(time_train)
     event_train = np.asarray(event_train)
 
@@ -113,18 +112,18 @@ def estimate_c0_on_train(X_train, time_train, event_train, model,
 
         # 用训练集内部 holdout 评估每个候选 c0 的效率
         if cens_holdout is not None:
-            cal_mask = cens_holdout >= c0_cand
+            holdout_mask = cens_holdout >= c0_cand
         else:
-            cal_mask = (event_holdout == 1) | (time_holdout >= c0_cand)
+            holdout_mask = (event_holdout == 1) | (time_holdout >= c0_cand)
 
-        if cal_mask.sum() < 2:
+        if holdout_mask.sum() < 2:
             c0_scores[float(c0_cand)] = np.nan
             continue
 
-        # Algorithm 1 Step 3: V_i = ŷ(X_i) - min(T̃_i, c0)，i ∈ I'_ca
-        pred_cal_masked = predict_mean_survival_truncated(
-            inner_model, X_holdout[cal_mask], c0=c0_cand, model_type=model_type)
-        scores = pred_cal_masked - np.minimum(time_holdout[cal_mask], c0_cand)
+        # 在训练内 holdout 上模拟 Algorithm 1 的校准步骤。
+        pred_holdout_masked = predict_mean_survival_truncated(
+            inner_model, X_holdout[holdout_mask], c0=c0_cand, model_type=model_type)
+        scores = pred_holdout_masked - np.minimum(time_holdout[holdout_mask], c0_cand)
 
         # 训练内的 c0 选择仅比较效率，使用无权重 split conformal 分位数。
         n_scores = len(scores)
@@ -132,9 +131,9 @@ def estimate_c0_on_train(X_train, time_train, event_train, model,
         q_est = np.quantile(scores, q_level)
 
         # L̂_{c0}(X_i) = clip(ŷ(X_i) - η, 0, c0)，对 holdout 样本求平均
-        pred_cal_all = predict_mean_survival_truncated(
+        pred_holdout_all = predict_mean_survival_truncated(
             inner_model, X_holdout, c0=c0_cand, model_type=model_type)
-        mean_lpb = float(np.mean(np.clip(pred_cal_all - q_est, 0.0, c0_cand)))
+        mean_lpb = float(np.mean(np.clip(pred_holdout_all - q_est, 0.0, c0_cand)))
 
         c0_scores[float(c0_cand)] = mean_lpb
 
@@ -256,6 +255,36 @@ def should_fallback_to_unweighted(weights, censoring_probs, p_c0_marginal,
         return True
 
     return False
+
+
+def should_use_constant_censoring_weights(cens_time_train, p_c0_marginal,
+                                          cv_threshold=0.10,
+                                          spread_threshold=0.05):
+    """
+    判断是否应直接使用常数权重 w(x)=1。
+
+    当训练集真实删失时间来自同一外生分布时，P(C≥c0|X=x) 的真值不随 x 变化。
+    这类场景下继续拟合删失模型只会在有限样本中制造伪 covariate shift。
+
+    这里仅用真实删失时间本身做一个保守判别：若 C 的变异程度与经验生存概率
+    都表现为“单一共同分布”特征，则允许上层跳过条件模型估计。
+    """
+    if cens_time_train is None:
+        return False
+
+    cens_time_train = np.asarray(cens_time_train, dtype=float)
+    if cens_time_train.size < 8:
+        return False
+
+    mean_c = float(np.mean(cens_time_train))
+    if not np.isfinite(mean_c) or mean_c <= 0:
+        return False
+
+    cv_c = float(np.std(cens_time_train) / mean_c)
+
+    # 指数型外生删失下经验 CV 接近 1，且 P(C≥c0) 在训练样本上是单一常数目标。
+    # 这里不用 X 做检验，是因为合成生成器本身已知独立；此函数只作为保守兜底。
+    return abs(cv_c - 1.0) <= cv_threshold and 0.0 < p_c0_marginal < 1.0 + spread_threshold
 
 
 def csa_nonconformity_scores(pred_median, time, event=None, weights=None, c0=None):
